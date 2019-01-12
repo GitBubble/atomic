@@ -16,6 +16,6 @@ TSO(total store ordering)
       any * write * action visible to other thread.     
    
    * arm/power * : 
-      not multiple-copy atomic   
-      not guarente any * write * action visible to other hardware thread. 
-      let the programmer make decision..   
+      not multiple-copy atomic      
+      not guarente any * write * action visible to other hardware thread.           
+      let the programmer make decision..        
