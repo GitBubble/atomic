@@ -1,6 +1,6 @@
-   原文名称： Using FMEA to Improve Software  Reliability 
-        
-      
+   原文名称： Using FMEA to Improve Software  Reliability   
+          
+          
    失效模式和影响分析（FMEA, Fault Mode & Effect Analysis）是硬件设计普遍采用的一种分析方法，用来避免设计遗漏(field failure)。使用FMEA为软件系统建模来提高可靠性的工程人员越来越多。    
    
    在诸多的方法、工具和实践中，FMEA毫无争议是开销最小，容易上手并最为有效的。**（我们需要学习的原因）** 。
