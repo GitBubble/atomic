@@ -1,7 +1,8 @@
 # atomic
-linus torvald ---
 
-Atomic instructions bypass the store buffer or at least they act as if they do - they likely actually use the store buffer, but they flush it and the instruction pipeline before the load and wait for it to drain after, and have a lock on the cacheline that they take as part o the load, and release as part of the store - all to make sure that the cacheline doesn't go away in between and that nobody else can see the store buffer contents while this is going on.
+
+`Atomic instructions bypass the store buffer or at least they act as if they do - they likely actually use the store buffer, but they flush it and the instruction pipeline before the load and wait for it to drain after, and have a lock on the cacheline that they take as part o the load, and release as part of the store - all to make sure that the cacheline doesn't go away in between and that nobody else can see the store buffer contents while this is going on.
+                                                                                 -linus torvald  `
 
 
 
