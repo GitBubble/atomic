@@ -31,44 +31,45 @@ atomic_perform.cpp comments:
 Methods tested
 Here is a list of the implemented algorithms with explanations:
 
-Read: reads the current value and increases control counter
-Write: reads the old value, increases it and writes it back
-Set: writes a loop counter into the protected variable
+Read: reads the current value and increases control counter   
+Write: reads the old value, increases it and writes it back    
+Set: writes a loop counter into the protected variable    
+
 0: Unlocked
-To get a reference to the costs of the locking, the probably race conditions prone flat increment & read was executed.
+To get a reference to the costs of the locking, the probably race conditions prone flat increment & read was executed.    
 
-1: Mutexes
-The classical way would be to protect the access to the variable by a mutex usind std::mutex. This is known to have much overhead.
+1: Mutexes   
+The classical way would be to protect the access to the variable by a mutex usind std::mutex. This is known to have much overhead.   
 
-2: Writelock / Writelock
-These “should” be cheaper than mutexes. We wanted to see whats happening if you don’t differentiate between read / write. We do pthread wrlock / wrlock for the *nix-es, SRWLock Exclusive / Exclusive on windows
+2: Writelock / Writelock   
+These “should” be cheaper than mutexes. We wanted to see whats happening if you don’t differentiate between read / write. We do pthread wrlock / wrlock for the *nix-es, SRWLock Exclusive / Exclusive on windows    
+ 
+3: Writelock / Readlock   
+These “should” be cheaper than mutexes. We do pthread wrlock / rdlock for the *nix-es, SRWLock Exclusive / Shared on windows   
 
-3: Writelock / Readlock
-These “should” be cheaper than mutexes. We do pthread wrlock / rdlock for the *nix-es, SRWLock Exclusive / Shared on windows
-
-4: Atomic Read & Write
-The new kid in town since C++ 11: Also called lockless. Atomic is here to ensure no races are to be expected while accessing a variable. The possible syntax can result in a very compact code, at which you may not always be aware the ‘a++’ you’re reading is actually involves the overhead of atomic operations. The implementation is strongly dependent on the CPU architecture and its support.
+4: Atomic Read & Write   
+The new kid in town since C++ 11: Also called lockless. Atomic is here to ensure no races are to be expected while accessing a variable. The possible syntax can result in a very compact code, at which you may not always be aware the ‘a++’ you’re reading is actually involves the overhead of atomic operations. The implementation is strongly dependent on the CPU architecture and its support.    
 
 5: Atomic Read “consume”, Atomic Set “release” for setting
 This way the expenses of the atomic operation comes quicker to the code readers eye; its using the setter & getter methods. The test case doesn’t increment the int, it simply sets the counter as new value – thus the resulting numbers look different. Atomic Load is used to retrieve the value in the readers; It offers several heuristics; this test chooses the std::memory_order_consume for reading, std::memory_order_release for setting..
 
-6: Atomic Read “acquire”, Atomic Set “release” for setting
-This way the expenses of the atomic operation comes quicker to the code readers eye; its using the setter & getter methods. The test case doesn’t increment the int, it simply sets the counter as new value – thus the resulting numbers look different. Atomic Load is used to retrieve the value in the readers; It offers several heuristics; this test chooses the std::memory_order_acquire, std::memory_order_release for setting.
+6: Atomic Read “acquire”, Atomic Set “release” for setting    
+This way the expenses of the atomic operation comes quicker to the code readers eye; its using the setter & getter methods. The test case doesn’t increment the int, it simply sets the counter as new value – thus the resulting numbers look different. Atomic Load is used to retrieve the value in the readers; It offers several heuristics; this test chooses the std::memory_order_acquire, std::memory_order_release for setting.   
 
-7: Atomic Read “consume”, Atomic Set “cst – consistent” for setting
+7: Atomic Read “consume”, Atomic Set “cst – consistent” for setting      
 This way the expenses of the atomic operation comes quicker to the code readers eye; its using the setter & getter methods. The test case doesn’t increment the int, it simply sets the counter as new value – thus the resulting numbers look different. Atomic Load is used to retrieve the value in the readers; It offers several heuristics; this test chooses the std::memory_order_consume, std::memory_order_seq_cst for setting.
 
-8: Atomic Read “acquire”, Atomic Set “cst – consistent” for setting
+8: Atomic Read “acquire”, Atomic Set “cst – consistent” for setting     
 This way the expenses of the atomic operation comes quicker to the code readers eye; its using the setter & getter methods. The test case doesn’t increment the int, it simply sets the counter as new value – thus the resulting numbers look different. Atomic Load is used to retrieve the value in the readers; It offers several heuristics; this test chooses the std::memory_order_acquire, std::memory_order_seq_cst for setting.
 
-9: Atomic Read “consume”, Atomic Set “relaxed” for setting
+9: Atomic Read “consume”, Atomic Set “relaxed” for setting   
 This way the expenses of the atomic operation comes quicker to the code readers eye; its using the setter & getter methods. The test case doesn’t increment the int, it simply sets the counter as new value – thus the resulting numbers look different. Atomic Load is used to retrieve the value in the readers; It offers several heuristics; this test chooses the std::memory_order_consume, std::memory_order_relaxed for setting.
 
-10: Atomic Read “acquire”, Atomic Set “relaxed” for setting
+10: Atomic Read “acquire”, Atomic Set “relaxed” for setting  
 This way the expenses of the atomic operation comes quicker to the code readers eye; its using the setter & getter methods. The test case doesn’t increment the int, it simply sets the counter as new value – thus the resulting numbers look different. Atomic Load is used to retrieve the value in the readers; It offers several heuristics; this test chooses the std::memory_order_acquire, *std::memory_order_relaxed for setting.
 
-11: Atomic Read “Acquire”, Atomic exchange weak for writing
+11: Atomic Read “Acquire”, Atomic exchange weak for writing   
 This way the expenses of the atomic operation comes quicker to the readers eye; its using the setter & getter methods. This test case implements incrementing using while loops, as suggested by the documentation. Atomic Load is used to retrieve the value in the readers; It offers several heuristics; this test chooses the std::memory_order_acquire, std::memory_order_relaxed for setting.
 
-12: Atomic Read “consume”, Atomic exchange weak for writing
+12: Atomic Read “consume”, Atomic exchange weak for writing    
 This way the expenses of the atomic operation comes quicker to the readers eye; its using the setter & getter methods. This test case implements incrementing using while loops, as suggested by the documentation. Atomic Load is used to retrieve the value in the readers; It offers several heuristics; this test chooses the std::memory_order_consume, std::memory_order_relaxed for setting.
