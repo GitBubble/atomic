@@ -73,3 +73,12 @@ This way the expenses of the atomic operation comes quicker to the readers eye; 
 
 12: Atomic Read “consume”, Atomic exchange weak for writing    
 This way the expenses of the atomic operation comes quicker to the readers eye; its using the setter & getter methods. This test case implements incrementing using while loops, as suggested by the documentation. Atomic Load is used to retrieve the value in the readers; It offers several heuristics; this test chooses the std::memory_order_consume, std::memory_order_relaxed for setting.
+
+
+A Data Synchronization Barrier (DSB) completes when all instructions before this instruction complete.
+A Data Memory Barrier (DMB) ensures that all explicit memory accesses before the DMB instruction complete before any explicit memory accesses after the DMB instruction start.
+An Instruction Synchronization Barrier (ISB) flushes the pipeline in the processor, so that all instructions following the ISB are fetched from cache or memory, after the ISB has been completed.
+
+
+
+
