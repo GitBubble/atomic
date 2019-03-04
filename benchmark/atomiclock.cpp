@@ -4,7 +4,7 @@
 #include <stdint.h>
 #include <unistd.h>
 #include <atomic>
-//#include <iostream>
+#include <iostream>
 
 namespace hiva {
 namespace base {
@@ -133,9 +133,10 @@ int main()
 
   hiva::base::AtomicRWLock rw_lock(false);
   //auto start = hiva::utility::Time::MonoTime();
-  for (int i = 0; i < 1000000; ++i) {
+  for (int i = 0; i < 5; ++i) {
     hiva::base::WriteLockGuard lg(rw_lock);
-  } 
+  }
+  std::cout<<"test aarch64 assembly"; 
   //auto end = hiva::utility::Time::MonoTime();
   //std::cout << "rw lock 1000000 times: " << end - start << std::endl;
     return 0;
