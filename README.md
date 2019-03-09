@@ -25,7 +25,7 @@ TSO(total store ordering)
       let the programmer make decision..        
 
 
-atomic_perform.cpp comments:
+## atomic_perform.cpp README:
 
 
 Methods tested
@@ -72,13 +72,16 @@ This way the expenses of the atomic operation comes quicker to the code readers 
 This way the expenses of the atomic operation comes quicker to the readers eye; its using the setter & getter methods. This test case implements incrementing using while loops, as suggested by the documentation. Atomic Load is used to retrieve the value in the readers; It offers several heuristics; this test chooses the std::memory_order_acquire, std::memory_order_relaxed for setting.
 
 12: Atomic Read “consume”, Atomic exchange weak for writing    
-This way the expenses of the atomic operation comes quicker to the readers eye; its using the setter & getter methods. This test case implements incrementing using while loops, as suggested by the documentation. Atomic Load is used to retrieve the value in the readers; It offers several heuristics; this test chooses the std::memory_order_consume, std::memory_order_relaxed for setting.
+This way the expenses of the atomic operation comes quicker to the readers eye; its using the setter & getter methods. This test case implements incrementing using while loops, as suggested by the documentation. Atomic Load is used to retrieve the value in the readers; It offers several heuristics; this test chooses the std::memory_order_consume, std::memory_order_relaxed for setting.   
 
 
+## inside a 16xx DMB/WMB is used   
 A Data Synchronization Barrier (DSB) completes when all instructions before this instruction complete.
 A Data Memory Barrier (DMB) ensures that all explicit memory accesses before the DMB instruction complete before any explicit memory accesses after the DMB instruction start.
 An Instruction Synchronization Barrier (ISB) flushes the pipeline in the processor, so that all instructions following the ISB are fetched from cache or memory, after the ISB has been completed.
 
+## spinlocks tips   
+The longer a thread holds a lock, the greater the risk that the thread will be interrupted by the OS scheduler while holding the lock. If this happens, other threads will be left "spinning" (repeatedly trying to acquire the lock), while the thread holding the lock is not making progress towards releasing it. The result is an indefinite postponement until the thread holding the lock can finish and release it. 
 
 
 
