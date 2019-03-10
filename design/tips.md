@@ -17,3 +17,9 @@ https://www.osnews.com/story/29090/implementing-mutexes-in-the-qnx-neutrino-real
 it's interesting, the libstdc++ also adopt posix mutex type:
  https://github.com/gcc-mirror/gcc/blob/master/libgcc/gthr-posix.h   
  typedef pthread_mutex_t __gthread_mutex_t;  
+
+linus torvald's kernel repo has a good article about mutex design:
+https://github.com/torvalds/linux/blob/master/Documentation/locking/mutex-design.txt     
+
+here is a guy implement a pub/sub zero-copy demo:
+https://github.com/nickbjohnson4224/fastpub/blob/master/main.c    
