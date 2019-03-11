@@ -14,14 +14,14 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/service_discovery/container/graph.h"
+#include "hiva/service_discovery/container/graph.h"
 
 #include <string>
 
 #include "gtest/gtest.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace service_discovery {
 
 TEST(GraphTest, vertice) {
@@ -207,5 +207,5 @@ TEST(GraphTest, graph) {
 }
 
 }  // namespace service_discovery
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

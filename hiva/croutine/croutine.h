@@ -25,11 +25,11 @@
 #include <set>
 #include <string>
 
-#include "cyber/common/log.h"
-#include "cyber/croutine/detail/routine_context.h"
+#include "hiva/common/log.h"
+#include "hiva/croutine/detail/routine_context.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace croutine {
 
 using RoutineFunc = std::function<void()>;
@@ -209,7 +209,7 @@ inline void CRoutine::SetUpdateFlag() {
 }
 
 }  // namespace croutine
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_CROUTINE_CROUTINE_H_

@@ -14,14 +14,14 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/service_discovery/specific_manager/service_manager.h"
-#include "cyber/common/global_data.h"
-#include "cyber/common/log.h"
-#include "cyber/common/util.h"
-#include "cyber/time/time.h"
+#include "hiva/service_discovery/specific_manager/service_manager.h"
+#include "hiva/common/global_data.h"
+#include "hiva/common/log.h"
+#include "hiva/common/util.h"
+#include "hiva/time/time.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace service_discovery {
 
 ServiceManager::ServiceManager() {
@@ -120,5 +120,5 @@ void ServiceManager::DisposeLeave(const ChangeMsg& msg) {
 }
 
 }  // namespace service_discovery
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

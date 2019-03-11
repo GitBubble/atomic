@@ -20,10 +20,10 @@
 #include <chrono>
 #include <string>
 
-#include "cyber/common/macros.h"
+#include "hiva/common/macros.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 
 class ClientBase {
  public:
@@ -58,7 +58,7 @@ class ClientBase {
   }
 };
 
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_SERVICE_CLIENT_BASE_H_

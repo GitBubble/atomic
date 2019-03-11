@@ -14,12 +14,12 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/node/node.h"
-#include "cyber/common/global_data.h"
-#include "cyber/time/time.h"
+#include "hiva/node/node.h"
+#include "hiva/common/global_data.h"
+#include "hiva/time/time.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 
 using proto::RoleType;
 
@@ -45,5 +45,5 @@ void Node::ClearData() {
   }
 }
 
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

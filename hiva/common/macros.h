@@ -23,7 +23,7 @@
 #include <type_traits>
 #include <utility>
 
-#include "cyber/base/macros.h"
+#include "hiva/base/macros.h"
 
 DEFINE_TYPE_TRAIT(HasShutdown, Shutdown)
 

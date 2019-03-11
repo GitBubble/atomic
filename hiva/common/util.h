@@ -20,7 +20,7 @@
 #include <string>
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace common {
 
 inline std::size_t Hash(const std::string& key) {
@@ -28,7 +28,7 @@ inline std::size_t Hash(const std::string& key) {
 }
 
 }  // namespace common
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_COMMON_UTIL_H_

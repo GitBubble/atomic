@@ -24,7 +24,7 @@
 #include <utility>
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace base {
 
 template <typename T>
@@ -86,7 +86,7 @@ class ThreadSafeQueue {
 };
 
 }  // namespace base
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_BASE_THREAD_SAFE_QUEUE_H_

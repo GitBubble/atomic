@@ -25,26 +25,26 @@
 #include <unordered_map>
 #include <vector>
 
-#include "cyber/common/global_data.h"
-#include "cyber/common/log.h"
-#include "cyber/common/types.h"
-#include "cyber/proto/role_attributes.pb.h"
-#include "cyber/proto/transport_conf.pb.h"
-#include "cyber/task/task.h"
-#include "cyber/transport/message/history.h"
-#include "cyber/transport/rtps/participant.h"
-#include "cyber/transport/transmitter/intra_transmitter.h"
-#include "cyber/transport/transmitter/rtps_transmitter.h"
-#include "cyber/transport/transmitter/shm_transmitter.h"
-#include "cyber/transport/transmitter/transmitter.h"
+#include "hiva/common/global_data.h"
+#include "hiva/common/log.h"
+#include "hiva/common/types.h"
+#include "hiva/proto/role_attributes.pb.h"
+#include "hiva/proto/transport_conf.pb.h"
+#include "hiva/task/task.h"
+#include "hiva/transport/message/history.h"
+#include "hiva/transport/rtps/participant.h"
+#include "hiva/transport/transmitter/intra_transmitter.h"
+#include "hiva/transport/transmitter/rtps_transmitter.h"
+#include "hiva/transport/transmitter/shm_transmitter.h"
+#include "hiva/transport/transmitter/transmitter.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
-using apollo::cyber::proto::OptionalMode;
-using apollo::cyber::proto::QosDurabilityPolicy;
-using apollo::cyber::proto::RoleAttributes;
+using apollo::hiva::proto::OptionalMode;
+using apollo::hiva::proto::QosDurabilityPolicy;
+using apollo::hiva::proto::RoleAttributes;
 
 template <typename M>
 class HybridTransmitter : public Transmitter<M> {
@@ -267,7 +267,7 @@ void HybridTransmitter<M>::TransmitHistoryMsg(
   }
 
   auto attr = opposite_attr;
-  cyber::Async(&HybridTransmitter<M>::ThreadFunc, this, attr, unsent_msgs);
+  hiva::Async(&HybridTransmitter<M>::ThreadFunc, this, attr, unsent_msgs);
 }
 
 template <typename M>
@@ -288,7 +288,7 @@ void HybridTransmitter<M>::ThreadFunc(
 
   for (auto& item : msgs) {
     new_transmitter->Transmit(item.msg, item.msg_info);
-    cyber::USleep(1000);
+    hiva::USleep(1000);
   }
   new_transmitter->Disable();
   ADEBUG << "trans threadfunc exit.";
@@ -311,7 +311,7 @@ Relation HybridTransmitter<M>::GetRelation(
 }
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_TRANSPORT_TRANSMITTER_HYBRID_TRANSMITTER_H_

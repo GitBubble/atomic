@@ -14,15 +14,15 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/timer/timer_manager.h"
+#include "hiva/timer/timer_manager.h"
 
 #include <gtest/gtest.h>
 #include <memory>
 
-#include "cyber/common/log.h"
+#include "hiva/common/log.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 
 TEST(TimerManagerTest, Basic) {
   auto tm = TimerManager::Instance();
@@ -33,5 +33,5 @@ TEST(TimerManagerTest, Basic) {
   ASSERT_EQ(tm->IsRunning(), false);
 }
 
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

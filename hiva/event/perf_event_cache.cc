@@ -14,30 +14,30 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/event/perf_event_cache.h"
+#include "hiva/event/perf_event_cache.h"
 
 #include <string>
 
-#include "cyber/base/macros.h"
-#include "cyber/common/environment.h"
-#include "cyber/common/log.h"
-#include "cyber/common/macros.h"
-#include "cyber/state.h"
-#include "cyber/time/time.h"
+#include "hiva/base/macros.h"
+#include "hiva/common/environment.h"
+#include "hiva/common/log.h"
+#include "hiva/common/macros.h"
+#include "hiva/state.h"
+#include "hiva/time/time.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace event {
 
 using common::GetEnv;
 
 PerfEventCache::PerfEventCache() {
-  auto trans_perf = GetEnv("cyber_trans_perf");
+  auto trans_perf = GetEnv("hiva_trans_perf");
   if (trans_perf != "" &&
       std::stoi(trans_perf)) {
     enable_trans_perf_ = true;
   }
-  auto sched_perf = GetEnv("cyber_sched_perf");
+  auto sched_perf = GetEnv("hiva_sched_perf");
   if (sched_perf != "" &&
       std::stoi(sched_perf)) {
     enable_sched_perf_ = true;
@@ -68,7 +68,7 @@ PerfEventCache::~PerfEventCache() {
     io_thread_.join();
   }
 
-  of_ << cyber::Time::Now().ToNanosecond() << std::endl;
+  of_ << hiva::Time::Now().ToNanosecond() << std::endl;
   of_.flush();
   of_.close();
 }
@@ -109,7 +109,7 @@ void PerfEventCache::AddTransportEvent(const TransPerf event_id,
 void PerfEventCache::Run() {
   EventBasePtr event;
   int buf_size = 0;
-  while (!shutdown_ && !apollo::cyber::IsShutdown()) {
+  while (!shutdown_ && !apollo::hiva::IsShutdown()) {
     if (event_queue_.WaitDequeue(&event)) {
       of_ << event->SerializeToString() << std::endl;
       buf_size++;
@@ -123,12 +123,12 @@ void PerfEventCache::Run() {
 
 void PerfEventCache::Start() {
   auto now = Time::Now();
-  std::string perf_file = "cyber_perf_" + now.ToString() + ".data";
+  std::string perf_file = "hiva_perf_" + now.ToString() + ".data";
   of_.open(perf_file, std::ios::trunc);
   of_ << Time::Now().ToNanosecond() << std::endl;
   io_thread_ = std::thread(&PerfEventCache::Run, this);
 }
 
 }  // namespace event
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

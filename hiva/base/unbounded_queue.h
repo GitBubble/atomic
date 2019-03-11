@@ -23,7 +23,7 @@
 #include <memory>
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace base {
 
 template <typename T>
@@ -105,7 +105,7 @@ class UnboundedQueue {
 };
 
 }  // namespace base
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_BASE_UNBOUNDED_QUEUE_H_

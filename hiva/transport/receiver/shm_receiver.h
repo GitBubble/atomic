@@ -19,12 +19,12 @@
 
 #include <functional>
 
-#include "cyber/common/log.h"
-#include "cyber/transport/dispatcher/shm_dispatcher.h"
-#include "cyber/transport/receiver/receiver.h"
+#include "hiva/common/log.h"
+#include "hiva/transport/dispatcher/shm_dispatcher.h"
+#include "hiva/transport/receiver/receiver.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
 template <typename M>
@@ -93,7 +93,7 @@ void ShmReceiver<M>::Disable(const RoleAttributes& opposite_attr) {
 }
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_TRANSPORT_RECEIVER_SHM_RECEIVER_H_

@@ -14,14 +14,14 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/transport/common/identity.h"
+#include "hiva/transport/common/identity.h"
 
 #include <uuid/uuid.h>
 
-#include "cyber/common/util.h"
+#include "hiva/common/util.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
 Identity::Identity(bool need_generate) : hash_value_(0), hash_value_str_("") {
@@ -71,5 +71,5 @@ void Identity::Update() {
 }
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

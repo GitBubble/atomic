@@ -14,10 +14,10 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/croutine/detail/routine_context.h"
+#include "hiva/croutine/detail/routine_context.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace croutine {
 
 void MakeContext(const func &f1, const void *arg, RoutineContext *ctx) {
@@ -30,5 +30,5 @@ void MakeContext(const func &f1, const void *arg, RoutineContext *ctx) {
 }
 
 }  // namespace croutine
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

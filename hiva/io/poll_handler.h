@@ -20,11 +20,11 @@
 #include <atomic>
 #include <memory>
 
-#include "cyber/croutine/croutine.h"
-#include "cyber/io/poll_data.h"
+#include "hiva/croutine/croutine.h"
+#include "hiva/io/poll_data.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace io {
 
 class PollHandler {
@@ -52,7 +52,7 @@ class PollHandler {
 };
 
 }  // namespace io
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_IO_POLL_HANDLER_H_

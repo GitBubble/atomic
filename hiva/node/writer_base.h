@@ -21,10 +21,10 @@
 #include <string>
 #include <vector>
 
-#include "cyber/proto/role_attributes.pb.h"
+#include "hiva/proto/role_attributes.pb.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 
 class WriterBase {
  public:
@@ -50,7 +50,7 @@ class WriterBase {
   bool init_;
 };
 
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_NODE_WRITER_BASE_H_

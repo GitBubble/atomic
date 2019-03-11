@@ -14,15 +14,15 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/base/atomic_rw_lock.h"
+#include "hiva/base/atomic_rw_lock.h"
 
 #include <thread>
 
-#include "cyber/base/reentrant_rw_lock.h"
+#include "hiva/base/reentrant_rw_lock.h"
 #include "gtest/gtest.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace base {
 
 TEST(ReentrantRWLockTest, read_lock) {
@@ -92,5 +92,5 @@ TEST(ReentrantRWLockTest, write_lock) {
 }
 
 }  // namespace base
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

@@ -15,13 +15,13 @@
  *****************************************************************************/
 #include <memory>
 
-#include "cyber/class_loader/class_loader.h"
-#include "cyber/component/component.h"
-#include "cyber/examples/proto/examples.pb.h"
+#include "hiva/class_loader/class_loader.h"
+#include "hiva/component/component.h"
+#include "hiva/examples/proto/examples.pb.h"
 
-using apollo::cyber::examples::proto::Driver;
-using apollo::cyber::Component;
-using apollo::cyber::ComponentBase;
+using apollo::hiva::examples::proto::Driver;
+using apollo::hiva::Component;
+using apollo::hiva::ComponentBase;
 
 class CommonComponentSample : public Component<Driver, Driver> {
  public:

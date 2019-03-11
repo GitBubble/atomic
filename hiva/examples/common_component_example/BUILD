@@ -18,8 +18,8 @@ cc_library(
         "common_component_example.h",
     ],
     deps = [
-        "//cyber",
-        "//cyber/examples/proto:examples_cc_proto",
+        "//hiva",
+        "//hiva/examples/proto:examples_cc_proto",
     ],
 )
 

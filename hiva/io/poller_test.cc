@@ -14,7 +14,7 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/io/poller.h"
+#include "hiva/io/poller.h"
 
 #include <fcntl.h>
 #include <gtest/gtest.h>
@@ -22,7 +22,7 @@
 #include <thread>
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace io {
 
 TEST(PollerTest, operation) {
@@ -98,7 +98,7 @@ TEST(PollerTest, operation) {
 }
 
 }  // namespace io
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 int main(int argc, char** argv) {

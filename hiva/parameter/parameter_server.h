@@ -22,22 +22,22 @@
 #include <unordered_map>
 #include <vector>
 
-#include "cyber/parameter/parameter.h"
-#include "cyber/proto/parameter.pb.h"
-#include "cyber/service/service.h"
+#include "hiva/parameter/parameter.h"
+#include "hiva/proto/parameter.pb.h"
+#include "hiva/service/service.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 
 class Node;
 
 class ParameterServer {
  public:
-  using Param = apollo::cyber::proto::Param;
-  using NodeName = apollo::cyber::proto::NodeName;
-  using ParamName = apollo::cyber::proto::ParamName;
-  using BoolResult = apollo::cyber::proto::BoolResult;
-  using Params = apollo::cyber::proto::Params;
+  using Param = apollo::hiva::proto::Param;
+  using NodeName = apollo::hiva::proto::NodeName;
+  using ParamName = apollo::hiva::proto::ParamName;
+  using BoolResult = apollo::hiva::proto::BoolResult;
+  using Params = apollo::hiva::proto::Params;
   /**
    * @brief Construct a new ParameterServer object
    *
@@ -79,7 +79,7 @@ class ParameterServer {
   std::unordered_map<std::string, Param> param_map_;
 };
 
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_PARAMETER_PARAMETER_SERVER_H_

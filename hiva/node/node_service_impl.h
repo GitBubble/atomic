@@ -21,13 +21,13 @@
 #include <string>
 #include <vector>
 
-#include "cyber/common/global_data.h"
-#include "cyber/service/client.h"
-#include "cyber/service/service.h"
-#include "cyber/service_discovery/topology_manager.h"
+#include "hiva/common/global_data.h"
+#include "hiva/service/client.h"
+#include "hiva/service/service.h"
+#include "hiva/service_discovery/topology_manager.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 
 class Node;
 
@@ -99,7 +99,7 @@ auto NodeServiceImpl::CreateClient(const std::string& service_name) ->
   return client_ptr;
 }
 
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_NODE_NODE_SERVICE_IMPL_H_

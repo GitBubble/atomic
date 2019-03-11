@@ -28,14 +28,14 @@
 #include <utility>
 #include <vector>
 
-#include "cyber/base/bounded_queue.h"
-#include "cyber/time/duration.h"
-#include "cyber/timer/timing_slot.h"
+#include "hiva/base/bounded_queue.h"
+#include "hiva/time/duration.h"
+#include "hiva/timer/timing_slot.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 
-using apollo::cyber::base::BoundedQueue;
+using apollo::hiva::base::BoundedQueue;
 using CallHandler = std::function<void()>;
 
 static const int TIMING_WHEEL_SIZE = 128;
@@ -86,7 +86,7 @@ class TimingWheel {
   BoundedQueue<HandlePackage> handler_queue_;
 };
 
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_TIMER_TIMING_WHEEL_H_

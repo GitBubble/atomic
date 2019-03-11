@@ -14,7 +14,7 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/time/duration.h"
+#include "hiva/time/duration.h"
 
 #include <chrono>
 #include <iomanip>
@@ -22,7 +22,7 @@
 #include <thread>
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 
 Duration::Duration(int64_t nanoseconds) { nanoseconds_ = nanoseconds; }
 
@@ -120,5 +120,5 @@ std::ostream &operator<<(std::ostream &os, const Duration &rhs) {
   return os;
 }
 
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

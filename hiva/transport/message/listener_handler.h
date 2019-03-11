@@ -22,19 +22,19 @@
 #include <string>
 #include <unordered_map>
 
-#include "cyber/base/atomic_rw_lock.h"
-#include "cyber/base/signal.h"
-#include "cyber/common/log.h"
-#include "cyber/message/raw_message.h"
-#include "cyber/transport/message/message_info.h"
+#include "hiva/base/atomic_rw_lock.h"
+#include "hiva/base/signal.h"
+#include "hiva/common/log.h"
+#include "hiva/message/raw_message.h"
+#include "hiva/transport/message/message_info.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
-using apollo::cyber::base::AtomicRWLock;
-using apollo::cyber::base::ReadLockGuard;
-using apollo::cyber::base::WriteLockGuard;
+using apollo::hiva::base::AtomicRWLock;
+using apollo::hiva::base::ReadLockGuard;
+using apollo::hiva::base::WriteLockGuard;
 
 class ListenerHandlerBase;
 using ListenerHandlerBasePtr = std::shared_ptr<ListenerHandlerBase>;
@@ -167,7 +167,7 @@ void ListenerHandler<MessageT>::Run(const Message& msg,
 }
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_TRANSPORT_MESSAGE_LISTENER_HANDLER_H_

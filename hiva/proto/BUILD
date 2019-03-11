@@ -3,16 +3,16 @@
 package(default_visibility = ["//visibility:public"])
 
 cc_proto_library(
-    name = "cyber_conf_cc_proto",
+    name = "hiva_conf_cc_proto",
     deps = [
-        ":cyber_conf_proto",
+        ":hiva_conf_proto",
     ],
 )
 
 proto_library(
-    name = "cyber_conf_proto",
+    name = "hiva_conf_proto",
     srcs = [
-        "cyber_conf.proto",
+        "hiva_conf.proto",
     ],
     deps = [
         ":choreography_conf_proto",

@@ -17,16 +17,16 @@
 #ifndef CYBER_INIT_H_
 #define CYBER_INIT_H_
 
-#include "cyber/common/log.h"
-#include "cyber/state.h"
+#include "hiva/common/log.h"
+#include "hiva/state.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 
 bool Init(const char* binary_name);
 void Clear();
 
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_INIT_H_

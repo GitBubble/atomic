@@ -14,18 +14,18 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/transport/transmitter/intra_transmitter.h"
+#include "hiva/transport/transmitter/intra_transmitter.h"
 
 #include <gtest/gtest.h>
 #include <memory>
 #include <string>
 #include <vector>
 
-#include "cyber/proto/unit_test.pb.h"
-#include "cyber/transport/receiver/intra_receiver.h"
+#include "hiva/proto/unit_test.pb.h"
+#include "hiva/transport/receiver/intra_receiver.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
 class IntraTranceiverTest : public ::testing::Test {
@@ -137,5 +137,5 @@ TEST_F(IntraTranceiverTest, enable_and_disable) {
 }
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

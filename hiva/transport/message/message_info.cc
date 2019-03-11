@@ -14,14 +14,14 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/transport/message/message_info.h"
+#include "hiva/transport/message/message_info.h"
 
 #include <arpa/inet.h>
 
-#include "cyber/common/log.h"
+#include "hiva/common/log.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
 const std::size_t MessageInfo::kSize = 2 * ID_SIZE + sizeof(uint64_t);
@@ -116,5 +116,5 @@ bool MessageInfo::DeserializeFrom(const char* src, std::size_t len) {
 }
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

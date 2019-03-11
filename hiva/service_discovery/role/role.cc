@@ -14,12 +14,12 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/service_discovery/role/role.h"
+#include "hiva/service_discovery/role/role.h"
 
-#include "cyber/common/log.h"
+#include "hiva/common/log.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace service_discovery {
 
 using proto::RoleAttributes;
@@ -81,5 +81,5 @@ bool RoleServer::Match(const RoleAttributes& target_attr) const {
 }
 
 }  // namespace service_discovery
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

@@ -14,7 +14,7 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/init.h"
+#include "hiva/init.h"
 
 #include <libgen.h>
 #include <stdio.h>
@@ -24,30 +24,30 @@
 #include <csignal>
 #include <string>
 
-#include "cyber/binary.h"
-#include "cyber/common/environment.h"
-#include "cyber/common/file.h"
-#include "cyber/common/global_data.h"
-#include "cyber/data/data_dispatcher.h"
-#include "cyber/event/perf_event_cache.h"
-//#include "cyber/logger/async_logger.h"
-//#include "cyber/scheduler/scheduler.h"
-#include "cyber/service_discovery/topology_manager.h"
-//#include "cyber/task/task.h"
-#include "cyber/timer/timer_manager.h"
-#include "cyber/transport/transport.h"
+#include "hiva/binary.h"
+#include "hiva/common/environment.h"
+#include "hiva/common/file.h"
+#include "hiva/common/global_data.h"
+#include "hiva/data/data_dispatcher.h"
+#include "hiva/event/perf_event_cache.h"
+//#include "hiva/logger/async_logger.h"
+//#include "hiva/scheduler/scheduler.h"
+#include "hiva/service_discovery/topology_manager.h"
+//#include "hiva/task/task.h"
+#include "hiva/timer/timer_manager.h"
+#include "hiva/transport/transport.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 
-using apollo::cyber::common::EnsureDirectory;
-using apollo::cyber::common::GetAbsolutePath;
-using apollo::cyber::common::GetProtoFromFile;
-using apollo::cyber::common::WorkRoot;
-//using apollo::cyber::croutine::CRoutine;
-using apollo::cyber::event::PerfEventCache;
-//using apollo::cyber::scheduler::Scheduler;
-using apollo::cyber::service_discovery::TopologyManager;
+using apollo::hiva::common::EnsureDirectory;
+using apollo::hiva::common::GetAbsolutePath;
+using apollo::hiva::common::GetProtoFromFile;
+using apollo::hiva::common::WorkRoot;
+//using apollo::hiva::croutine::CRoutine;
+using apollo::hiva::event::PerfEventCache;
+//using apollo::hiva::scheduler::Scheduler;
+using apollo::hiva::service_discovery::TopologyManager;
 
 namespace {
 bool g_atexit_registered = false;
@@ -60,9 +60,9 @@ namespace {
 void InitLogger(const char* binary_name) {
   const char* slash = strrchr(binary_name, '/');
   if (slash) {
-    ::apollo::cyber::Binary::SetName(slash + 1);
+    ::apollo::hiva::Binary::SetName(slash + 1);
   } else {
-    ::apollo::cyber::Binary::SetName(binary_name);
+    ::apollo::hiva::Binary::SetName(binary_name);
   }
   CHECK_NOTNULL(common::GlobalData::Instance());
 
@@ -73,7 +73,7 @@ void InitLogger(const char* binary_name) {
 //  google::SetLogDestination(google::FATAL, "");
 //
   // Init async logger
-//  async_logger = new ::apollo::cyber::logger::AsyncLogger(
+//  async_logger = new ::apollo::hiva::logger::AsyncLogger(
 //      google::base::GetLogger(FLAGS_minloglevel), 2 * 1024 * 1024);
 //  google::base::SetLogger(FLAGS_minloglevel, async_logger);
 //  async_logger->Start();
@@ -130,5 +130,5 @@ void Clear() {
   SetState(STATE_SHUTDOWN);
 }
 
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

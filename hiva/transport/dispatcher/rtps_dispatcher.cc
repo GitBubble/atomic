@@ -14,10 +14,10 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/transport/dispatcher/rtps_dispatcher.h"
+#include "hiva/transport/dispatcher/rtps_dispatcher.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
 RtpsDispatcher::RtpsDispatcher() : participant_(nullptr) {}
@@ -84,5 +84,5 @@ void RtpsDispatcher::OnMessage(uint64_t channel_id,
 }
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

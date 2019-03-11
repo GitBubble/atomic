@@ -14,12 +14,12 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/io/poll_handler.h"
-#include "cyber/common/log.h"
-#include "cyber/io/poller.h"
+#include "hiva/io/poll_handler.h"
+#include "hiva/common/log.h"
+#include "hiva/io/poller.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace io {
 
 using croutine::CRoutine;
@@ -110,5 +110,5 @@ void PollHandler::ResponseCallback(const PollResponse& rsp) {
 }
 
 }  // namespace io
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

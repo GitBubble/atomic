@@ -1,8 +1,8 @@
 syntax = "proto2";
 
-package apollo.cyber.proto;
+package apollo.hiva.proto;
 
-import "cyber/proto/role_attributes.proto";
+import "hiva/proto/role_attributes.proto";
 
 enum ChangeType {
     CHANGE_NODE = 1;

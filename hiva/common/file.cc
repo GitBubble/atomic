@@ -14,7 +14,7 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/common/file.h"
+#include "hiva/common/file.h"
 
 #include <dirent.h>
 #include <errno.h>
@@ -25,7 +25,7 @@
 #include <string>
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace common {
 
 bool SetProtoToASCIIFile(const google::protobuf::Message &message,
@@ -319,5 +319,5 @@ std::string GetFileName(const std::string &path, const bool remove_extension) {
 std::string GetCurrentPath() { return std::string(get_current_dir_name()); }
 
 }  // namespace common
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

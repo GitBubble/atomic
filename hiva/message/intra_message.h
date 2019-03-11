@@ -22,13 +22,13 @@
 #include <string>
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace message {
 
 class IntraMessage {};
 
 }  // namespace message
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_MESSAGE_INTRA_MESSAGE_H_

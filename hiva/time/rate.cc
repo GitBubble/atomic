@@ -51,11 +51,11 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/time/rate.h"
-#include "cyber/common/log.h"
+#include "hiva/time/rate.h"
+#include "hiva/common/log.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 
 Rate::Rate(double frequency)
     : start_(Time::Now()),
@@ -110,5 +110,5 @@ void Rate::Reset() { start_ = Time::Now(); }
 
 Duration Rate::CycleTime() const { return actual_cycle_time_; }
 
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

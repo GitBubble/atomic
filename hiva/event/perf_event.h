@@ -21,10 +21,10 @@
 #include <sstream>
 #include <string>
 
-#include "cyber/common/global_data.h"
+#include "hiva/common/global_data.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace event {
 
 enum class EventType { SCHED_EVENT = 0, TRANS_EVENT = 1, TRY_FETCH_EVENT = 3 };
@@ -119,7 +119,7 @@ class TransportEvent : public EventBase {
 };
 
 }  // namespace event
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_EVENT_PERF_EVENT_H_

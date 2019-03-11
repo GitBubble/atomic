@@ -14,22 +14,22 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/croutine/croutine.h"
+#include "hiva/croutine/croutine.h"
 
 #include <utility>
 
-#include "cyber/base/concurrent_object_pool.h"
-#include "cyber/common/global_data.h"
-#include "cyber/common/log.h"
-#include "cyber/croutine/detail/routine_context.h"
-#include "cyber/event/perf_event_cache.h"
+#include "hiva/base/concurrent_object_pool.h"
+#include "hiva/common/global_data.h"
+#include "hiva/common/log.h"
+#include "hiva/croutine/detail/routine_context.h"
+#include "hiva/event/perf_event_cache.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace croutine {
 
-using apollo::cyber::event::PerfEventCache;
-using apollo::cyber::event::SchedPerf;
+using apollo::hiva::event::PerfEventCache;
+using apollo::hiva::event::SchedPerf;
 
 thread_local CRoutine *CRoutine::current_routine_ = nullptr;
 thread_local char *CRoutine::main_stack_ = nullptr;
@@ -94,5 +94,5 @@ RoutineState CRoutine::Resume() {
 void CRoutine::Stop() { force_stop_ = true; }
 
 }  // namespace croutine
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

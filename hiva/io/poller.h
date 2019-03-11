@@ -25,12 +25,12 @@
 #include <unordered_map>
 #include <vector>
 
-#include "cyber/base/atomic_rw_lock.h"
-#include "cyber/common/macros.h"
-#include "cyber/io/poll_data.h"
+#include "hiva/base/atomic_rw_lock.h"
+#include "hiva/common/macros.h"
+#include "hiva/io/poll_data.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace io {
 
 class Poller {
@@ -73,7 +73,7 @@ class Poller {
 };
 
 }  // namespace io
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_IO_POLLER_H_

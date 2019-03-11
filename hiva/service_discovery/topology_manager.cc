@@ -14,14 +14,14 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/service_discovery/topology_manager.h"
+#include "hiva/service_discovery/topology_manager.h"
 
-#include "cyber/common/global_data.h"
-#include "cyber/common/log.h"
-#include "cyber/time/time.h"
+#include "hiva/common/global_data.h"
+#include "hiva/common/log.h"
+#include "hiva/time/time.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace service_discovery {
 
 TopologyManager::TopologyManager()
@@ -167,7 +167,7 @@ bool TopologyManager::Convert(const PartInfo& info, ChangeMsg* msg) {
     return false;
   }
 
-  msg->set_timestamp(cyber::Time::Now().ToNanosecond());
+  msg->set_timestamp(hiva::Time::Now().ToNanosecond());
   msg->set_change_type(ChangeType::CHANGE_PARTICIPANT);
   msg->set_operate_type(opt_type);
   msg->set_role_type(RoleType::ROLE_PARTICIPANT);
@@ -198,5 +198,5 @@ bool TopologyManager::ParseParticipantName(const std::string& participant_name,
 }
 
 }  // namespace service_discovery
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

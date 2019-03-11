@@ -1,6 +1,6 @@
 syntax = "proto2";
 
-package apollo.cyber.proto;
+package apollo.hiva.proto;
 
 enum ParamType {
     NOT_SET = 0;

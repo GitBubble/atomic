@@ -14,11 +14,11 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/io/session.h"
-#include "cyber/common/log.h"
+#include "hiva/io/session.h"
+#include "hiva/common/log.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace io {
 
 Session::Session() : Session(-1) {}
@@ -220,5 +220,5 @@ ssize_t Session::Write(const void *buf, size_t count, int timeout_ms) {
 }
 
 }  // namespace io
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

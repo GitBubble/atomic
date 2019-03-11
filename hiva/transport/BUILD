@@ -29,8 +29,8 @@ cc_library(
         "sub_listener",
         "underlay_message",
         "underlay_message_type",
-        "//cyber/service_discovery:role",
-        "//cyber/timer:timer_manager",
+        "//hiva/service_discovery:role",
+        "//hiva/timer:timer_manager",
         "@fastrtps",
     ],
 )
@@ -40,8 +40,8 @@ cc_test(
     size = "small",
     srcs = ["transport_test.cc"],
     deps = [
-        "//cyber:cyber_core",
-        "//cyber/proto:unit_test_cc_proto",
+        "//hiva:hiva_core",
+        "//hiva/proto:unit_test_cc_proto",
         "@gtest",
     ],
 )
@@ -52,8 +52,8 @@ cc_library(
     hdrs = ["common/endpoint.h"],
     deps = [
         "identity",
-        "//cyber/common:global_data",
-        "//cyber/proto:role_attributes_cc_proto",
+        "//hiva/common:global_data",
+        "//hiva/proto:role_attributes_cc_proto",
     ],
 )
 
@@ -62,7 +62,7 @@ cc_library(
     srcs = ["common/identity.cc"],
     hdrs = ["common/identity.h"],
     deps = [
-        "//cyber/common:util",
+        "//hiva/common:util",
     ],
 )
 
@@ -73,7 +73,7 @@ cc_test(
         "common/common_test.cc",
     ],
     deps = [
-        "//cyber:cyber_core",
+        "//hiva:hiva_core",
         "@gtest//:main",
     ],
 )
@@ -85,7 +85,7 @@ cc_library(
     deps = [
         "listener_handler",
         "message_info",
-        "//cyber/proto:role_attributes_cc_proto",
+        "//hiva/proto:role_attributes_cc_proto",
     ],
 )
 
@@ -96,8 +96,8 @@ cc_test(
         "dispatcher/dispatcher_test.cc",
     ],
     deps = [
-        "//cyber:cyber_core",
-        "//cyber/proto:unit_test_cc_proto",
+        "//hiva:hiva_core",
+        "//hiva/proto:unit_test_cc_proto",
         "@gtest//:main",
     ],
 )
@@ -108,8 +108,8 @@ cc_library(
     hdrs = ["dispatcher/intra_dispatcher.h"],
     deps = [
         "dispatcher",
-        "//cyber/message:message_traits",
-        "//cyber/proto:role_attributes_cc_proto",
+        "//hiva/message:message_traits",
+        "//hiva/proto:role_attributes_cc_proto",
     ],
 )
 
@@ -120,8 +120,8 @@ cc_test(
         "dispatcher/intra_dispatcher_test.cc",
     ],
     deps = [
-        "//cyber:cyber_core",
-        "//cyber/proto:unit_test_cc_proto",
+        "//hiva:hiva_core",
+        "//hiva/proto:unit_test_cc_proto",
         "@gtest//:main",
     ],
 )
@@ -135,8 +135,8 @@ cc_library(
         "dispatcher",
         "participant",
         "sub_listener",
-        "//cyber/message:message_traits",
-        "//cyber/proto:role_attributes_cc_proto",
+        "//hiva/message:message_traits",
+        "//hiva/proto:role_attributes_cc_proto",
     ],
 )
 
@@ -147,8 +147,8 @@ cc_test(
         "dispatcher/rtps_dispatcher_test.cc",
     ],
     deps = [
-        "//cyber:cyber_core",
-        "//cyber/proto:unit_test_cc_proto",
+        "//hiva:hiva_core",
+        "//hiva/proto:unit_test_cc_proto",
         "@gtest",
     ],
 )
@@ -162,9 +162,9 @@ cc_library(
         "notifier_factory",
         "readable_info",
         "segment",
-        "//cyber/message:message_traits",
-        "//cyber/proto:proto_desc_cc_proto",
-        "//cyber/scheduler:scheduler_factory",
+        "//hiva/message:message_traits",
+        "//hiva/proto:proto_desc_cc_proto",
+        "//hiva/scheduler:scheduler_factory",
     ],
 )
 
@@ -175,8 +175,8 @@ cc_test(
         "dispatcher/shm_dispatcher_test.cc",
     ],
     deps = [
-        "//cyber:cyber_core",
-        "//cyber/proto:unit_test_cc_proto",
+        "//hiva:hiva_core",
+        "//hiva/proto:unit_test_cc_proto",
         "@gtest//:main",
     ],
 )
@@ -204,10 +204,10 @@ cc_library(
     srcs = ["message/message_info.cc"],
     hdrs = ["message/message_info.h"],
     deps = [
-        "//cyber/base:signal",
-        "//cyber/common",
-        "//cyber/message:raw_message",
-        "//cyber/transport:identity",
+        "//hiva/base:signal",
+        "//hiva/common",
+        "//hiva/message:raw_message",
+        "//hiva/transport:identity",
     ],
 )
 
@@ -218,7 +218,7 @@ cc_test(
         "message/message_test.cc",
     ],
     deps = [
-        "//cyber:cyber_core",
+        "//hiva:hiva_core",
         "@gtest//:main",
     ],
 )
@@ -229,7 +229,7 @@ cc_library(
     hdrs = ["qos/qos_profile_conf.h"],
     deps = [
         "history",
-        "//cyber/proto:qos_profile_cc_proto",
+        "//hiva/proto:qos_profile_cc_proto",
     ],
 )
 
@@ -283,7 +283,7 @@ cc_library(
     hdrs = ["rtps/attributes_filler.h"],
     deps = [
         "qos_profile_conf",
-        "//cyber/common:log",
+        "//hiva/common:log",
         "@fastrtps",
     ],
 )
@@ -304,7 +304,7 @@ cc_library(
     deps = [
         "underlay_message",
         "underlay_message_type",
-        "//cyber/common:global_data",
+        "//hiva/common:global_data",
     ],
 )
 
@@ -334,7 +334,7 @@ cc_test(
     size = "small",
     srcs = ["rtps/rtps_test.cc"],
     deps = [
-        "//cyber:cyber_core",
+        "//hiva:hiva_core",
         "@gtest//:main",
     ],
 )
@@ -344,8 +344,8 @@ cc_library(
     srcs = ["shm/block.cc"],
     hdrs = ["shm/block.h"],
     deps = [
-        "//cyber/base:atomic_rw_lock",
-        "//cyber/common:log",
+        "//hiva/base:atomic_rw_lock",
+        "//hiva/common:log",
     ],
 )
 
@@ -355,9 +355,9 @@ cc_library(
     hdrs = ["shm/condition_notifier.h"],
     deps = [
         "notifier_base",
-        "//cyber/common:global_data",
-        "//cyber/common:log",
-        "//cyber/common:util",
+        "//hiva/common:global_data",
+        "//hiva/common:log",
+        "//hiva/common:util",
     ],
 )
 
@@ -367,9 +367,9 @@ cc_library(
     hdrs = ["shm/multicast_notifier.h"],
     deps = [
         "notifier_base",
-        "//cyber/common:global_data",
-        "//cyber/common:log",
-        "//cyber/common:macros",
+        "//hiva/common:global_data",
+        "//hiva/common:log",
+        "//hiva/common:macros",
     ],
 )
 
@@ -389,8 +389,8 @@ cc_library(
         "condition_notifier",
         "multicast_notifier",
         "notifier_base",
-        "//cyber/common:global_data",
-        "//cyber/common:log",
+        "//hiva/common:global_data",
+        "//hiva/common:log",
     ],
 )
 
@@ -399,7 +399,7 @@ cc_library(
     srcs = ["shm/readable_info.cc"],
     hdrs = ["shm/readable_info.h"],
     deps = [
-        "//cyber/common:log",
+        "//hiva/common:log",
     ],
 )
 
@@ -411,8 +411,8 @@ cc_library(
         "block",
         "shm_conf",
         "state",
-        "//cyber/common:log",
-        "//cyber/common:util",
+        "//hiva/common:log",
+        "//hiva/common:util",
     ],
 )
 
@@ -421,7 +421,7 @@ cc_library(
     srcs = ["shm/shm_conf.cc"],
     hdrs = ["shm/shm_conf.h"],
     deps = [
-        "//cyber/common:log",
+        "//hiva/common:log",
     ],
 )
 
@@ -453,7 +453,7 @@ cc_library(
     deps = [
         "endpoint",
         "message_info",
-        "//cyber/event:perf_event_cache",
+        "//hiva/event:perf_event_cache",
     ],
 )
 
@@ -478,8 +478,8 @@ cc_test(
     size = "small",
     srcs = ["transceiver/hybrid_transceiver_test.cc"],
     deps = [
-        "//cyber:cyber_core",
-        "//cyber/proto:unit_test_cc_proto",
+        "//hiva:hiva_core",
+        "//hiva/proto:unit_test_cc_proto",
         "@gtest",
     ],
 )
@@ -489,8 +489,8 @@ cc_test(
     size = "small",
     srcs = ["transceiver/intra_transceiver_test.cc"],
     deps = [
-        "//cyber:cyber_core",
-        "//cyber/proto:unit_test_cc_proto",
+        "//hiva:hiva_core",
+        "//hiva/proto:unit_test_cc_proto",
         "@gtest//:main",
     ],
 )
@@ -500,8 +500,8 @@ cc_test(
     size = "small",
     srcs = ["transceiver/rtps_transceiver_test.cc"],
     deps = [
-        "//cyber:cyber_core",
-        "//cyber/proto:unit_test_cc_proto",
+        "//hiva:hiva_core",
+        "//hiva/proto:unit_test_cc_proto",
         "@gtest",
     ],
 )
@@ -511,8 +511,8 @@ cc_test(
     size = "small",
     srcs = ["transceiver/shm_transceiver_test.cc"],
     deps = [
-        "//cyber:cyber_core",
-        "//cyber/proto:unit_test_cc_proto",
+        "//hiva:hiva_core",
+        "//hiva/proto:unit_test_cc_proto",
         "@gtest//:main",
     ],
 )

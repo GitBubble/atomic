@@ -18,16 +18,16 @@
 #include <memory>
 #include <vector>
 
-#include "cyber/cyber.h"
-#include "cyber/init.h"
-#include "cyber/message/protobuf_factory.h"
-#include "cyber/parameter/parameter_server.h"
+#include "hiva/hiva.h"
+#include "hiva/init.h"
+#include "hiva/message/protobuf_factory.h"
+#include "hiva/parameter/parameter_server.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 
-using apollo::cyber::proto::Param;
-using apollo::cyber::proto::ParamType;
+using apollo::hiva::proto::Param;
+using apollo::hiva::proto::ParamType;
 
 class ParameterServerTest : public ::testing::Test {
  protected:
@@ -39,7 +39,7 @@ class ParameterServerTest : public ::testing::Test {
 
   virtual void SetUp() {
     // Called before every TEST_F(ParameterServerTest, *)
-    apollo::cyber::Init("parameter_server_test");
+    apollo::hiva::Init("parameter_server_test");
     node_ = CreateNode("parameter_server");
     ps_.reset(new ParameterServer(node_));
   }
@@ -70,5 +70,5 @@ TEST_F(ParameterServerTest, list_parameter) {
   EXPECT_EQ(1, parameters[0].AsInt64());
 }
 
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

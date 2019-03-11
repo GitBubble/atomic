@@ -20,10 +20,10 @@
 #include <atomic>
 #include <memory>
 
-#include "cyber/timer/timer_manager.h"
+#include "hiva/timer/timer_manager.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 
 struct TimerOption {
   uint32_t period;                 // The period of the timer, unit is ms
@@ -80,7 +80,7 @@ class Timer {
   std::atomic<bool> started_ = {false};
 };
 
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_TIMER_TIMER_H_

@@ -12,18 +12,18 @@ cc_library(
     ],
     linkopts = ["-latomic"],
     deps = [
-        "//cyber/base:atomic_hash_map",
-        "//cyber/base:atomic_rw_lock",
-        "//cyber/base:bounded_queue",
-        "//cyber/base:concurrent_object_pool",
-        "//cyber/base:macros",
-        "//cyber/base:wait_strategy",
-        "//cyber/common",
-        "//cyber/croutine:routine_context",
-        "//cyber/croutine:routine_factory",
-        "//cyber/croutine:swap",
-        "//cyber/event:perf_event_cache",
-        "//cyber/time",
+        "//hiva/base:atomic_hash_map",
+        "//hiva/base:atomic_rw_lock",
+        "//hiva/base:bounded_queue",
+        "//hiva/base:concurrent_object_pool",
+        "//hiva/base:macros",
+        "//hiva/base:wait_strategy",
+        "//hiva/common",
+        "//hiva/croutine:routine_context",
+        "//hiva/croutine:routine_factory",
+        "//hiva/croutine:swap",
+        "//hiva/event:perf_event_cache",
+        "//hiva/time",
     ],
 )
 
@@ -36,7 +36,7 @@ cc_library(
         "detail/routine_context.h",
     ],
     deps = [
-        "//cyber/common",
+        "//hiva/common",
     ],
 )
 
@@ -46,8 +46,8 @@ cc_library(
         "routine_factory.h",
     ],
     deps = [
-        "//cyber/common",
-        "//cyber/event:perf_event_cache",
+        "//hiva/common",
+        "//hiva/event:perf_event_cache",
     ],
 )
 
@@ -65,7 +65,7 @@ cc_test(
         "croutine_test.cc",
     ],
     deps = [
-        "//cyber",
+        "//hiva",
         "@gtest//:main",
     ],
 )

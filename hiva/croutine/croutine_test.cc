@@ -13,21 +13,21 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *****************************************************************************/
-#include "cyber/croutine/croutine.h"
+#include "hiva/croutine/croutine.h"
 
-#include "cyber/common/global_data.h"
-#include "cyber/cyber.h"
-#include "cyber/init.h"
+#include "hiva/common/global_data.h"
+#include "hiva/hiva.h"
+#include "hiva/init.h"
 #include "gtest/gtest.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace croutine {
 
 void function() { CRoutine::Yield(RoutineState::IO_WAIT); }
 
 TEST(Croutine, croutinetest) {
-  apollo::cyber::Init("croutine_test");
+  apollo::hiva::Init("croutine_test");
   std::shared_ptr<CRoutine> cr = std::make_shared<CRoutine>(function);
   auto id = GlobalData::RegisterTaskName("croutine");
   cr->set_id(id);
@@ -49,5 +49,5 @@ TEST(Croutine, croutinetest) {
 }
 
 }  // namespace croutine
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

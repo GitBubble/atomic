@@ -22,12 +22,12 @@
 #include <memory>
 #include <thread>
 
-#include "cyber/base/bounded_queue.h"
-#include "cyber/common/macros.h"
-#include "cyber/event/perf_event.h"
+#include "hiva/base/bounded_queue.h"
+#include "hiva/common/macros.h"
+#include "hiva/event/perf_event.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace event {
 
 class PerfEventCache {
@@ -59,7 +59,7 @@ class PerfEventCache {
   DECLARE_SINGLETON(PerfEventCache)
 };
 }  // namespace event
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_INIT_H_

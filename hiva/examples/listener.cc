@@ -14,24 +14,24 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/cyber.h"
-#include "cyber/examples/proto/examples.pb.h"
+#include "hiva/hiva.h"
+#include "hiva/examples/proto/examples.pb.h"
 
 void MessageCallback(
-    const std::shared_ptr<apollo::cyber::examples::proto::Chatter>& msg) {
+    const std::shared_ptr<apollo::hiva::examples::proto::Chatter>& msg) {
   AINFO << "Received message seq-> " << msg->seq();
   AINFO << "msgcontent->" << msg->content();
 }
 
 int main(int argc, char* argv[]) {
-  // init cyber framework
-  apollo::cyber::Init(argv[0]);
+  // init hiva framework
+  apollo::hiva::Init(argv[0]);
   // create listener node
-  auto listener_node = apollo::cyber::CreateNode("listener");
+  auto listener_node = apollo::hiva::CreateNode("listener");
   // create listener
   auto listener =
-      listener_node->CreateReader<apollo::cyber::examples::proto::Chatter>(
+      listener_node->CreateReader<apollo::hiva::examples::proto::Chatter>(
           "channel/chatter", MessageCallback);
-  apollo::cyber::WaitForShutdown();
+  apollo::hiva::WaitForShutdown();
   return 0;
 }

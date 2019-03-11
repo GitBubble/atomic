@@ -14,12 +14,12 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/transport/shm/block.h"
+#include "hiva/transport/shm/block.h"
 
-#include "cyber/common/log.h"
+#include "hiva/common/log.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
 const int32_t Block::kRWLockFree = 0;
@@ -73,5 +73,5 @@ void Block::ReleaseWriteLock() { lock_num_.fetch_add(1); }
 void Block::ReleaseReadLock() { lock_num_.fetch_sub(1); }
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

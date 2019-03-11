@@ -21,7 +21,7 @@
 #include <vector>
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace data {
 
 template <typename T>
@@ -81,7 +81,7 @@ class CacheBuffer {
 };
 
 }  // namespace data
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_DATA_CACHE_BUFFER_H_

@@ -14,18 +14,18 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/cyber.h"
-#include "cyber/parameter/parameter_client.h"
-#include "cyber/parameter/parameter_server.h"
+#include "hiva/hiva.h"
+#include "hiva/parameter/parameter_client.h"
+#include "hiva/parameter/parameter_server.h"
 
-using apollo::cyber::Parameter;
-using apollo::cyber::ParameterServer;
-using apollo::cyber::ParameterClient;
+using apollo::hiva::Parameter;
+using apollo::hiva::ParameterServer;
+using apollo::hiva::ParameterClient;
 
 int main(int argc, char** argv) {
-  apollo::cyber::Init(*argv);
-  std::shared_ptr<apollo::cyber::Node> node =
-      apollo::cyber::CreateNode("parameter");
+  apollo::hiva::Init(*argv);
+  std::shared_ptr<apollo::hiva::Node> node =
+      apollo::hiva::CreateNode("parameter");
   auto param_server = std::make_shared<ParameterServer>(node);
   auto param_client = std::make_shared<ParameterClient>(node, "parameter");
   param_server->SetParameter(Parameter("int", 1));

@@ -14,13 +14,13 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/service_discovery/container/multi_value_warehouse.h"
-#include "cyber/service_discovery/container/single_value_warehouse.h"
+#include "hiva/service_discovery/container/multi_value_warehouse.h"
+#include "hiva/service_discovery/container/single_value_warehouse.h"
 
 #include "gtest/gtest.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace service_discovery {
 
 using proto::RoleAttributes;
@@ -275,5 +275,5 @@ TEST_F(WarehouseTest, get_all_roles) {
 }
 
 }  // namespace service_discovery
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

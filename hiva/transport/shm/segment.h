@@ -27,12 +27,12 @@
 #include <string>
 #include <unordered_map>
 
-#include "cyber/transport/shm/block.h"
-#include "cyber/transport/shm/shm_conf.h"
-#include "cyber/transport/shm/state.h"
+#include "hiva/transport/shm/block.h"
+#include "hiva/transport/shm/shm_conf.h"
+#include "hiva/transport/shm/state.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
 class Segment;
@@ -86,7 +86,7 @@ class Segment final {
 };
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_TRANSPORT_SHM_SEGMENT_H_

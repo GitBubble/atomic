@@ -14,14 +14,14 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/transport/shm/readable_info.h"
+#include "hiva/transport/shm/readable_info.h"
 
 #include <cstring>
 
-#include "cyber/common/log.h"
+#include "hiva/common/log.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
 const size_t ReadableInfo::kSize = sizeof(uint64_t) * 2 + sizeof(uint32_t);
@@ -77,5 +77,5 @@ bool ReadableInfo::DeserializeFrom(const char* src, std::size_t len) {
 }
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

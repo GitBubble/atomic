@@ -18,11 +18,11 @@ cc_library(
     deps = [
         "reader",
         "writer",
-        "//cyber/blocker:intra_reader",
-        "//cyber/blocker:intra_writer",
-        "//cyber/common:global_data",
-        "//cyber/message:message_traits",
-        "//cyber/proto:run_mode_conf_cc_proto",
+        "//hiva/blocker:intra_reader",
+        "//hiva/blocker:intra_writer",
+        "//hiva/common:global_data",
+        "//hiva/message:message_traits",
+        "//hiva/proto:run_mode_conf_cc_proto",
     ],
 )
 
@@ -32,10 +32,10 @@ cc_library(
     deps = [
         "reader",
         "writer",
-        "//cyber/common:global_data",
-        "//cyber/service",
-        "//cyber/service:client",
-        "//cyber/service_discovery:topology_manager",
+        "//hiva/common:global_data",
+        "//hiva/service",
+        "//hiva/service:client",
+        "//hiva/service_discovery:topology_manager",
     ],
 )
 
@@ -46,8 +46,8 @@ cc_test(
         "node_test.cc",
     ],
     deps = [
-        "//cyber",
-        "//cyber/proto:unit_test_cc_proto",
+        "//hiva",
+        "//hiva/proto:unit_test_cc_proto",
         "@gtest//:main",
     ],
 )
@@ -57,15 +57,15 @@ cc_library(
     hdrs = ["reader.h"],
     deps = [
         "reader_base",
-        "//cyber/blocker",
-        "//cyber/common:global_data",
-        "//cyber/croutine:routine_factory",
-        "//cyber/data:data_visitor",
-        "//cyber/proto:topology_change_cc_proto",
-        "//cyber/scheduler",
-        "//cyber/service_discovery:topology_manager",
-        "//cyber/time",
-        "//cyber/transport",
+        "//hiva/blocker",
+        "//hiva/common:global_data",
+        "//hiva/croutine:routine_factory",
+        "//hiva/data:data_visitor",
+        "//hiva/proto:topology_change_cc_proto",
+        "//hiva/scheduler",
+        "//hiva/service_discovery:topology_manager",
+        "//hiva/time",
+        "//hiva/transport",
     ],
 )
 
@@ -73,8 +73,8 @@ cc_library(
     name = "reader_base",
     hdrs = ["reader_base.h"],
     deps = [
-        "//cyber/event:perf_event_cache",
-        "//cyber/transport",
+        "//hiva/event:perf_event_cache",
+        "//hiva/transport",
     ],
 )
 
@@ -83,10 +83,10 @@ cc_library(
     hdrs = ["writer.h"],
     deps = [
         "writer_base",
-        "//cyber/common:log",
-        "//cyber/proto:topology_change_cc_proto",
-        "//cyber/service_discovery:topology_manager",
-        "//cyber/transport",
+        "//hiva/common:log",
+        "//hiva/proto:topology_change_cc_proto",
+        "//hiva/service_discovery:topology_manager",
+        "//hiva/transport",
     ],
 )
 
@@ -94,9 +94,9 @@ cc_library(
     name = "writer_base",
     hdrs = ["writer_base.h"],
     deps = [
-        "//cyber/common:macros",
-        "//cyber/common:util",
-        "//cyber/proto:role_attributes_cc_proto",
+        "//hiva/common:macros",
+        "//hiva/common:util",
+        "//hiva/proto:role_attributes_cc_proto",
     ],
 )
 
@@ -105,8 +105,8 @@ cc_test(
     size = "small",
     srcs = ["writer_reader_test.cc"],
     deps = [
-        "//cyber",
-        "//cyber/proto:unit_test_cc_proto",
+        "//hiva",
+        "//hiva/proto:unit_test_cc_proto",
         "@gtest",
     ],
 )

@@ -25,25 +25,25 @@
 #include <utility>
 #include <vector>
 
-#include "cyber/common/global_data.h"
-#include "cyber/common/log.h"
-#include "cyber/common/types.h"
-#include "cyber/proto/role_attributes.pb.h"
-#include "cyber/service_discovery/role/role.h"
-#include "cyber/task/task.h"
-#include "cyber/time/time.h"
-#include "cyber/transport/receiver/intra_receiver.h"
-#include "cyber/transport/receiver/rtps_receiver.h"
-#include "cyber/transport/receiver/shm_receiver.h"
-#include "cyber/transport/rtps/participant.h"
+#include "hiva/common/global_data.h"
+#include "hiva/common/log.h"
+#include "hiva/common/types.h"
+#include "hiva/proto/role_attributes.pb.h"
+#include "hiva/service_discovery/role/role.h"
+#include "hiva/task/task.h"
+#include "hiva/time/time.h"
+#include "hiva/transport/receiver/intra_receiver.h"
+#include "hiva/transport/receiver/rtps_receiver.h"
+#include "hiva/transport/receiver/shm_receiver.h"
+#include "hiva/transport/rtps/participant.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
-using apollo::cyber::proto::OptionalMode;
-using apollo::cyber::proto::QosDurabilityPolicy;
-using apollo::cyber::proto::RoleAttributes;
+using apollo::hiva::proto::OptionalMode;
+using apollo::hiva::proto::QosDurabilityPolicy;
+using apollo::hiva::proto::RoleAttributes;
 
 template <typename M>
 class HybridReceiver : public Receiver<M> {
@@ -252,7 +252,7 @@ void HybridReceiver<M>::ReceiveHistoryMsg(const RoleAttributes& opposite_attr) {
   }
 
   auto attr = opposite_attr;
-  cyber::Async(&HybridReceiver<M>::ThreadFunc, this, attr);
+  hiva::Async(&HybridReceiver<M>::ThreadFunc, this, attr);
 }
 
 template <typename M>
@@ -280,7 +280,7 @@ void HybridReceiver<M>::ThreadFunc(const RoleAttributes& opposite_attr) {
     if (is_msg_arrived) {
       is_msg_arrived = false;
     }
-    cyber::USleep(1000000);
+    hiva::USleep(1000000);
   } while (is_msg_arrived);
 
   receiver->Disable();
@@ -305,7 +305,7 @@ Relation HybridReceiver<M>::GetRelation(const RoleAttributes& opposite_attr) {
 }
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_TRANSPORT_RECEIVER_HYBRID_RECEIVER_H_

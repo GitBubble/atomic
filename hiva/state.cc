@@ -14,20 +14,20 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/state.h"
+#include "hiva/state.h"
 
 #include <atomic>
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 
 namespace {
-std::atomic<State> g_cyber_state;
+std::atomic<State> g_hiva_state;
 }
 
-State GetState() { return g_cyber_state.load(); }
+State GetState() { return g_hiva_state.load(); }
 
-void SetState(const State& state) { g_cyber_state.store(state); }
+void SetState(const State& state) { g_hiva_state.store(state); }
 
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

@@ -14,16 +14,16 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/data/data_dispatcher.h"
+#include "hiva/data/data_dispatcher.h"
 
 #include <gtest/gtest.h>
 #include <memory>
 #include <vector>
 
-#include "cyber/common/util.h"
+#include "hiva/common/util.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace data {
 
 template <typename T>
@@ -58,5 +58,5 @@ TEST(DataDispatcher, Dispatch) {
 }
 
 }  // namespace data
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

@@ -22,7 +22,7 @@
 #include <functional>
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace io {
 
 struct PollResponse {
@@ -45,7 +45,7 @@ struct PollCtrlParam {
 };
 
 }  // namespace io
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_IO_POLL_DATA_H_

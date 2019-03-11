@@ -1,8 +1,8 @@
 syntax = "proto2";
 
-package apollo.cyber.proto;
+package apollo.hiva.proto;
 
-import "cyber/proto/qos_profile.proto";
+import "hiva/proto/qos_profile.proto";
 
 message SocketAddr {
     optional string ip = 1;  // dotted decimal

@@ -21,10 +21,10 @@
 #include <memory>
 #include <string>
 
-#include "cyber/message/raw_message.h"
+#include "hiva/message/raw_message.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace message {
 
 // Template specialization for RawMessage
@@ -39,7 +39,7 @@ inline bool ParseFromArray(const void* data, int size, RawMessage* message) {
 inline int ByteSize(const RawMessage& message) { return message.ByteSize(); }
 
 }  // namespace message
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_MESSAGE_RAW_MESSAGE_TRAITS_H_

@@ -29,12 +29,12 @@
 #include "fastrtps/publisher/Publisher.h"
 #include "fastrtps/subscriber/Subscriber.h"
 
-#include "cyber/base/signal.h"
-#include "cyber/proto/topology_change.pb.h"
-#include "cyber/service_discovery/communication/subscriber_listener.h"
+#include "hiva/base/signal.h"
+#include "hiva/proto/topology_change.pb.h"
+#include "hiva/service_discovery/communication/subscriber_listener.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace service_discovery {
 
 using proto::ChangeMsg;
@@ -101,7 +101,7 @@ class Manager {
 };
 
 }  // namespace service_discovery
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_SERVICE_DISCOVERY_SPECIFIC_MANAGER_MANAGER_H_

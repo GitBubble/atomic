@@ -14,15 +14,15 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/timer/timer_manager.h"
+#include "hiva/timer/timer_manager.h"
 
-#include "cyber/common/log.h"
-#include "cyber/scheduler/scheduler_factory.h"
-#include "cyber/time/duration.h"
-#include "cyber/time/rate.h"
+#include "hiva/common/log.h"
+#include "hiva/scheduler/scheduler_factory.h"
+#include "hiva/time/duration.h"
+#include "hiva/time/rate.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 
 TimerManager::TimerManager()
     : timing_wheel_(Duration(0.01)),
@@ -78,5 +78,5 @@ void TimerManager::ThreadFuncImpl() {
   }
 }
 
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

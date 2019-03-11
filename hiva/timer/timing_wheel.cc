@@ -14,18 +14,18 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/timer/timing_wheel.h"
+#include "hiva/timer/timing_wheel.h"
 
 #include <algorithm>
 
-#include "cyber/base/for_each.h"
-#include "cyber/common/log.h"
-#include "cyber/task/task.h"
-#include "cyber/time/time.h"
-#include "cyber/timer/timer_task.h"
+#include "hiva/base/for_each.h"
+#include "hiva/common/log.h"
+#include "hiva/task/task.h"
+#include "hiva/time/time.h"
+#include "hiva/timer/timer_task.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 
 TimingWheel::TimingWheel() {
   if (!add_queue_.Init(BOUNDED_QUEUE_SIZE)) {
@@ -111,7 +111,7 @@ void TimingWheel::Step() {
   while (!handler_queue_.Empty()) {
     HandlePackage hp;
     if (handler_queue_.Dequeue(&hp)) {
-      cyber::Async(hp.handle);
+      hiva::Async(hp.handle);
     }
   }
 }
@@ -176,5 +176,5 @@ void TimingWheel::FillSlot(const std::shared_ptr<TimerTask>& task) {
 
   ADEBUG << "task id " << task->Id() << " insert to index " << idx;
 }
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

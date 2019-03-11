@@ -13,10 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *****************************************************************************/
-#include "cyber/examples/common_component_example/common_component_example.h"
+#include "hiva/examples/common_component_example/common_component_example.h"
 
-#include "cyber/class_loader/class_loader.h"
-#include "cyber/component/component.h"
+#include "hiva/class_loader/class_loader.h"
+#include "hiva/component/component.h"
 
 bool CommonComponentSample::Init() {
   AINFO << "Commontest component init";

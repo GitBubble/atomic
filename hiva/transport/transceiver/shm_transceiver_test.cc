@@ -20,14 +20,14 @@
 #include <thread>
 #include <vector>
 
-#include "cyber/common/global_data.h"
-#include "cyber/common/util.h"
-#include "cyber/proto/unit_test.pb.h"
-#include "cyber/transport/receiver/shm_receiver.h"
-#include "cyber/transport/transmitter/shm_transmitter.h"
+#include "hiva/common/global_data.h"
+#include "hiva/common/util.h"
+#include "hiva/proto/unit_test.pb.h"
+#include "hiva/transport/receiver/shm_receiver.h"
+#include "hiva/transport/transmitter/shm_transmitter.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
 class ShmTransceiverTest : public ::testing::Test {
@@ -148,5 +148,5 @@ TEST_F(ShmTransceiverTest, enable_and_disable) {
 }
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

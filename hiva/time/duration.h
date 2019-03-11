@@ -24,7 +24,7 @@
 #include <stdexcept>
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 
 class Duration {
  public:
@@ -62,7 +62,7 @@ class Duration {
 
 std::ostream &operator<<(std::ostream &os, const Duration &rhs);
 
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_TIME_DURATION_H_

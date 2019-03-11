@@ -22,10 +22,10 @@
 #include <memory>
 #include <string>
 
-#include "cyber/message/protobuf_factory.h"
+#include "hiva/message/protobuf_factory.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace message {
 
 struct RawMessage {
@@ -91,14 +91,14 @@ struct RawMessage {
 
   int ByteSize() const { return static_cast<int>(message.size()); }
 
-  static std::string TypeName() { return "apollo.cyber.message.RawMessage"; }
+  static std::string TypeName() { return "apollo.hiva.message.RawMessage"; }
 
   std::string message;
   uint64_t timestamp;
 };
 
 }  // namespace message
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_MESSAGE_RAW_MESSAGE_H_

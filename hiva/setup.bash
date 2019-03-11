@@ -1,12 +1,12 @@
 export CYBER_PATH=$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)
-binary_path="/apollo/bazel-bin/cyber"
-cyber_tool_path="/apollo/bazel-bin/cyber/tools"
+binary_path="/apollo/bazel-bin/hiva"
+hiva_tool_path="/apollo/bazel-bin/hiva/tools"
 apollo_tool_path="/apollo/bazel-bin/modules/tools"
-recorder_path="${cyber_tool_path}/cyber_recorder"
-monitor_path="${cyber_tool_path}/cyber_monitor"
+recorder_path="${hiva_tool_path}/hiva_recorder"
+monitor_path="${hiva_tool_path}/hiva_monitor"
 visualizer_path="${apollo_tool_path}/visualizer"
-PYTHON_LD_PATH="/apollo/bazel-bin/cyber/py_wrapper"
-launch_path="${CYBER_PATH}/tools/cyber_launch"
+PYTHON_LD_PATH="/apollo/bazel-bin/hiva/py_wrapper"
+launch_path="${CYBER_PATH}/tools/hiva_launch"
 qt_path=/usr/local/Qt5.5.1/5.5/gcc_64
 rosbag_to_record_path="/apollo/bazel-bin/modules/data/tools/rosbag_to_record"
 
@@ -24,11 +24,11 @@ export GLOG_alsologtostderr=0
 export GLOG_colorlogtostderr=1
 export GLOG_minloglevel=0
 
-export cyber_trans_perf=0
-export cyber_sched_perf=0
+export hiva_trans_perf=0
+export hiva_sched_perf=0
 
 # for DEBUG log
 #export GLOG_minloglevel=-1
 #export GLOG_v=4
 
-source ${CYBER_PATH}/tools/cyber_tools_auto_complete.bash
+source ${CYBER_PATH}/tools/hiva_tools_auto_complete.bash

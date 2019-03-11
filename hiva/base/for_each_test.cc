@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *****************************************************************************/
-#include "cyber/base/for_each.h"
+#include "hiva/base/for_each.h"
 
 #include <gtest/gtest.h>
 #include <iostream>
@@ -21,7 +21,7 @@
 #include <vector>
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace base {
 
 TEST(ForEachTest, base) {
@@ -36,5 +36,5 @@ TEST(ForEachTest, base) {
 }
 
 }  // namespace base
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

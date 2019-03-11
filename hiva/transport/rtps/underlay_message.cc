@@ -30,10 +30,10 @@ char dummy;
 #include <fastcdr/Cdr.h>
 #include <fastcdr/exceptions/BadParamException.h>
 
-#include "cyber/transport/rtps/underlay_message.h"
+#include "hiva/transport/rtps/underlay_message.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
 UnderlayMessage::UnderlayMessage() {
@@ -142,5 +142,5 @@ void UnderlayMessage::serializeKey(eprosima::fastcdr::Cdr& scdr) const {
 }
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

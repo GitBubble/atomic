@@ -14,21 +14,21 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/service_discovery/specific_manager/channel_manager.h"
+#include "hiva/service_discovery/specific_manager/channel_manager.h"
 
 #include <gtest/gtest.h>
 #include <memory>
 #include <string>
 #include <vector>
 
-#include "cyber/common/global_data.h"
-#include "cyber/message/message_traits.h"
-#include "cyber/message/protobuf_factory.h"
-#include "cyber/proto/unit_test.pb.h"
-#include "cyber/transport/common/identity.h"
+#include "hiva/common/global_data.h"
+#include "hiva/message/message_traits.h"
+#include "hiva/message/protobuf_factory.h"
+#include "hiva/proto/unit_test.pb.h"
+#include "hiva/transport/common/identity.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace service_discovery {
 
 class ChannelManagerTest : public ::testing::Test {
@@ -431,5 +431,5 @@ TEST_F(ChannelManagerTest, is_message_type_matching) {
 }
 
 }  // namespace service_discovery
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

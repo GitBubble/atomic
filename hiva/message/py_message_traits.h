@@ -21,10 +21,10 @@
 #include <memory>
 #include <string>
 
-#include "cyber/message/py_message.h"
+#include "hiva/message/py_message.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace message {
 
 // Template specialization for RawMessage
@@ -40,7 +40,7 @@ inline bool ParseFromArray(const void* data, int size, PyMessageWrap* message) {
 inline int ByteSize(const PyMessageWrap& message) { return message.ByteSize(); }
 
 }  // namespace message
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_MESSAGE_PY_MESSAGE_TRAITS_H_

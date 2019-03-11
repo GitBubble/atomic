@@ -14,16 +14,16 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/transport/shm/segment.h"
+#include "hiva/transport/shm/segment.h"
 
 #include <algorithm>
 
-#include "cyber/common/log.h"
-#include "cyber/common/util.h"
-#include "cyber/transport/shm/shm_conf.h"
+#include "hiva/common/log.h"
+#include "hiva/common/util.h"
+#include "hiva/transport/shm/shm_conf.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
 Segment::Segment(uint64_t channel_id, const ReadWriteMode& mode)
@@ -379,5 +379,5 @@ uint32_t Segment::GetNextWritableBlockIndex() {
 }
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

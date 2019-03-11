@@ -22,7 +22,7 @@
 #include <mutex>
 #include <string>
 
-#include "cyber/transport/rtps/underlay_message_type.h"
+#include "hiva/transport/rtps/underlay_message_type.h"
 #include "fastrtps/Domain.h"
 #include "fastrtps/attributes/ParticipantAttributes.h"
 #include "fastrtps/participant/Participant.h"
@@ -30,7 +30,7 @@
 #include "fastrtps/rtps/common/Locator.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
 class Participant;
@@ -62,7 +62,7 @@ class Participant {
 };
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_TRANSPORT_RTPS_PARTICIPANT_H_

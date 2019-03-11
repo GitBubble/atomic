@@ -24,16 +24,16 @@
 #include <mutex>
 #include <string>
 
-#include "cyber/base/signal.h"
-#include "cyber/common/macros.h"
-#include "cyber/service_discovery/communication/participant_listener.h"
-#include "cyber/service_discovery/specific_manager/channel_manager.h"
-#include "cyber/service_discovery/specific_manager/node_manager.h"
-#include "cyber/service_discovery/specific_manager/service_manager.h"
-#include "cyber/transport/rtps/participant.h"
+#include "hiva/base/signal.h"
+#include "hiva/common/macros.h"
+#include "hiva/service_discovery/communication/participant_listener.h"
+#include "hiva/service_discovery/specific_manager/channel_manager.h"
+#include "hiva/service_discovery/specific_manager/node_manager.h"
+#include "hiva/service_discovery/specific_manager/service_manager.h"
+#include "hiva/transport/rtps/participant.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace service_discovery {
 
 class NodeManager;
@@ -91,7 +91,7 @@ class TopologyManager {
 };
 
 }  // namespace service_discovery
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_SERVICE_DISCOVERY_TOPOLOGY_H_

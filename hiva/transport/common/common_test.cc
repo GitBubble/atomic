@@ -20,12 +20,12 @@
 #include <gtest/gtest.h>
 #include <string>
 
-#include "cyber/common/global_data.h"
-#include "cyber/transport/common/endpoint.h"
-#include "cyber/transport/common/identity.h"
+#include "hiva/common/global_data.h"
+#include "hiva/transport/common/endpoint.h"
+#include "hiva/transport/common/identity.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
 TEST(IdentityTest, identity_test) {
@@ -69,5 +69,5 @@ TEST(EndpointTest, endpoint_test) {
 }
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

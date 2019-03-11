@@ -13,13 +13,13 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *****************************************************************************/
-#include "cyber/parameter/parameter_server.h"
-#include "cyber/common/log.h"
-#include "cyber/node/node.h"
-#include "cyber/parameter/parameter_service_names.h"
+#include "hiva/parameter/parameter_server.h"
+#include "hiva/common/log.h"
+#include "hiva/node/node.h"
+#include "hiva/parameter/parameter_service_names.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 
 ParameterServer::ParameterServer(const std::shared_ptr<Node>& node)
     : node_(node) {
@@ -82,5 +82,5 @@ void ParameterServer::ListParameters(std::vector<Parameter>* parameters) {
   }
 }
 
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

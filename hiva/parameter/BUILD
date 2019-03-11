@@ -11,8 +11,8 @@ cc_library(
         "parameter.h",
     ],
     deps = [
-        "//cyber/message:protobuf_factory",
-        "//cyber/proto:parameter_cc_proto",
+        "//hiva/message:protobuf_factory",
+        "//hiva/proto:parameter_cc_proto",
     ],
 )
 
@@ -23,7 +23,7 @@ cc_test(
         "parameter_test.cc",
     ],
     deps = [
-        "//cyber",
+        "//hiva",
         "@gtest//:main",
     ],
 )
@@ -39,8 +39,8 @@ cc_library(
     deps = [
         "parameter",
         "parameter_service_names",
-        "//cyber/node",
-        "//cyber/service:client",
+        "//hiva/node",
+        "//hiva/service:client",
         "@fastrtps",
     ],
 )
@@ -52,7 +52,7 @@ cc_test(
         "parameter_client_test.cc",
     ],
     deps = [
-        "//cyber",
+        "//hiva",
         "@gtest",
     ],
 )
@@ -68,8 +68,8 @@ cc_library(
     deps = [
         "parameter",
         "parameter_service_names",
-        "//cyber/node",
-        "//cyber/service",
+        "//hiva/node",
+        "//hiva/service",
         "@fastrtps",
     ],
 )
@@ -81,7 +81,7 @@ cc_test(
         "parameter_server_test.cc",
     ],
     deps = [
-        "//cyber",
+        "//hiva",
         "@gtest//:main",
     ],
 )

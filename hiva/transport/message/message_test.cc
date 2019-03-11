@@ -19,18 +19,18 @@
 #include <string>
 #include <vector>
 
-#include "cyber/common/global_data.h"
-#include "cyber/message/raw_message.h"
-#include "cyber/transport/message/history.h"
-#include "cyber/transport/message/history_attributes.h"
-#include "cyber/transport/message/listener_handler.h"
-#include "cyber/transport/message/message_info.h"
+#include "hiva/common/global_data.h"
+#include "hiva/message/raw_message.h"
+#include "hiva/transport/message/history.h"
+#include "hiva/transport/message/history_attributes.h"
+#include "hiva/transport/message/listener_handler.h"
+#include "hiva/transport/message/message_info.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
-using apollo::cyber::message::RawMessage;
+using apollo::hiva::message::RawMessage;
 
 TEST(MessageInfoTest, message_info_test) {
   Identity sender_id;
@@ -163,5 +163,5 @@ TEST(ListenerHandlerTest, listener_handler_test) {
 }
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

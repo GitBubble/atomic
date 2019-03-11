@@ -18,10 +18,10 @@
 
 #include <stdlib.h>
 
-#include "cyber/common/environment.h"
+#include "hiva/common/environment.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace common {
 
 TEST(EnvironmentTest, get_env) {
@@ -45,5 +45,5 @@ TEST(EnvironmentTest, work_root) {
 }
 
 }  // namespace common
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

@@ -14,12 +14,12 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/service_discovery/communication/participant_listener.h"
+#include "hiva/service_discovery/communication/participant_listener.h"
 
-#include "cyber/common/log.h"
+#include "hiva/common/log.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace service_discovery {
 
 ParticipantListener::ParticipantListener(const ChangeFunc& callback)
@@ -39,5 +39,5 @@ void ParticipantListener::onParticipantDiscovery(
 }
 
 }  // namespace service_discovery
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

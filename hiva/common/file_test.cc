@@ -14,7 +14,7 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/common/file.h"
+#include "hiva/common/file.h"
 
 #include <gmock/gmock.h>
 #include <gtest/gtest.h>
@@ -22,16 +22,16 @@
 #include <string>
 #include <vector>
 
-#include "cyber/proto/unit_test.pb.h"
+#include "hiva/proto/unit_test.pb.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace common {
 
 TEST(FileTest, proto_set_get_test) {
-  apollo::cyber::proto::UnitTest message;
+  apollo::hiva::proto::UnitTest message;
   message.set_class_name("FileTest");
-  apollo::cyber::proto::UnitTest read_message;
+  apollo::hiva::proto::UnitTest read_message;
   EXPECT_FALSE(SetProtoToASCIIFile(message, -1));
   EXPECT_FALSE(SetProtoToASCIIFile(message, "not_exists_dir/message.proto"));
   EXPECT_TRUE(SetProtoToASCIIFile(message, "message.ascii"));
@@ -52,9 +52,9 @@ TEST(FileTest, proto_set_get_test) {
 }
 
 TEST(FileTest, file_utils_test) {
-  apollo::cyber::proto::UnitTest message;
+  apollo::hiva::proto::UnitTest message;
   message.set_class_name("FileTest");
-  apollo::cyber::proto::UnitTest read_message;
+  apollo::hiva::proto::UnitTest read_message;
   EXPECT_TRUE(SetProtoToBinaryFile(message, "message.binary"));
 
   std::string content;
@@ -148,5 +148,5 @@ TEST(FileTest, GetFileName) {
 }
 
 }  // namespace common
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

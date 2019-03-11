@@ -21,11 +21,11 @@
 #include <unordered_map>
 #include <vector>
 
-#include "cyber/base/atomic_rw_lock.h"
-#include "cyber/service_discovery/container/warehouse_base.h"
+#include "hiva/base/atomic_rw_lock.h"
+#include "hiva/service_discovery/container/warehouse_base.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace service_discovery {
 
 class MultiValueWarehouse : public WarehouseBase {
@@ -72,7 +72,7 @@ class MultiValueWarehouse : public WarehouseBase {
 };
 
 }  // namespace service_discovery
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_SERVICE_DISCOVERY_CONTAINER_MULTI_VALUE_WAREHOUSE_H_

@@ -22,7 +22,7 @@
 #include <string>
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
 const uint8_t ID_SIZE = 8;
@@ -61,7 +61,7 @@ class Identity {
 };
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_TRANSPORT_COMMON_IDENTITY_H_

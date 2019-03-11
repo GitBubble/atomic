@@ -26,14 +26,14 @@
 #include <unordered_map>
 #include <utility>
 
-#include "cyber/common/log.h"
-#include "cyber/common/types.h"
+#include "hiva/common/log.h"
+#include "hiva/common/types.h"
 
-#include "cyber/node/node_channel_impl.h"
-#include "cyber/service/client_base.h"
+#include "hiva/node/node_channel_impl.h"
+#include "hiva/service/client_base.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 
 template <typename Request, typename Response>
 class Client : public ClientBase {
@@ -235,7 +235,7 @@ void Client<Request, Response>::HandleResponse(
   callback(future);
 }
 
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_SERVICE_CLIENT_H_

@@ -21,21 +21,21 @@
 #include <string>
 #include <utility>
 
-#include "cyber/common/log.h"
-#include "cyber/component/component.h"
-#include "cyber/init.h"
-#include "cyber/node/node.h"
-//#include "cyber/task/task.h"
-#include "cyber/time/time.h"
-#include "cyber/timer/timer.h"
+#include "hiva/common/log.h"
+#include "hiva/component/component.h"
+#include "hiva/init.h"
+#include "hiva/node/node.h"
+//#include "hiva/task/task.h"
+#include "hiva/time/time.h"
+#include "hiva/timer/timer.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 
 std::unique_ptr<Node> CreateNode(const std::string& node_name,
                                  const std::string& name_space = "");
 
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_CYBER_H_

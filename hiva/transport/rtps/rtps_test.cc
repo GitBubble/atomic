@@ -20,16 +20,16 @@
 #include <string>
 #include <utility>
 
-#include "cyber/common/global_data.h"
-#include "cyber/common/log.h"
-#include "cyber/transport/qos/qos_profile_conf.h"
-#include "cyber/transport/rtps/attributes_filler.h"
-#include "cyber/transport/rtps/participant.h"
-#include "cyber/transport/rtps/underlay_message.h"
-#include "cyber/transport/rtps/underlay_message_type.h"
+#include "hiva/common/global_data.h"
+#include "hiva/common/log.h"
+#include "hiva/transport/qos/qos_profile_conf.h"
+#include "hiva/transport/rtps/attributes_filler.h"
+#include "hiva/transport/rtps/participant.h"
+#include "hiva/transport/rtps/underlay_message.h"
+#include "hiva/transport/rtps/underlay_message_type.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
 TEST(AttributesFillerTest, fill_in_pub_attr_test) {
@@ -207,5 +207,5 @@ TEST(UnderlayMessageTest, underlay_message_test) {
 }
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

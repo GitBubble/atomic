@@ -14,14 +14,14 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/transport/rtps/participant.h"
+#include "hiva/transport/rtps/participant.h"
 
-#include "cyber/common/global_data.h"
-#include "cyber/common/log.h"
-#include "cyber/proto/transport_conf.pb.h"
+#include "hiva/common/global_data.h"
+#include "hiva/common/log.h"
+#include "hiva/proto/transport_conf.pb.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
 Participant::Participant(const std::string& name, int send_port,
@@ -111,7 +111,7 @@ void Participant::CreateFastRtpsParticipant(
       return;
     }
   }
-  ADEBUG << "cyber ip: " << ip_env;
+  ADEBUG << "hiva ip: " << ip_env;
 
   eprosima::fastrtps::rtps::Locator_t locator;
   locator.port = 0;
@@ -133,5 +133,5 @@ void Participant::CreateFastRtpsParticipant(
 }
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

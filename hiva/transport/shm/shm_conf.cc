@@ -14,11 +14,11 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/transport/shm/shm_conf.h"
-#include "cyber/common/log.h"
+#include "hiva/transport/shm/shm_conf.h"
+#include "hiva/common/log.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
 ShmConf::ShmConf() { Update(MESSAGE_SIZE_16K); }
@@ -109,5 +109,5 @@ uint32_t ShmConf::GetBlockNum(const uint64_t& ceiling_msg_size) {
 }
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

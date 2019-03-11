@@ -28,10 +28,10 @@
 #include <utility>
 #include <vector>
 
-#include "cyber/base/bounded_queue.h"
+#include "hiva/base/bounded_queue.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 
 using CallHandler = std::function<void()>;
 
@@ -68,7 +68,7 @@ class TimerTask {
   bool IsExpired() { return State() == EXPIRED; }
 };
 
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_TIMER_TIMER_TASK_H_

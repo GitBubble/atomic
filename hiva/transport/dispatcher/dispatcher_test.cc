@@ -14,18 +14,18 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/transport/dispatcher/dispatcher.h"
+#include "hiva/transport/dispatcher/dispatcher.h"
 
 #include <gtest/gtest.h>
 #include <memory>
 #include <vector>
 
-#include "cyber/common/util.h"
-#include "cyber/proto/unit_test.pb.h"
-#include "cyber/transport/common/identity.h"
+#include "hiva/common/util.h"
+#include "hiva/proto/unit_test.pb.h"
+#include "hiva/transport/common/identity.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
 class DispatcherTest : public ::testing::Test {
@@ -131,5 +131,5 @@ TEST_F(DispatcherTest, has_channel) {
 }
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

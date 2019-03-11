@@ -14,15 +14,15 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/service_discovery/topology_manager.h"
+#include "hiva/service_discovery/topology_manager.h"
 
 #include <memory>
 
-#include "cyber/common/log.h"
+#include "hiva/common/log.h"
 #include "gtest/gtest.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace service_discovery {
 
 class TopologyTest : public ::testing::Test {
@@ -68,5 +68,5 @@ TEST_F(TopologyTest, get_manager) {
 }
 
 }  // namespace service_discovery
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

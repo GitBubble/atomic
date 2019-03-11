@@ -22,11 +22,11 @@
 #include <string>
 #include <utility>
 
-#include "cyber/node/node_channel_impl.h"
-#include "cyber/node/node_service_impl.h"
+#include "hiva/node/node_channel_impl.h"
+#include "hiva/node/node_service_impl.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 
 template <typename M0, typename M1, typename M2, typename M3>
 //class Component;
@@ -49,17 +49,17 @@ class Node {
   template <typename MessageT>
   auto CreateReader(const std::string& channel_name,
                     const CallbackFunc<MessageT>& reader_func = nullptr)
-      -> std::shared_ptr<cyber::Reader<MessageT>>;
+      -> std::shared_ptr<hiva::Reader<MessageT>>;
 
   template <typename MessageT>
   auto CreateReader(const ReaderConfig& config,
                     const CallbackFunc<MessageT>& reader_func = nullptr)
-      -> std::shared_ptr<cyber::Reader<MessageT>>;
+      -> std::shared_ptr<hiva::Reader<MessageT>>;
 
   template <typename MessageT>
   auto CreateReader(const proto::RoleAttributes& role_attr,
                     const CallbackFunc<MessageT>& reader_func = nullptr)
-      -> std::shared_ptr<cyber::Reader<MessageT>>;
+      -> std::shared_ptr<hiva::Reader<MessageT>>;
 
   template <typename MessageT>
   auto CreateWriter(const std::string& channel_name)
@@ -129,7 +129,7 @@ auto Node::CreateReader(const proto::RoleAttributes& role_attr,
 template <typename MessageT>
 auto Node::CreateReader(const ReaderConfig& config,
                         const CallbackFunc<MessageT>& reader_func)
-    -> std::shared_ptr<cyber::Reader<MessageT>> {
+    -> std::shared_ptr<hiva::Reader<MessageT>> {
   std::lock_guard<std::mutex> lg(readers_mutex_);
   if (readers_.find(config.channel_name) != readers_.end()) {
     AWARN << "Failed to create reader: reader with the same channel already "
@@ -189,7 +189,7 @@ auto Node::GetReader(const std::string& name)
   return nullptr;
 }
 
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_NODE_NODE_H_

@@ -1,8 +1,8 @@
 syntax = "proto2";
 
-package apollo.cyber.proto;
+package apollo.hiva.proto;
 
-import "cyber/proto/component_conf.proto";
+import "hiva/proto/component_conf.proto";
 
 message ComponentInfo {
     optional string class_name = 1;

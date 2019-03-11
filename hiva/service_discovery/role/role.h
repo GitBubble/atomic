@@ -21,10 +21,10 @@
 #include <memory>
 #include <string>
 
-#include "cyber/proto/role_attributes.pb.h"
+#include "hiva/proto/role_attributes.pb.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace service_discovery {
 
 class RoleBase;
@@ -84,7 +84,7 @@ class RoleServer : public RoleBase {
 };
 
 }  // namespace service_discovery
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_SERVICE_DISCOVERY_ROLE_ROLE_H_

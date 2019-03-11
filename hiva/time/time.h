@@ -20,10 +20,10 @@
 #include <limits>
 #include <string>
 
-#include "cyber/time/duration.h"
+#include "hiva/time/duration.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 
 class Time {
  public:
@@ -65,7 +65,7 @@ class Time {
 
 std::ostream& operator<<(std::ostream& os, const Time& rhs);
 
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_TIME_TIME_H_

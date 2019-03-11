@@ -1,9 +1,9 @@
 syntax = "proto2";
 
-package apollo.cyber.proto;
+package apollo.hiva.proto;
 
-import "cyber/proto/classic_conf.proto";
-import "cyber/proto/choreography_conf.proto";
+import "hiva/proto/classic_conf.proto";
+import "hiva/proto/choreography_conf.proto";
 
 message SchedulerConf {
   optional string policy = 1;

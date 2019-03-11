@@ -14,17 +14,17 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/transport/shm/notifier_factory.h"
+#include "hiva/transport/shm/notifier_factory.h"
 
 #include <string>
 
-#include "cyber/common/global_data.h"
-#include "cyber/common/log.h"
-#include "cyber/transport/shm/condition_notifier.h"
-#include "cyber/transport/shm/multicast_notifier.h"
+#include "hiva/common/global_data.h"
+#include "hiva/common/log.h"
+#include "hiva/transport/shm/condition_notifier.h"
+#include "hiva/transport/shm/multicast_notifier.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
 using common::GlobalData;
@@ -58,5 +58,5 @@ auto NotifierFactory::CreateMulticastNotifier() -> NotifierPtr {
 }
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

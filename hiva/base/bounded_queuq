@@ -24,11 +24,11 @@
 #include <cstdlib>
 #include <memory>
 
-#include "cyber/base/macros.h"
-#include "cyber/base/wait_strategy.h"
+#include "hiva/base/macros.h"
+#include "hiva/base/wait_strategy.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace base {
 
 template <typename T>
@@ -241,7 +241,7 @@ inline void BoundedQueue<T>::BreakAllWait() {
 }
 
 }  // namespace base
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_BASE_BOUNDED_QUEUE_H_

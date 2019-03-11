@@ -8,7 +8,7 @@ cc_library(
     hdrs = ["timer.h"],
     deps = [
         "timer_manager",
-        "//cyber/common:global_data",
+        "//hiva/common:global_data",
     ],
 )
 
@@ -18,11 +18,11 @@ cc_library(
     hdrs = ["timer_manager.h"],
     deps = [
         "timing_wheel",
-        "//cyber/common:macros",
-        "//cyber/scheduler",
-        "//cyber/task",
-        "//cyber/time",
-        "//cyber/time:rate",
+        "//hiva/common:macros",
+        "//hiva/scheduler",
+        "//hiva/task",
+        "//hiva/time",
+        "//hiva/time:rate",
     ],
 )
 
@@ -31,7 +31,7 @@ cc_test(
     size = "small",
     srcs = ["timer_manager_test.cc"],
     deps = [
-        "//cyber:cyber_core",
+        "//hiva:hiva_core",
         "@gtest//:main",
     ],
 )
@@ -41,8 +41,8 @@ cc_library(
     srcs = ["timer_task.cc"],
     hdrs = ["timer_task.h"],
     deps = [
-        "//cyber/base:bounded_queue",
-        "//cyber/task",
+        "//hiva/base:bounded_queue",
+        "//hiva/task",
     ],
 )
 
@@ -52,7 +52,7 @@ cc_library(
     hdrs = ["timing_slot.h"],
     deps = [
         "timer_task",
-        "//cyber/base:bounded_queue",
+        "//hiva/base:bounded_queue",
     ],
 )
 
@@ -63,10 +63,10 @@ cc_library(
     deps = [
         "timer_task",
         "timing_slot",
-        "//cyber/base:bounded_queue",
-        "//cyber/task",
-        "//cyber/time",
-        "//cyber/time:duration",
+        "//hiva/base:bounded_queue",
+        "//hiva/task",
+        "//hiva/time",
+        "//hiva/time:duration",
     ],
 )
 
@@ -75,8 +75,8 @@ cc_test(
     size = "small",
     srcs = ["timing_wheel_test.cc"],
     deps = [
-        "//cyber:cyber_core",
-        "//cyber:init",
+        "//hiva:hiva_core",
+        "//hiva:init",
         "@gtest//:main",
     ],
 )

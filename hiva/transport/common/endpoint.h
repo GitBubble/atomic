@@ -20,11 +20,11 @@
 #include <memory>
 #include <string>
 
-#include "cyber/include/role_attributes.h"
-#include "cyber/transport/common/identity.h"
+#include "hiva/include/role_attributes.h"
+#include "hiva/transport/common/identity.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
 class Endpoint;
@@ -47,7 +47,7 @@ class Endpoint {
 };
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_TRANSPORT_COMMON_ENDPOINT_H_

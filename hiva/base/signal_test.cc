@@ -14,14 +14,14 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/base/signal.h"
+#include "hiva/base/signal.h"
 
 #include <gtest/gtest.h>
 #include <memory>
 
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace base {
 
 TEST(SlotTest, zero_input_param) {
@@ -136,5 +136,5 @@ TEST(SignalTest, module) {
 }
 
 }  // namespace base
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

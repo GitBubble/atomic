@@ -14,12 +14,12 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/node/node.h"
+#include "hiva/node/node.h"
 
-#include "cyber/init.h"
-#include "cyber/proto/unit_test.pb.h"
+#include "hiva/init.h"
+#include "hiva/proto/unit_test.pb.h"
 #include "gtest/gtest.h"
 
 namespace apollo {
-namespace cyber {}  // namespace cyber
+namespace hiva {}  // namespace hiva
 }  // namespace apollo

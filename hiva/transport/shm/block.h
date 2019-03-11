@@ -21,7 +21,7 @@
 #include <cstdint>
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
 class Block {
@@ -56,7 +56,7 @@ class Block {
 };
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_TRANSPORT_SHM_BLOCK_H_

@@ -14,15 +14,15 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/cyber.h"
-#include "cyber/examples/proto/examples.pb.h"
+#include "hiva/hiva.h"
+#include "hiva/examples/proto/examples.pb.h"
 
-using apollo::cyber::examples::proto::Driver;
+using apollo::hiva::examples::proto::Driver;
 
 int main(int argc, char* argv[]) {
-  apollo::cyber::Init(argv[0]);
-  std::shared_ptr<apollo::cyber::Node> node(
-      apollo::cyber::CreateNode("start_node"));
+  apollo::hiva::Init(argv[0]);
+  std::shared_ptr<apollo::hiva::Node> node(
+      apollo::hiva::CreateNode("start_node"));
   auto server = node->CreateService<Driver, Driver>(
       "test_server", [](const std::shared_ptr<Driver>& request,
                         std::shared_ptr<Driver>& response) {
@@ -36,7 +36,7 @@ int main(int argc, char* argv[]) {
   auto driver_msg = std::make_shared<Driver>();
   driver_msg->set_msg_id(0);
   driver_msg->set_timestamp(0);
-  while (apollo::cyber::OK()) {
+  while (apollo::hiva::OK()) {
     auto res = client->SendRequest(driver_msg);
     if (res != nullptr) {
       AINFO << "client: responese: " << res->ShortDebugString();
@@ -46,6 +46,6 @@ int main(int argc, char* argv[]) {
     sleep(1);
   }
 
-  apollo::cyber::WaitForShutdown();
+  apollo::hiva::WaitForShutdown();
   return 0;
 }

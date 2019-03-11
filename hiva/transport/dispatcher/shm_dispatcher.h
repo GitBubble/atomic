@@ -23,24 +23,24 @@
 #include <thread>
 #include <unordered_map>
 
-#include "cyber/base/atomic_rw_lock.h"
-#include "cyber/common/global_data.h"
-#include "cyber/common/log.h"
-#include "cyber/common/macros.h"
-#include "cyber/message/message_traits.h"
-#include "cyber/transport/dispatcher/dispatcher.h"
-#include "cyber/transport/shm/notifier_factory.h"
-#include "cyber/transport/shm/segment.h"
+#include "hiva/base/atomic_rw_lock.h"
+#include "hiva/common/global_data.h"
+#include "hiva/common/log.h"
+#include "hiva/common/macros.h"
+#include "hiva/message/message_traits.h"
+#include "hiva/transport/dispatcher/dispatcher.h"
+#include "hiva/transport/shm/notifier_factory.h"
+#include "hiva/transport/shm/segment.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
 class ShmDispatcher;
 using ShmDispatcherPtr = ShmDispatcher*;
-using apollo::cyber::base::AtomicRWLock;
-using apollo::cyber::base::ReadLockGuard;
-using apollo::cyber::base::WriteLockGuard;
+using apollo::hiva::base::AtomicRWLock;
+using apollo::hiva::base::ReadLockGuard;
+using apollo::hiva::base::WriteLockGuard;
 
 class ShmDispatcher : public Dispatcher {
  public:
@@ -113,7 +113,7 @@ void ShmDispatcher::AddListener(const RoleAttributes& self_attr,
 }
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_TRANSPORT_DISPATCHER_SHM_DISPATCHER_H_

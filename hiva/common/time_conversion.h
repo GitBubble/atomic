@@ -25,7 +25,7 @@
 #include <vector>
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace common {
 
 // Leap seconds change every a few years. See below for details.
@@ -137,7 +137,7 @@ inline std::string UnixSecondsToString(
 }
 
 }  // namespace common
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_COMMON_TIME_CONVERSION_H_

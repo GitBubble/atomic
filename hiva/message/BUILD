@@ -22,7 +22,7 @@ cc_library(
         "protobuf_traits",
         "py_message_traits",
         "raw_message_traits",
-        "//cyber/base:macros",
+        "//hiva/base:macros",
     ],
 )
 
@@ -33,8 +33,8 @@ cc_test(
         "message_traits_test.cc",
     ],
     deps = [
-        "//cyber",
-        "//cyber/proto:unit_test_cc_proto",
+        "//hiva",
+        "//hiva/proto:unit_test_cc_proto",
         "@gtest//:main",
     ],
 )
@@ -48,9 +48,9 @@ cc_library(
         "protobuf_factory.h",
     ],
     deps = [
-        "//cyber/common:log",
-        "//cyber/common:macros",
-        "//cyber/proto:proto_desc_cc_proto",
+        "//hiva/common:log",
+        "//hiva/common:macros",
+        "//hiva/proto:proto_desc_cc_proto",
     ],
 )
 
@@ -102,7 +102,7 @@ cc_test(
         "raw_message_test.cc",
     ],
     deps = [
-        "//cyber",
+        "//hiva",
         "@gtest//:main",
     ],
 )
@@ -114,8 +114,8 @@ cc_test(
         "protobuf_factory_test.cc",
     ],
     deps = [
-        "//cyber",
-        "//cyber/proto:unit_test_cc_proto",
+        "//hiva",
+        "//hiva/proto:unit_test_cc_proto",
         "@gtest//:main",
     ],
 )

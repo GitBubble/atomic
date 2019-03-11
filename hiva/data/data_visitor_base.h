@@ -22,13 +22,13 @@
 #include <memory>
 #include <vector>
 
-#include "cyber/common/global_data.h"
-#include "cyber/common/log.h"
-#include "cyber/data/data_notifier.h"
-#include "cyber/proto/component_conf.pb.h"
+#include "hiva/common/global_data.h"
+#include "hiva/common/log.h"
+#include "hiva/data/data_notifier.h"
+#include "hiva/proto/component_conf.pb.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace data {
 
 class DataVisitorBase {
@@ -49,7 +49,7 @@ class DataVisitorBase {
 };
 
 }  // namespace data
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_DATA_DATA_VISITOR_BASE_H_
