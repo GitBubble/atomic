@@ -23,7 +23,7 @@
 #include <utility>
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace base {
 /**
  * @brief A implementation of lock-free fixed size hash map
@@ -254,7 +254,7 @@ class AtomicHashMap {
 };
 
 }  // namespace base
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_BASE_ATOMIC_HASH_MAP_H_

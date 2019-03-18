@@ -14,7 +14,7 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/transport/shm/multicast_notifier.h"
+#include "hiva/transport/shm/multicast_notifier.h"
 
 #include <arpa/inet.h>
 #include <fcntl.h>
@@ -25,11 +25,11 @@
 #include <unistd.h>
 #include <string>
 
-#include "cyber/common/global_data.h"
-#include "cyber/common/log.h"
+#include "hiva/common/global_data.h"
+#include "hiva/common/log.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
 using common::GlobalData;
@@ -181,5 +181,5 @@ bool MulticastNotifier::Init() {
 }
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

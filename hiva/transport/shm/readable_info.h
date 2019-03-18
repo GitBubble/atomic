@@ -23,7 +23,7 @@
 #include <string>
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
 class ReadableInfo;
@@ -59,7 +59,7 @@ class ReadableInfo {
 };
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_TRANSPORT_SHM_READABLE_INFO_H_

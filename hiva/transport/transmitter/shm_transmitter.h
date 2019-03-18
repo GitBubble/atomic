@@ -22,17 +22,17 @@
 #include <memory>
 #include <string>
 
-#include "cyber/common/global_data.h"
-#include "cyber/common/log.h"
-#include "cyber/common/util.h"
-#include "cyber/message/message_traits.h"
-#include "cyber/transport/shm/notifier_factory.h"
-#include "cyber/transport/shm/readable_info.h"
-#include "cyber/transport/shm/segment.h"
-#include "cyber/transport/transmitter/transmitter.h"
+#include "hiva/common/global_data.h"
+#include "hiva/common/log.h"
+#include "hiva/common/util.h"
+#include "hiva/message/message_traits.h"
+#include "hiva/transport/shm/notifier_factory.h"
+#include "hiva/transport/shm/readable_info.h"
+#include "hiva/transport/shm/segment.h"
+#include "hiva/transport/transmitter/transmitter.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
 template <typename M>
@@ -137,7 +137,7 @@ bool ShmTransmitter<M>::Transmit(const M& msg, const MessageInfo& msg_info) {
 }
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_TRANSPORT_TRANSMITTER_SHM_TRANSMITTER_H_

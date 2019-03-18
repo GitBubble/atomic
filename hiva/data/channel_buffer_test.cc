@@ -19,11 +19,11 @@
 
 #include "gtest/gtest.h"
 
-#include "cyber/common/util.h"
-#include "cyber/data/channel_buffer.h"
+#include "hiva/common/util.h"
+#include "hiva/data/channel_buffer.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace data {
 
 auto channel0 = common::Hash("/channel0");
@@ -98,5 +98,5 @@ TEST(ChannelBufferTest, FetchMulti) {
 }
 
 }  // namespace data
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

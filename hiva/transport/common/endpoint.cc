@@ -14,11 +14,11 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/transport/common/endpoint.h"
-#include "cyber/common/global_data.h"
+#include "hiva/transport/common/endpoint.h"
+#include "hiva/common/global_data.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
 Endpoint::Endpoint(const RoleAttributes& attr)
@@ -39,5 +39,5 @@ Endpoint::Endpoint(const RoleAttributes& attr)
 Endpoint::~Endpoint() {}
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

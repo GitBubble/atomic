@@ -23,10 +23,10 @@
 #include <unistd.h>
 #include <memory>
 
-#include "cyber/io/poll_handler.h"
+#include "hiva/io/poll_handler.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace io {
 
 class Session {
@@ -73,7 +73,7 @@ class Session {
 };
 
 }  // namespace io
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_IO_SESSION_H_

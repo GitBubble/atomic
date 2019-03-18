@@ -20,10 +20,10 @@
 #include <assert.h>
 #include <string>
 
-#include "cyber/common/log.h"
+#include "hiva/common/log.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace common {
 
 inline const std::string GetEnv(const std::string& var_name) {
@@ -39,13 +39,13 @@ inline const std::string GetEnv(const std::string& var_name) {
 inline const std::string WorkRoot() {
   std::string work_root = GetEnv("CYBER_PATH");
   if (work_root.empty()) {
-    work_root = "/apollo/cyber";
+    work_root = "/apollo/hiva";
   }
   return work_root;
 }
 
 }  // namespace common
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_COMMON_ENVIRONMENT_H_

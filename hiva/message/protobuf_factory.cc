@@ -14,11 +14,11 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/message/protobuf_factory.h"
-#include "cyber/common/log.h"
+#include "hiva/message/protobuf_factory.h"
+#include "hiva/common/log.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace message {
 
 using google::protobuf::MessageFactory;
@@ -223,5 +223,5 @@ void ErrorCollector::AddWarning(const std::string& filename,
 }
 
 }  // namespace message
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

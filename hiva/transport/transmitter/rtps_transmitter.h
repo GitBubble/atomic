@@ -20,18 +20,18 @@
 #include <memory>
 #include <string>
 
-#include "cyber/common/log.h"
-#include "cyber/message/message_traits.h"
-#include "cyber/transport/rtps/attributes_filler.h"
-#include "cyber/transport/rtps/participant.h"
-#include "cyber/transport/transmitter/transmitter.h"
+#include "hiva/common/log.h"
+#include "hiva/message/message_traits.h"
+#include "hiva/transport/rtps/attributes_filler.h"
+#include "hiva/transport/rtps/participant.h"
+#include "hiva/transport/transmitter/transmitter.h"
 #include "fastrtps/Domain.h"
 #include "fastrtps/attributes/PublisherAttributes.h"
 #include "fastrtps/participant/Participant.h"
 #include "fastrtps/publisher/Publisher.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
 template <typename M>
@@ -126,7 +126,7 @@ bool RtpsTransmitter<M>::Transmit(const M& msg, const MessageInfo& msg_info) {
 }
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_TRANSPORT_TRANSMITTER_RTPS_TRANSMITTER_H_

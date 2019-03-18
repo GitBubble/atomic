@@ -12,7 +12,7 @@ cc_library(
     ],
     deps = [
         "duration",
-        "//cyber/common",
+        "//hiva/common",
     ],
 )
 
@@ -23,7 +23,7 @@ cc_test(
         "time_test.cc",
     ],
     deps = [
-        "//cyber:cyber_core",
+        "//hiva:hiva_core",
         "@gtest//:main",
     ],
 )
@@ -39,7 +39,7 @@ cc_library(
     deps = [
         "duration",
         "time",
-        "//cyber/common",
+        "//hiva/common",
     ],
 )
 
@@ -52,7 +52,7 @@ cc_library(
         "duration.h",
     ],
     deps = [
-        "//cyber/common",
+        "//hiva/common",
     ],
 )
 
@@ -63,7 +63,7 @@ cc_test(
         "duration_test.cc",
     ],
     deps = [
-        "//cyber:cyber_core",
+        "//hiva:hiva_core",
         "@gtest//:main",
     ],
 )

@@ -32,7 +32,7 @@
 #include <string>
 #include <vector>
 
-#include "cyber/common/log.h"
+#include "hiva/common/log.h"
 #include "google/protobuf/io/zero_copy_stream_impl.h"
 #include "google/protobuf/text_format.h"
 
@@ -41,7 +41,7 @@
  * @brief apollo::common::util
  */
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace common {
 
 bool SetProtoToASCIIFile(const google::protobuf::Message &message,
@@ -192,7 +192,7 @@ std::string GetFileName(const std::string &path,
 std::string GetCurrentPath();
 
 }  // namespace common
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_COMMON_FILE_H_

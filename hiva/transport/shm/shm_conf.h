@@ -21,7 +21,7 @@
 #include <string>
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
 class ShmConf {
@@ -76,7 +76,7 @@ class ShmConf {
 };
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_TRANSPORT_SHM_SHM_CONF_H_

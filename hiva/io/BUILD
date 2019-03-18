@@ -24,8 +24,8 @@ cc_library(
     deps = [
         "poll_data",
         "poller",
-        "//cyber/common:log",
-        "//cyber/croutine",
+        "//hiva/common:log",
+        "//hiva/croutine",
     ],
 )
 
@@ -35,11 +35,11 @@ cc_library(
     hdrs = ["poller.h"],
     deps = [
         "poll_data",
-        "//cyber/base:atomic_rw_lock",
-        "//cyber/common:log",
-        "//cyber/common:macros",
-        "//cyber/scheduler:scheduler_factory",
-        "//cyber/time",
+        "//hiva/base:atomic_rw_lock",
+        "//hiva/common:log",
+        "//hiva/common:macros",
+        "//hiva/scheduler:scheduler_factory",
+        "//hiva/time",
     ],
 )
 
@@ -59,7 +59,7 @@ cc_library(
     hdrs = ["session.h"],
     deps = [
         "poll_handler",
-        "//cyber/common:log",
+        "//hiva/common:log",
     ],
 )
 
@@ -67,7 +67,7 @@ cc_binary(
     name = "tcp_echo_client",
     srcs = ["example/tcp_echo_client.cc"],
     deps = [
-        "//cyber:cyber_core",
+        "//hiva:hiva_core",
     ],
 )
 
@@ -75,7 +75,7 @@ cc_binary(
     name = "tcp_echo_server",
     srcs = ["example/tcp_echo_server.cc"],
     deps = [
-        "//cyber:cyber_core",
+        "//hiva:hiva_core",
     ],
 )
 
@@ -83,7 +83,7 @@ cc_binary(
     name = "udp_echo_client",
     srcs = ["example/udp_echo_client.cc"],
     deps = [
-        "//cyber:cyber_core",
+        "//hiva:hiva_core",
     ],
 )
 
@@ -91,7 +91,7 @@ cc_binary(
     name = "udp_echo_server",
     srcs = ["example/udp_echo_server.cc"],
     deps = [
-        "//cyber:cyber_core",
+        "//hiva:hiva_core",
     ],
 )
 

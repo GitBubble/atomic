@@ -21,14 +21,14 @@
 #include <string>
 #include <vector>
 
-#include "cyber/common/log.h"
-#include "cyber/node/writer_base.h"
-#include "cyber/proto/topology_change.pb.h"
-#include "cyber/service_discovery/topology_manager.h"
-#include "cyber/transport/transport.h"
+#include "hiva/common/log.h"
+#include "hiva/node/writer_base.h"
+#include "hiva/proto/topology_change.pb.h"
+#include "hiva/service_discovery/topology_manager.h"
+#include "hiva/transport/transport.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 
 template <typename MessageT>
 class Writer : public WriterBase {
@@ -174,7 +174,7 @@ void Writer<MessageT>::GetReaders(std::vector<proto::RoleAttributes>* readers) {
   channel_manager_->GetReadersOfChannel(role_attr_.channel_name(), readers);
 }
 
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_NODE_WRITER_H_

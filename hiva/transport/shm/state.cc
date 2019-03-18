@@ -14,10 +14,10 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/transport/shm/state.h"
+#include "hiva/transport/shm/state.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
 State::State(const uint64_t& ceiling_msg_size)
@@ -26,5 +26,5 @@ State::State(const uint64_t& ceiling_msg_size)
 State::~State() {}
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

@@ -20,14 +20,14 @@
 #include <memory>
 #include <utility>
 
-#include "cyber/common/global_data.h"
-#include "cyber/common/log.h"
-#include "cyber/croutine/croutine.h"
-#include "cyber/data/data_visitor.h"
-#include "cyber/event/perf_event_cache.h"
+#include "hiva/common/global_data.h"
+#include "hiva/common/log.h"
+#include "hiva/croutine/croutine.h"
+#include "hiva/data/data_visitor.h"
+#include "hiva/event/perf_event_cache.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace croutine {
 
 class RoutineFactory {
@@ -149,7 +149,7 @@ RoutineFactory CreateRoutineFactory(Function&& f) {
 }
 
 }  // namespace croutine
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_CROUTINE_ROUTINE_FACTORY_H_

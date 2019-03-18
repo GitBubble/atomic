@@ -20,11 +20,11 @@
 #include <netinet/in.h>
 #include <atomic>
 
-#include "cyber/common/macros.h"
-#include "cyber/transport/shm/notifier_base.h"
+#include "hiva/common/macros.h"
+#include "hiva/transport/shm/notifier_base.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
 class MulticastNotifier : public NotifierBase {
@@ -51,7 +51,7 @@ class MulticastNotifier : public NotifierBase {
 };
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_TRANSPORT_SHM_MULTICAST_NOTIFIER_H_

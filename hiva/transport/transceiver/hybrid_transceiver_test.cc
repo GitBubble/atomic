@@ -20,16 +20,16 @@
 #include <thread>
 #include <vector>
 
-#include "cyber/common/global_data.h"
-#include "cyber/common/util.h"
-#include "cyber/proto/unit_test.pb.h"
-#include "cyber/transport/qos/qos_profile_conf.h"
-#include "cyber/transport/receiver/hybrid_receiver.h"
-#include "cyber/transport/transmitter/hybrid_transmitter.h"
-#include "cyber/transport/transport.h"
+#include "hiva/common/global_data.h"
+#include "hiva/common/util.h"
+#include "hiva/proto/unit_test.pb.h"
+#include "hiva/transport/qos/qos_profile_conf.h"
+#include "hiva/transport/receiver/hybrid_receiver.h"
+#include "hiva/transport/transmitter/hybrid_transmitter.h"
+#include "hiva/transport/transport.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
 class HybridTransceiverTest : public ::testing::Test {
@@ -338,13 +338,13 @@ TEST_F(HybridTransceiverTest, enable_and_disable_with_param_diff_host) {
 }
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 int main(int argc, char** argv) {
   testing::InitGoogleTest(&argc, argv);
-  apollo::cyber::transport::Transport::Instance();
+  apollo::hiva::transport::Transport::Instance();
   auto res = RUN_ALL_TESTS();
-  apollo::cyber::transport::Transport::Instance()->Shutdown();
+  apollo::hiva::transport::Transport::Instance()->Shutdown();
   return res;
 }

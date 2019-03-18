@@ -25,11 +25,11 @@
 #include <stdexcept>
 #include <utility>
 
-#include "cyber/base/for_each.h"
-#include "cyber/base/macros.h"
+#include "hiva/base/for_each.h"
+#include "hiva/base/macros.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace base {
 
 template <typename T>
@@ -148,7 +148,7 @@ void CCObjectPool<T>::ReleaseObject(T *object) {
 }
 
 }  // namespace base
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_BASE_CONCURRENT_OBJECT_POOL_H_

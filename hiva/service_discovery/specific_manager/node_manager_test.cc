@@ -14,17 +14,17 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/service_discovery/specific_manager/node_manager.h"
+#include "hiva/service_discovery/specific_manager/node_manager.h"
 
 #include <gtest/gtest.h>
 #include <memory>
 #include <string>
 #include <vector>
 
-#include "cyber/common/global_data.h"
+#include "hiva/common/global_data.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace service_discovery {
 
 class NodeManagerTest : public ::testing::Test {
@@ -129,5 +129,5 @@ TEST_F(NodeManagerTest, get_nodes) {
 }
 
 }  // namespace service_discovery
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

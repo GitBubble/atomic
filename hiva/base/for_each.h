@@ -19,10 +19,10 @@
 
 #include <type_traits>
 
-#include "cyber/base/macros.h"
+#include "hiva/base/macros.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace base {
 
 DEFINE_TYPE_TRAIT(HasLess, operator<)  // NOLINT
@@ -43,10 +43,10 @@ LessThan(const Value& val, const End& end) {
 
 #define FOR_EACH(i, begin, end)           \
   for (auto i = (true ? (begin) : (end)); \
-       apollo::cyber::base::LessThan(i, (end)); ++i)
+       apollo::hiva::base::LessThan(i, (end)); ++i)
 
 }  // namespace base
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_BASE_FOR_EACH_H_

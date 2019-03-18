@@ -27,7 +27,7 @@
 #include <thread>
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace base {
 
 template <typename RWLock>
@@ -59,7 +59,7 @@ class WriteLockGuard {
 };
 
 }  // namespace base
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_BASE_RW_LOCK_GUARD_H_

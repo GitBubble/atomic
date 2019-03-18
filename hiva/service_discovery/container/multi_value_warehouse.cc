@@ -14,15 +14,15 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/service_discovery/container/multi_value_warehouse.h"
+#include "hiva/service_discovery/container/multi_value_warehouse.h"
 
 #include <algorithm>
 #include <utility>
 
-#include "cyber/common/log.h"
+#include "hiva/common/log.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace service_discovery {
 
 using base::AtomicRWLock;
@@ -212,5 +212,5 @@ void MultiValueWarehouse::GetAllRoles(std::vector<RoleAttributes>* roles_attr) {
 }
 
 }  // namespace service_discovery
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

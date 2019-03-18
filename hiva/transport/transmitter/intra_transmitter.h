@@ -20,12 +20,12 @@
 #include <memory>
 #include <string>
 
-#include "cyber/common/log.h"
-#include "cyber/transport/dispatcher/intra_dispatcher.h"
-#include "cyber/transport/transmitter/transmitter.h"
+#include "hiva/common/log.h"
+#include "hiva/transport/dispatcher/intra_dispatcher.h"
+#include "hiva/transport/transmitter/transmitter.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
 template <typename M>
@@ -86,7 +86,7 @@ bool IntraTransmitter<M>::Transmit(const MessagePtr& msg,
 }
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_TRANSPORT_TRANSMITTER_INTRA_TRANSMITTER_H_

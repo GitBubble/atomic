@@ -19,10 +19,10 @@
 
 #include <cstdint>
 
-#include "cyber/proto/qos_profile.pb.h"
+#include "hiva/proto/qos_profile.pb.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
 struct HistoryAttributes {
@@ -38,7 +38,7 @@ struct HistoryAttributes {
 };
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_TRANSPORT_MESSAGE_HISTORY_ATTRIBUTES_H_

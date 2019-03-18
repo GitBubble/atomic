@@ -14,12 +14,12 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/service_discovery/container/single_value_warehouse.h"
+#include "hiva/service_discovery/container/single_value_warehouse.h"
 
-#include "cyber/common/log.h"
+#include "hiva/common/log.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace service_discovery {
 
 using base::AtomicRWLock;
@@ -203,5 +203,5 @@ void SingleValueWarehouse::GetAllRoles(
 }
 
 }  // namespace service_discovery
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

@@ -22,13 +22,13 @@
 #include <string>
 #include <utility>
 
-#include "cyber/common/types.h"
-#include "cyber/node/node_channel_impl.h"
-#include "cyber/scheduler/scheduler.h"
-#include "cyber/service/service_base.h"
+#include "hiva/common/types.h"
+#include "hiva/node/node_channel_impl.h"
+#include "hiva/scheduler/scheduler.h"
+#include "hiva/service/service_base.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 
 template <typename Request, typename Response>
 class Service : public ServiceBase {
@@ -109,7 +109,7 @@ inline void Service<Request, Response>::Enqueue(std::function<void()>&& task) {
 
 template <typename Request, typename Response>
 void Service<Request, Response>::Process() {
-  while (!cyber::IsShutdown()) {
+  while (!hiva::IsShutdown()) {
     std::unique_lock<std::mutex> ul(queue_mutex_);
     condition_.wait(ul, [this]() { return !inited_ || !this->tasks_.empty(); });
     if (!inited_) {
@@ -204,7 +204,7 @@ void Service<Request, Response>::SendResponse(
   response_transmitter_->Transmit(response, message_info);
 }
 
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_SERVICE_SERVICE_H_

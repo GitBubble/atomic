@@ -23,16 +23,16 @@
 #include <mutex>
 #include <string>
 
-#include "cyber/transport/message/message_info.h"
-#include "cyber/transport/rtps/underlay_message.h"
-#include "cyber/transport/rtps/underlay_message_type.h"
+#include "hiva/transport/message/message_info.h"
+#include "hiva/transport/rtps/underlay_message.h"
+#include "hiva/transport/rtps/underlay_message_type.h"
 #include "fastrtps/Domain.h"
 #include "fastrtps/subscriber/SampleInfo.h"
 #include "fastrtps/subscriber/Subscriber.h"
 #include "fastrtps/subscriber/SubscriberListener.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
 class SubListener;
@@ -58,7 +58,7 @@ class SubListener : public eprosima::fastrtps::SubscriberListener {
 };
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_TRANSPORT_RTPS_SUB_LISTENER_H_

@@ -22,10 +22,10 @@
 #include <cstring>
 #include <iostream>
 
-#include "cyber/base/macros.h"
+#include "hiva/base/macros.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 
 template <typename T>
 class AtomicFIFO {
@@ -122,7 +122,7 @@ bool AtomicFIFO<T>::Pop(T *value) {
   return true;
 }
 
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_BASE_ATOMIC_FIFO_H_

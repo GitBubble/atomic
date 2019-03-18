@@ -14,12 +14,12 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/common/macros.h"
+#include "hiva/common/macros.h"
 
 #include "gtest/gtest.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace common {
 
 class ClassWithShutdown {
@@ -63,5 +63,5 @@ TEST(MacrosTest, shut_down_test) {
 }
 
 }  // namespace common
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

@@ -19,16 +19,16 @@
 
 #include <stdint.h>
 
-#include "cyber/proto/qos_profile.pb.h"
+#include "hiva/proto/qos_profile.pb.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
-using cyber::proto::QosDurabilityPolicy;
-using cyber::proto::QosHistoryPolicy;
-using cyber::proto::QosProfile;
-using cyber::proto::QosReliabilityPolicy;
+using hiva::proto::QosDurabilityPolicy;
+using hiva::proto::QosHistoryPolicy;
+using hiva::proto::QosProfile;
+using hiva::proto::QosReliabilityPolicy;
 
 class QosProfileConf {
  public:
@@ -54,7 +54,7 @@ class QosProfileConf {
 };
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_TRANSPORT_QOS_QOS_PROFILE_CONF_H_

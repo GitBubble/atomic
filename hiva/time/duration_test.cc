@@ -14,15 +14,15 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/time/duration.h"
+#include "hiva/time/duration.h"
 
 #include <iostream>
 
-#include "cyber/time/time.h"
+#include "hiva/time/time.h"
 #include "gtest/gtest.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 
 TEST(DurationTest, constructor) {
   Duration duration(100);
@@ -66,5 +66,5 @@ TEST(DurationTest, is_zero) {
   EXPECT_TRUE(duration.IsZero());
 }
 
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

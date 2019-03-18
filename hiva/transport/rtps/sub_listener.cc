@@ -14,13 +14,13 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/transport/rtps/sub_listener.h"
+#include "hiva/transport/rtps/sub_listener.h"
 
-#include "cyber/common/log.h"
-#include "cyber/common/util.h"
+#include "hiva/common/log.h"
+#include "hiva/common/util.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
 SubListener::SubListener(const NewMsgCallback& callback)
@@ -73,5 +73,5 @@ void SubListener::onSubscriptionMatched(
 }
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

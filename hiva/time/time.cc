@@ -14,7 +14,7 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/time/time.h"
+#include "hiva/time/time.h"
 
 #include <time.h>
 #include <chrono>
@@ -23,7 +23,7 @@
 #include <thread>
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 
 using std::chrono::system_clock;
 using std::chrono::steady_clock;
@@ -154,5 +154,5 @@ std::ostream& operator<<(std::ostream& os, const Time& rhs) {
   return os;
 }
 
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

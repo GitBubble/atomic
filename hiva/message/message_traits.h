@@ -19,14 +19,14 @@
 
 #include <string>
 
-#include "cyber/base/macros.h"
-#include "cyber/message/intra_message.h"
-#include "cyber/message/protobuf_traits.h"
-#include "cyber/message/py_message_traits.h"
-#include "cyber/message/raw_message_traits.h"
+#include "hiva/base/macros.h"
+#include "hiva/message/intra_message.h"
+#include "hiva/message/protobuf_traits.h"
+#include "hiva/message/py_message_traits.h"
+#include "hiva/message/raw_message_traits.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace message {
 
 DEFINE_TYPE_TRAIT(HasByteSize, ByteSize)
@@ -151,7 +151,7 @@ template <typename MessageT,
 void GetDescriptorString(const MessageT& message, std::string* desc_str) {}
 
 }  // namespace message
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_MESSAGE_MESSAGE_TRAITS_H_

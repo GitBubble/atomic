@@ -14,7 +14,7 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/io/poller.h"
+#include "hiva/io/poller.h"
 
 #include <fcntl.h>
 #include <signal.h>
@@ -22,12 +22,12 @@
 #include <sys/epoll.h>
 #include <unistd.h>
 
-#include "cyber/common/log.h"
-#include "cyber/scheduler/scheduler_factory.h"
-#include "cyber/time/time.h"
+#include "hiva/common/log.h"
+#include "hiva/scheduler/scheduler_factory.h"
+#include "hiva/time/time.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace io {
 
 using base::AtomicRWLock;
@@ -304,5 +304,5 @@ void Poller::Notify() {
 }
 
 }  // namespace io
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

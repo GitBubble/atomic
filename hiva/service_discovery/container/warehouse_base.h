@@ -20,10 +20,10 @@
 #include <cstdint>
 #include <vector>
 
-#include "cyber/service_discovery/role/role.h"
+#include "hiva/service_discovery/role/role.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace service_discovery {
 
 class WarehouseBase {
@@ -64,7 +64,7 @@ class WarehouseBase {
 };
 
 }  // namespace service_discovery
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_SERVICE_DISCOVERY_CONTAINER_WAREHOUSE_BASE_H_

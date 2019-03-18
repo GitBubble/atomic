@@ -14,15 +14,15 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/transport/rtps/attributes_filler.h"
+#include "hiva/transport/rtps/attributes_filler.h"
 
 #include <limits>
 
-#include "cyber/common/log.h"
-#include "cyber/transport/qos/qos_profile_conf.h"
+#include "hiva/common/log.h"
+#include "hiva/transport/qos/qos_profile_conf.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
 AttributesFiller::AttributesFiller() {}
@@ -180,5 +180,5 @@ bool AttributesFiller::FillInSubAttr(
 }
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

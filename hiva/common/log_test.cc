@@ -14,17 +14,17 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/common/log.h"
+#include "hiva/common/log.h"
 
 #include "glog/logging.h"
 #include "gtest/gtest.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace common {
 
 TEST(LogTest, TestAll) { AINFO << "11111"; }
 
 }  // namespace common
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

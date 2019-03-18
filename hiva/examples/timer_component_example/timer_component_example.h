@@ -15,16 +15,16 @@
  *****************************************************************************/
 #include <memory>
 
-#include "cyber/class_loader/class_loader.h"
-#include "cyber/component/component.h"
-#include "cyber/component/timer_component.h"
-#include "cyber/examples/proto/examples.pb.h"
+#include "hiva/class_loader/class_loader.h"
+#include "hiva/component/component.h"
+#include "hiva/component/timer_component.h"
+#include "hiva/examples/proto/examples.pb.h"
 
-using apollo::cyber::examples::proto::Driver;
-using apollo::cyber::Component;
-using apollo::cyber::ComponentBase;
-using apollo::cyber::TimerComponent;
-using apollo::cyber::Writer;
+using apollo::hiva::examples::proto::Driver;
+using apollo::hiva::Component;
+using apollo::hiva::ComponentBase;
+using apollo::hiva::TimerComponent;
+using apollo::hiva::Writer;
 
 class TimerComponentSample : public TimerComponent {
  public:

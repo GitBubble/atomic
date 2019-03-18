@@ -14,12 +14,12 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/timer/timer.h"
+#include "hiva/timer/timer.h"
 
-#include "cyber/common/global_data.h"
+#include "hiva/common/global_data.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 
 Timer::Timer() { tm_ = TimerManager::Instance(); }
 
@@ -61,5 +61,5 @@ Timer::~Timer() {
   }
 }
 
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

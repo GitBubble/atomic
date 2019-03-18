@@ -21,14 +21,14 @@
 #include <sstream>
 #include <string>
 
-#include "cyber/common/macros.h"
-#include "cyber/message/protobuf_factory.h"
+#include "hiva/common/macros.h"
+#include "hiva/message/protobuf_factory.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace message {
 
-const char* const PY_MESSAGE_FULLNAME = "apollo.cyber.message.PyMessage";
+const char* const PY_MESSAGE_FULLNAME = "apollo.hiva.message.PyMessage";
 
 class PyMessageWrap {
  public:
@@ -138,7 +138,7 @@ inline const PyMessageWrap::Descriptor* PyMessageWrap::descriptor() {
 inline std::string PyMessageWrap::TypeName() { return PY_MESSAGE_FULLNAME; }
 
 }  // namespace message
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_MESSAGE_PY_MESSAGE_H_

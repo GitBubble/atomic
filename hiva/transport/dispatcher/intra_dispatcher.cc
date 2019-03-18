@@ -14,10 +14,10 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/transport/dispatcher/intra_dispatcher.h"
+#include "hiva/transport/dispatcher/intra_dispatcher.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
 IntraDispatcher::IntraDispatcher() {}
@@ -25,5 +25,5 @@ IntraDispatcher::IntraDispatcher() {}
 IntraDispatcher::~IntraDispatcher() {}
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

@@ -20,16 +20,16 @@
 #include <memory>
 #include <string>
 
-//#include "cyber/blocker/intra_reader.h"
-//#include "cyber/blocker/intra_writer.h"
-#include "cyber/common/global_data.h"
-#include "cyber/message/message_traits.h"
-#include "cyber/node/reader.h"
-#include "cyber/node/writer.h"
-#include "cyber/proto/run_mode_conf.pb.h"
+//#include "hiva/blocker/intra_reader.h"
+//#include "hiva/blocker/intra_writer.h"
+#include "hiva/common/global_data.h"
+#include "hiva/message/message_traits.h"
+#include "hiva/node/reader.h"
+#include "hiva/node/writer.h"
+#include "hiva/proto/run_mode_conf.pb.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 
 class Node;
 
@@ -222,7 +222,7 @@ void NodeChannelImpl::FillInAttr(proto::RoleAttributes* attr) {
   }
 }
 
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_NODE_NODE_CHANNEL_IMPL_H_

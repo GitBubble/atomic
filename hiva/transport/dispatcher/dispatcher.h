@@ -25,24 +25,24 @@
 #include <string>
 #include <unordered_map>
 
-#include "cyber/base/atomic_hash_map.h"
-#include "cyber/base/atomic_rw_lock.h"
-#include "cyber/common/global_data.h"
-#include "cyber/common/log.h"
-#include "cyber/proto/role_attributes.pb.h"
-#include "cyber/transport/message/listener_handler.h"
-#include "cyber/transport/message/message_info.h"
+#include "hiva/base/atomic_hash_map.h"
+#include "hiva/base/atomic_rw_lock.h"
+#include "hiva/common/global_data.h"
+#include "hiva/common/log.h"
+#include "hiva/proto/role_attributes.pb.h"
+#include "hiva/transport/message/listener_handler.h"
+#include "hiva/transport/message/message_info.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
-using apollo::cyber::base::AtomicHashMap;
-using apollo::cyber::base::AtomicRWLock;
-using apollo::cyber::base::ReadLockGuard;
-using apollo::cyber::base::WriteLockGuard;
-using apollo::cyber::common::GlobalData;
-using cyber::proto::RoleAttributes;
+using apollo::hiva::base::AtomicHashMap;
+using apollo::hiva::base::AtomicRWLock;
+using apollo::hiva::base::ReadLockGuard;
+using apollo::hiva::base::WriteLockGuard;
+using apollo::hiva::common::GlobalData;
+using hiva::proto::RoleAttributes;
 
 class Dispatcher;
 using DispatcherPtr = std::shared_ptr<Dispatcher>;
@@ -168,7 +168,7 @@ void Dispatcher::RemoveListener(const RoleAttributes& self_attr,
 }
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_TRANSPORT_DISPATCHER_DISPATCHER_H_

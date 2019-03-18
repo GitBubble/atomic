@@ -17,11 +17,11 @@
 #ifndef CYBER_TIME_RATE_H_
 #define CYBER_TIME_RATE_H_
 
-#include "cyber/time/duration.h"
-#include "cyber/time/time.h"
+#include "hiva/time/duration.h"
+#include "hiva/time/time.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 
 class Rate {
  public:
@@ -39,7 +39,7 @@ class Rate {
   Duration actual_cycle_time_;
 };
 
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_TIME_RATE_H_

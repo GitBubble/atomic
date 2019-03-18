@@ -26,19 +26,19 @@
 #include <utility>
 #include <vector>
 
-#include "cyber/blocker/blocker.h"
-#include "cyber/common/global_data.h"
-#include "cyber/croutine/routine_factory.h"
-#include "cyber/data/data_visitor.h"
-#include "cyber/node/reader_base.h"
-#include "cyber/proto/topology_change.pb.h"
-#include "cyber/scheduler/scheduler_factory.h"
-#include "cyber/service_discovery/topology_manager.h"
-#include "cyber/time/time.h"
-#include "cyber/transport/transport.h"
+#include "hiva/blocker/blocker.h"
+#include "hiva/common/global_data.h"
+#include "hiva/croutine/routine_factory.h"
+#include "hiva/data/data_visitor.h"
+#include "hiva/node/reader_base.h"
+#include "hiva/proto/topology_change.pb.h"
+#include "hiva/scheduler/scheduler_factory.h"
+#include "hiva/service_discovery/topology_manager.h"
+#include "hiva/time/time.h"
+#include "hiva/transport/transport.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 
 template <typename M0>
 using CallbackFunc = std::function<void(const std::shared_ptr<M0>&)>;
@@ -296,7 +296,7 @@ void Reader<MessageT>::GetWriters(std::vector<proto::RoleAttributes>* writers) {
   channel_manager_->GetWritersOfChannel(role_attr_.channel_name(), writers);
 }
 
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_NODE_READER_H_

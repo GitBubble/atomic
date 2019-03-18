@@ -14,13 +14,13 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/timer/timing_slot.h"
+#include "hiva/timer/timing_slot.h"
 
-#include "cyber/common/log.h"
-#include "cyber/timer/timer_task.h"
+#include "hiva/common/log.h"
+#include "hiva/timer/timer_task.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 
 void TimingSlot::AddTask(const std::shared_ptr<TimerTask>& task) {
   tasks_.emplace(task->Id(), task);
@@ -61,5 +61,5 @@ void TimingSlot::EnumTaskList(
     }
   }
 }
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

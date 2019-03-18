@@ -21,16 +21,16 @@
 #include <memory>
 #include <string>
 
-#include "cyber/event/perf_event_cache.h"
-#include "cyber/transport/common/endpoint.h"
-#include "cyber/transport/message/message_info.h"
+#include "hiva/event/perf_event_cache.h"
+#include "hiva/transport/common/endpoint.h"
+#include "hiva/transport/message/message_info.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
-using apollo::cyber::event::PerfEventCache;
-using apollo::cyber::event::TransPerf;
+using apollo::hiva::event::PerfEventCache;
+using apollo::hiva::event::TransPerf;
 
 template <typename M>
 class Transmitter : public Endpoint {
@@ -89,7 +89,7 @@ void Transmitter<M>::Disable(const RoleAttributes& opposite_attr) {
 }
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_TRANSPORT_TRANSMITTER_TRANSMITTER_H_

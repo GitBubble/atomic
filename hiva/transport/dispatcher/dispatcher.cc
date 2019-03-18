@@ -14,10 +14,10 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/transport/dispatcher/dispatcher.h"
+#include "hiva/transport/dispatcher/dispatcher.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
 Dispatcher::Dispatcher() : is_shutdown_(false) {}
@@ -34,5 +34,5 @@ bool Dispatcher::HasChannel(uint64_t channel_id) {
 }
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

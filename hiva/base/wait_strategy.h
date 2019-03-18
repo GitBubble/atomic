@@ -24,7 +24,7 @@
 #include <thread>
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace base {
 
 class WaitStrategy {
@@ -116,7 +116,7 @@ class TimeoutBlockWaitStrategy : public WaitStrategy {
 };
 
 }  // namespace base
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_BASE_WAIT_STRATEGY_H_

@@ -20,15 +20,15 @@
 #include <thread>
 #include <vector>
 
-#include "cyber/common/global_data.h"
-#include "cyber/cyber.h"
-#include "cyber/init.h"
-#include "cyber/node/reader.h"
-#include "cyber/node/writer.h"
-#include "cyber/proto/unit_test.pb.h"
+#include "hiva/common/global_data.h"
+#include "hiva/hiva.h"
+#include "hiva/init.h"
+#include "hiva/node/reader.h"
+#include "hiva/node/writer.h"
+#include "hiva/proto/unit_test.pb.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 
 TEST(WriterReaderTest, constructor) {
   const std::string channel_name("constructor");
@@ -293,12 +293,12 @@ TEST(WriterReaderTest, user_defined_message) {
   EXPECT_EQ(latest->content, "message");
 }
 
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 int main(int argc, char** argv) {
   testing::InitGoogleTest(&argc, argv);
-  apollo::cyber::Init(argv[0]);
+  apollo::hiva::Init(argv[0]);
   auto res = RUN_ALL_TESTS();
   return res;
 }

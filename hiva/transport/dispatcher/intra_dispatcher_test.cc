@@ -14,18 +14,18 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/transport/dispatcher/intra_dispatcher.h"
+#include "hiva/transport/dispatcher/intra_dispatcher.h"
 
 #include <gtest/gtest.h>
 #include <memory>
 
-#include "cyber/common/util.h"
-#include "cyber/message/raw_message.h"
-#include "cyber/proto/unit_test.pb.h"
-#include "cyber/transport/common/identity.h"
+#include "hiva/common/util.h"
+#include "hiva/message/raw_message.h"
+#include "hiva/proto/unit_test.pb.h"
+#include "hiva/transport/common/identity.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
 TEST(IntraDispatcherTest, on_message) {
@@ -79,5 +79,5 @@ TEST(IntraDispatcherTest, on_message) {
 }
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

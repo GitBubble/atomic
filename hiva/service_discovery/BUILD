@@ -11,7 +11,7 @@ cc_library(
         "node_manager",
         "participant_listener",
         "service_manager",
-        "//cyber/transport:participant",
+        "//hiva/transport:participant",
     ],
 )
 
@@ -20,7 +20,7 @@ cc_test(
     size = "small",
     srcs = ["topology_manager_test.cc"],
     deps = [
-        "//cyber",
+        "//hiva",
         "@gtest//:main",
     ],
 )
@@ -30,7 +30,7 @@ cc_library(
     srcs = ["communication/participant_listener.cc"],
     hdrs = ["communication/participant_listener.h"],
     deps = [
-        "//cyber/common:log",
+        "//hiva/common:log",
         "@fastrtps",
     ],
 )
@@ -40,9 +40,9 @@ cc_library(
     srcs = ["communication/subscriber_listener.cc"],
     hdrs = ["communication/subscriber_listener.h"],
     deps = [
-        "//cyber/common:log",
-        "//cyber/transport:underlay_message",
-        "//cyber/transport:underlay_message_type",
+        "//hiva/common:log",
+        "//hiva/transport:underlay_message",
+        "//hiva/transport:underlay_message_type",
         "@fastrtps",
     ],
 )
@@ -51,7 +51,7 @@ cc_library(
     name = "graph",
     srcs = ["container/graph.cc"],
     hdrs = ["container/graph.h"],
-    deps = ["//cyber/base:atomic_rw_lock"],
+    deps = ["//hiva/base:atomic_rw_lock"],
 )
 
 cc_test(
@@ -59,7 +59,7 @@ cc_test(
     size = "small",
     srcs = ["container/graph_test.cc"],
     deps = [
-        "//cyber",
+        "//hiva",
         "@gtest//:main",
     ],
 )
@@ -70,7 +70,7 @@ cc_library(
     hdrs = ["container/multi_value_warehouse.h"],
     deps = [
         "warehouse_base",
-        "//cyber/base:atomic_rw_lock",
+        "//hiva/base:atomic_rw_lock",
     ],
 )
 
@@ -80,7 +80,7 @@ cc_library(
     hdrs = ["container/single_value_warehouse.h"],
     deps = [
         "warehouse_base",
-        "//cyber/base:atomic_rw_lock",
+        "//hiva/base:atomic_rw_lock",
     ],
 )
 
@@ -95,10 +95,10 @@ cc_library(
     srcs = ["role/role.cc"],
     hdrs = ["role/role.h"],
     deps = [
-        "//cyber:binary",
-        "//cyber/common:log",
-        "//cyber/common:types",
-        "//cyber/proto:role_attributes_cc_proto",
+        "//hiva:binary",
+        "//hiva/common:log",
+        "//hiva/common:types",
+        "//hiva/proto:role_attributes_cc_proto",
     ],
 )
 
@@ -107,7 +107,7 @@ cc_test(
     size = "small",
     srcs = ["role/role_test.cc"],
     deps = [
-        "//cyber",
+        "//hiva",
         "@gtest//:main",
     ],
 )
@@ -118,17 +118,17 @@ cc_library(
     hdrs = ["specific_manager/manager.h"],
     deps = [
         "subscriber_listener",
-        "//cyber:state",
-        "//cyber/base:signal",
-        "//cyber/message:message_traits",
-        "//cyber/message:protobuf_factory",
-        "//cyber/proto:proto_desc_cc_proto",
-        "//cyber/proto:role_attributes_cc_proto",
-        "//cyber/proto:topology_change_cc_proto",
-        "//cyber/time",
-        "//cyber/transport:attributes_filler",
-        "//cyber/transport:qos_profile_conf",
-        "//cyber/transport:underlay_message_type",
+        "//hiva:state",
+        "//hiva/base:signal",
+        "//hiva/message:message_traits",
+        "//hiva/message:protobuf_factory",
+        "//hiva/proto:proto_desc_cc_proto",
+        "//hiva/proto:role_attributes_cc_proto",
+        "//hiva/proto:topology_change_cc_proto",
+        "//hiva/time",
+        "//hiva/transport:attributes_filler",
+        "//hiva/transport:qos_profile_conf",
+        "//hiva/transport:underlay_message_type",
     ],
 )
 
@@ -149,8 +149,8 @@ cc_test(
     size = "small",
     srcs = ["specific_manager/channel_manager_test.cc"],
     deps = [
-        "//cyber",
-        "//cyber/proto:unit_test_cc_proto",
+        "//hiva",
+        "//hiva/proto:unit_test_cc_proto",
         "@gtest//:main",
     ],
 )
@@ -171,7 +171,7 @@ cc_test(
     size = "small",
     srcs = ["specific_manager/node_manager_test.cc"],
     deps = [
-        "//cyber",
+        "//hiva",
         "@gtest//:main",
     ],
 )
@@ -192,7 +192,7 @@ cc_test(
     size = "small",
     srcs = ["specific_manager/service_manager_test.cc"],
     deps = [
-        "//cyber",
+        "//hiva",
         "@gtest//:main",
     ],
 )

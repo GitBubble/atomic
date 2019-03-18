@@ -22,12 +22,12 @@
 #include <string>
 #include <vector>
 
-#include "cyber/cyber.h"
-#include "cyber/io/session.h"
-#include "cyber/init.h"
-#include "cyber/scheduler/scheduler_factory.h"
+#include "hiva/hiva.h"
+#include "hiva/io/session.h"
+#include "hiva/init.h"
+#include "hiva/scheduler/scheduler_factory.h"
 
-using apollo::cyber::io::Session;
+using apollo::hiva::io::Session;
 
 int main(int argc, char* argv[]) {
   if (argc != 2) {
@@ -35,10 +35,10 @@ int main(int argc, char* argv[]) {
     return -1;
   }
 
-  apollo::cyber::Init(argv[0]);
+  apollo::hiva::Init(argv[0]);
 
   int server_port = atoi(argv[1]);
-  apollo::cyber::scheduler::Instance()->CreateTask(
+  apollo::hiva::scheduler::Instance()->CreateTask(
       [&server_port]() {
         struct sockaddr_in server_addr;
         server_addr.sin_addr.s_addr = inet_addr("127.0.0.1");
@@ -102,5 +102,5 @@ int main(int argc, char* argv[]) {
       },
       "echo_client");
 
-  apollo::cyber::WaitForShutdown();
+  apollo::hiva::WaitForShutdown();
 }

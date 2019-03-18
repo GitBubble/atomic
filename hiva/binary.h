@@ -20,7 +20,7 @@
 #include <string>
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 class Binary {
  public:
   static std::string GetName() { return GetNameRef(); }
@@ -30,7 +30,7 @@ class Binary {
     return binary_name;
   }
 };
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_BINARY_H_

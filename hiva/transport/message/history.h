@@ -23,12 +23,12 @@
 #include <mutex>
 #include <vector>
 
-#include "cyber/common/global_data.h"
-#include "cyber/transport/message/history_attributes.h"
-#include "cyber/transport/message/message_info.h"
+#include "hiva/common/global_data.h"
+#include "hiva/transport/message/history_attributes.h"
+#include "hiva/transport/message/message_info.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
 template <typename MessageT>
@@ -128,7 +128,7 @@ size_t History<MessageT>::GetSize() const {
 }
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_TRANSPORT_MESSAGE_HISTORY_H_

@@ -14,12 +14,12 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/timer/timer_task.h"
+#include "hiva/timer/timer_task.h"
 
-#include "cyber/task/task.h"
+#include "hiva/task/task.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 
 void TimerTask::Fire(bool async) {
   if (status_ != INIT) {
@@ -28,7 +28,7 @@ void TimerTask::Fire(bool async) {
   if (oneshot_)  // not repeat. so always on ready
     status_ = EXPIRED;
   if (async) {
-    cyber::Async(handler_);
+    hiva::Async(handler_);
   } else {
     handler_();
   }
@@ -41,5 +41,5 @@ bool TimerTask::Cancel() {
   status_ = CANCELED;
   return true;
 }
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

@@ -14,7 +14,7 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/message/raw_message.h"
+#include "hiva/message/raw_message.h"
 
 #include <gtest/gtest.h>
 #include <string.h>
@@ -22,7 +22,7 @@
 
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace message {
 
 TEST(RawMessageTest, constructor) {
@@ -70,12 +70,12 @@ TEST(RawMessageTest, parse_from_array) {
 TEST(RawMessageTest, message_type) {
   RawMessage msg;
   std::string msg_type = RawMessage::TypeName();
-  EXPECT_EQ(msg_type, "apollo.cyber.message.RawMessage");
+  EXPECT_EQ(msg_type, "apollo.hiva.message.RawMessage");
 
   // msg_type = MessageType<RawMessage>();
-  // EXPECT_EQ(msg_type, "apollo.cyber.message.RawMessage");
+  // EXPECT_EQ(msg_type, "apollo.hiva.message.RawMessage");
 }
 
 }  // namespace message
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

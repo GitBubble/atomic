@@ -14,20 +14,20 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/parameter/parameter.h"
+#include "hiva/parameter/parameter.h"
 
 #include <gtest/gtest.h>
 #include <string>
 
-#include "cyber/cyber.h"
-#include "cyber/message/message_traits.h"
-#include "cyber/proto/parameter.pb.h"
+#include "hiva/hiva.h"
+#include "hiva/message/message_traits.h"
+#include "hiva/proto/parameter.pb.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 
-using apollo::cyber::proto::Param;
-using apollo::cyber::proto::ParamType;
+using apollo::hiva::proto::Param;
+using apollo::hiva::proto::ParamType;
 
 class ParameterTest : public ::testing::Test {
  protected:
@@ -122,7 +122,7 @@ TEST_F(ParameterTest, type_name) {
   EXPECT_EQ("INT", _int_param->TypeName());
   EXPECT_EQ("DOUBLE", _double_param->TypeName());
   EXPECT_EQ("STRING", _string_param->TypeName());
-  EXPECT_EQ("apollo.cyber.proto.Param", _protobuf_param->TypeName());
+  EXPECT_EQ("apollo.hiva.proto.Param", _protobuf_param->TypeName());
 }
 
 TEST_F(ParameterTest, name) {
@@ -165,7 +165,7 @@ TEST_F(ParameterTest, value) {
 
   auto param = _protobuf_param->value<proto::Param>();
   EXPECT_EQ("protobuf", _protobuf_param->Name());
-  EXPECT_EQ("apollo.cyber.proto.Param", _protobuf_param->TypeName());
+  EXPECT_EQ("apollo.hiva.proto.Param", _protobuf_param->TypeName());
   std::string str;
   param.SerializeToString(&str);
   EXPECT_EQ(str, _protobuf_param->value<std::string>());
@@ -182,10 +182,10 @@ TEST_F(ParameterTest, debug_string) {
   EXPECT_EQ("{name: \"string\", type: \"STRING\", value: \"test\"}",
             _string_param->DebugString());
   EXPECT_EQ(
-      "{name: \"protobuf\", type: \"apollo.cyber.proto.Param\", value: "
+      "{name: \"protobuf\", type: \"apollo.hiva.proto.Param\", value: "
       "\"name: \"param\"\"}",
       _protobuf_param->DebugString());
 }
 
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

@@ -19,10 +19,10 @@
 
 #include <memory>
 
-#include "cyber/transport/shm/notifier_base.h"
+#include "hiva/transport/shm/notifier_base.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
 class NotifierFactory {
@@ -35,7 +35,7 @@ class NotifierFactory {
 };
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_TRANSPORT_SHM_NOTIFIER_FACTORY_H_

@@ -20,11 +20,11 @@
 #include <cstdint>
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 
 class NullType {};
 
-// Return code definition for cyber internal function return.
+// Return code definition for hiva internal function return.
 enum ReturnCode {
   SUCC = 0,
   FAIL = 1,
@@ -43,7 +43,7 @@ enum Relation : std::uint8_t {
 static const char SRV_CHANNEL_REQ_SUFFIX[] = "__SRV__REQUEST";
 static const char SRV_CHANNEL_RES_SUFFIX[] = "__SRV__RESPONSE";
 
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_COMMON_TYPES_H_

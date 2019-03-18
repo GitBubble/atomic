@@ -14,17 +14,17 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/transport/transport.h"
+#include "hiva/transport/transport.h"
 
 #include <gtest/gtest.h>
 #include <memory>
 #include <typeinfo>
 
-#include "cyber/proto/unit_test.pb.h"
-#include "cyber/transport/common/identity.h"
+#include "hiva/proto/unit_test.pb.h"
+#include "hiva/transport/common/identity.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
 using TransmitterPtr = std::shared_ptr<Transmitter<proto::UnitTest>>;
@@ -75,13 +75,13 @@ TEST(TransportTest, create_receiver) {
 }
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 int main(int argc, char** argv) {
   testing::InitGoogleTest(&argc, argv);
-  apollo::cyber::transport::Transport::Instance();
+  apollo::hiva::transport::Transport::Instance();
   auto res = RUN_ALL_TESTS();
-  apollo::cyber::transport::Transport::Instance()->Shutdown();
+  apollo::hiva::transport::Transport::Instance()->Shutdown();
   return res;
 }

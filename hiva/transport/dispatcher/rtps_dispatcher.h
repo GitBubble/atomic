@@ -23,16 +23,16 @@
 #include <string>
 #include <unordered_map>
 
-#include "cyber/common/log.h"
-#include "cyber/common/macros.h"
-#include "cyber/message/message_traits.h"
-#include "cyber/transport/dispatcher/dispatcher.h"
-#include "cyber/transport/rtps/attributes_filler.h"
-#include "cyber/transport/rtps/participant.h"
-#include "cyber/transport/rtps/sub_listener.h"
+#include "hiva/common/log.h"
+#include "hiva/common/macros.h"
+#include "hiva/message/message_traits.h"
+#include "hiva/transport/dispatcher/dispatcher.h"
+#include "hiva/transport/rtps/attributes_filler.h"
+#include "hiva/transport/rtps/participant.h"
+#include "hiva/transport/rtps/sub_listener.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
 struct Subscriber {
@@ -111,7 +111,7 @@ void RtpsDispatcher::AddListener(const RoleAttributes& self_attr,
 }
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_TRANSPORT_DISPATCHER_RTPS_DISPATCHER_H_

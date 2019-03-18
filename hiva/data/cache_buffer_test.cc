@@ -14,7 +14,7 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/data/cache_buffer.h"
+#include "hiva/data/cache_buffer.h"
 
 #include <gtest/gtest.h>
 #include <mutex>
@@ -23,7 +23,7 @@
 
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace data {
 
 TEST(CacheBufferTest, cache_buffer_test) {
@@ -54,5 +54,5 @@ TEST(CacheBufferTest, cache_buffer_test) {
 }
 
 }  // namespace data
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

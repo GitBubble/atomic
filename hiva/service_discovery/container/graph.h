@@ -21,10 +21,10 @@
 #include <string>
 #include <unordered_map>
 
-#include "cyber/base/atomic_rw_lock.h"
+#include "hiva/base/atomic_rw_lock.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace service_discovery {
 
 /**
@@ -127,7 +127,7 @@ class Graph {
 };
 
 }  // namespace service_discovery
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_SERVICE_DISCOVERY_ROLE_GRAPH_H_

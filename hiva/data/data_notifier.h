@@ -21,19 +21,19 @@
 #include <mutex>
 #include <vector>
 
-#include "cyber/common/log.h"
-#include "cyber/common/macros.h"
-#include "cyber/data/cache_buffer.h"
-#include "cyber/event/perf_event_cache.h"
-#include "cyber/time/time.h"
+#include "hiva/common/log.h"
+#include "hiva/common/macros.h"
+#include "hiva/data/cache_buffer.h"
+#include "hiva/event/perf_event_cache.h"
+#include "hiva/time/time.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace data {
 
-using apollo::cyber::Time;
-using apollo::cyber::base::AtomicHashMap;
-using apollo::cyber::event::PerfEventCache;
+using apollo::hiva::Time;
+using apollo::hiva::base::AtomicHashMap;
+using apollo::hiva::event::PerfEventCache;
 
 struct Notifier {
   std::function<void()> callback;
@@ -84,7 +84,7 @@ inline bool DataNotifier::Notify(const uint64_t channel_id) {
 }
 
 }  // namespace data
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_DATA_DATA_NOTIFIER_H_

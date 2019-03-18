@@ -25,10 +25,10 @@
 #include <cstring>
 #include <thread>
 
-#include "cyber/common/log.h"
+#include "hiva/common/log.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 
 enum State : std::uint8_t {
   STATE_UNINITIALIZED = 0,
@@ -59,7 +59,7 @@ inline void AsyncShutdown() {
   }
 }
 
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_STATE_H_

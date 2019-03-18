@@ -14,12 +14,12 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/parameter/parameter_client.h"
-#include "cyber/node/node.h"
-#include "cyber/parameter/parameter_service_names.h"
+#include "hiva/parameter/parameter_client.h"
+#include "hiva/node/node.h"
+#include "hiva/parameter/parameter_service_names.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 
 ParameterClient::ParameterClient(const std::shared_ptr<Node>& node,
                                  const std::string& service_node_name)
@@ -77,5 +77,5 @@ bool ParameterClient::ListParameters(std::vector<Parameter>* parameters) {
   return true;
 }
 
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

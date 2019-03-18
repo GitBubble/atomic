@@ -14,19 +14,19 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/timer/timing_wheel.h"
+#include "hiva/timer/timing_wheel.h"
 
 #include <gtest/gtest.h>
 #include <unistd.h>
 #include <atomic>
 #include <memory>
 
-#include "cyber/common/log.h"
-#include "cyber/cyber.h"
-#include "cyber/init.h"
+#include "hiva/common/log.h"
+#include "hiva/hiva.h"
+#include "hiva/init.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 
 class TestHandler {
  public:
@@ -71,12 +71,12 @@ TEST(TimingWheelTest, Period) {
   }
 }
 
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 int main(int argc, char** argv) {
   testing::InitGoogleTest(&argc, argv);
-  apollo::cyber::Init(argv[0]);
+  apollo::hiva::Init(argv[0]);
   auto res = RUN_ALL_TESTS();
   return res;
 }

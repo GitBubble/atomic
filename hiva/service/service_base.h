@@ -20,7 +20,7 @@
 #include <string>
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 
 class ServiceBase {
  public:
@@ -37,7 +37,7 @@ class ServiceBase {
   std::string service_name_;
 };
 
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_SERVICE_SERVICE_BASE_H_

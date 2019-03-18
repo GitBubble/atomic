@@ -14,14 +14,14 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/base/bounded_queue.h"
+#include "hiva/base/bounded_queue.h"
 
 #include <thread>
 
 #include "gtest/gtest.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace base {
 
 TEST(BoundedQueueTest, Enqueue) {
@@ -162,5 +162,5 @@ TEST(BoundedQueueTest, busy_wait) {
 }
 
 }  // namespace base
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

@@ -19,17 +19,17 @@
 
 #include <string>
 
-#include "cyber/common/log.h"
-#include "cyber/proto/parameter.pb.h"
+#include "hiva/common/log.h"
+#include "hiva/proto/parameter.pb.h"
 
 /**
- * @namespace cyber.parameter
+ * @namespace hiva.parameter
  */
 namespace apollo {
-namespace cyber {
+namespace hiva {
 
-using apollo::cyber::proto::Param;
-using apollo::cyber::proto::ParamType;
+using apollo::hiva::proto::Param;
+using apollo::hiva::proto::ParamType;
 
 /**
  * @class Parameter
@@ -51,24 +51,24 @@ class Parameter {
   Parameter(const std::string& name, const google::protobuf::Message& msg);
 
   /**
-   * @brief Parse a cyber::proto::Param object to
-   * cyber::parameter::Parameter object
-   * @param param The cyber::proto::Param object parse from
+   * @brief Parse a hiva::proto::Param object to
+   * hiva::parameter::Parameter object
+   * @param param The hiva::proto::Param object parse from
    * @param parameter A pointer to the target Parameter object
    * @return True if parse ok, otherwise False
    */
   void FromProtoParam(const Param& param);
 
   /**
-   * @brief Parse a cyber::parameter::Parameter object to
-   * cyber::proto::Param object
-   * @return The target cyber::proto::Param object
+   * @brief Parse a hiva::parameter::Parameter object to
+   * hiva::proto::Param object
+   * @return The target hiva::proto::Param object
    */
   Param ToProtoParam() const;
 
   /**
-   * @brief Get the cyber:parameter::ParameterType of this object
-   * @return cyber:parameter::ParameterType
+   * @brief Get the hiva:parameter::ParameterType of this object
+   * @return hiva:parameter::ParameterType
    */
   inline ParamType Type() const;
   inline std::string TypeName() const;
@@ -184,7 +184,7 @@ inline double Parameter::AsDouble() const { return value<double>(); }
 
 const std::string Parameter::AsString() const { return value<std::string>(); }
 
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_PARAMETER_PARAMETER_H_

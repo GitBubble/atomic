@@ -14,21 +14,21 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/transport/dispatcher/shm_dispatcher.h"
+#include "hiva/transport/dispatcher/shm_dispatcher.h"
 
 #include <gtest/gtest.h>
 #include <memory>
 
-#include "cyber/common/global_data.h"
-#include "cyber/common/log.h"
-#include "cyber/common/util.h"
-#include "cyber/message/raw_message.h"
-#include "cyber/proto/unit_test.pb.h"
-#include "cyber/transport/common/identity.h"
-#include "cyber/transport/transport.h"
+#include "hiva/common/global_data.h"
+#include "hiva/common/log.h"
+#include "hiva/common/util.h"
+#include "hiva/message/raw_message.h"
+#include "hiva/proto/unit_test.pb.h"
+#include "hiva/transport/common/identity.h"
+#include "hiva/transport/transport.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
 TEST(ShmDispatcherTest, add_listener) {
@@ -103,5 +103,5 @@ TEST(ShmDispatcherTest, shutdown) {
 }
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

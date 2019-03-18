@@ -27,10 +27,10 @@
 #include <utility>
 #include <vector>
 
-#include "cyber/base/bounded_queue.h"
+#include "hiva/base/bounded_queue.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace base {
 
 class ThreadPool {
@@ -97,7 +97,7 @@ inline ThreadPool::~ThreadPool() {
 }
 
 }  // namespace base
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_BASE_THREAD_POOL_H_

@@ -26,10 +26,10 @@
 #include <mutex>
 #include <thread>
 
-#include "cyber/base/rw_lock_guard.h"
+#include "hiva/base/rw_lock_guard.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace base {
 
 class AtomicRWLock {
@@ -113,7 +113,7 @@ inline void AtomicRWLock::ReadUnlock() { lock_num_.fetch_sub(1); }
 inline void AtomicRWLock::WriteUnlock() { lock_num_.fetch_add(1); }
 
 }  // namespace base
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_BASE_ATOMIC_RW_LOCK_H_

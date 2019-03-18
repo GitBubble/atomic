@@ -28,12 +28,12 @@
 #include <utility>
 #include <vector>
 
-#include "cyber/base/bounded_queue.h"
+#include "hiva/base/bounded_queue.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 
-using apollo::cyber::base::BoundedQueue;
+using apollo::hiva::base::BoundedQueue;
 using CallHandler = std::function<void()>;
 
 class TimerTask;
@@ -58,7 +58,7 @@ class TimingSlot {
                     BoundedQueue<std::shared_ptr<TimerTask>>* rep_list);
 };  // TimeSlot end
 
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_TIMER_TIMING_SLOT_H_

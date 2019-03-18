@@ -25,12 +25,12 @@
 #include <string>
 #include <thread>
 
-#include "cyber/common/macros.h"
-#include "cyber/time/duration.h"
-#include "cyber/timer/timing_wheel.h"
+#include "hiva/common/macros.h"
+#include "hiva/time/duration.h"
+#include "hiva/timer/timing_wheel.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 
 class TimerManager {
  public:
@@ -52,7 +52,7 @@ class TimerManager {
   DECLARE_SINGLETON(TimerManager)
 };
 
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_TIMER_TIMER_MANAGER_H_

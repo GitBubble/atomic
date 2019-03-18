@@ -14,23 +14,23 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/data/data_visitor.h"
+#include "hiva/data/data_visitor.h"
 
 #include <gtest/gtest.h>
 #include <memory>
 #include <string>
 #include <vector>
 
-#include "cyber/common/log.h"
-#include "cyber/cyber.h"
-#include "cyber/message/raw_message.h"
+#include "hiva/common/log.h"
+#include "hiva/hiva.h"
+#include "hiva/message/raw_message.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace data {
 
-using apollo::cyber::message::RawMessage;
-using apollo::cyber::proto::RoleAttributes;
+using apollo::hiva::message::RawMessage;
+using apollo::hiva::proto::RoleAttributes;
 std::hash<std::string> str_hash;
 
 auto channel0 = str_hash("/channel0");
@@ -132,5 +132,5 @@ TEST(DataVisitorTest, four_channel) {
 }
 
 }  // namespace data
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

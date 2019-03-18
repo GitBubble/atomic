@@ -14,24 +14,24 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/transport/shm/condition_notifier.h"
+#include "hiva/transport/shm/condition_notifier.h"
 
 #include <pthread.h>
 #include <sys/ipc.h>
 #include <sys/shm.h>
 #include <thread>
 
-#include "cyber/common/log.h"
-#include "cyber/common/util.h"
+#include "hiva/common/log.h"
+#include "hiva/common/util.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
 using common::Hash;
 
 ConditionNotifier::ConditionNotifier() {
-  key_ = static_cast<key_t>(Hash("/apollo/cyber/transport/shm/notifier"));
+  key_ = static_cast<key_t>(Hash("/apollo/hiva/transport/shm/notifier"));
   ADEBUG << "condition notifier key: " << key_;
   shm_size_ = sizeof(Indicator);
 
@@ -221,5 +221,5 @@ void ConditionNotifier::Reset() {
 }
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

@@ -14,7 +14,7 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/common/global_data.h"
+#include "hiva/common/global_data.h"
 
 #include <arpa/inet.h>
 #include <ifaddrs.h>
@@ -25,11 +25,11 @@
 #include <unistd.h>
 #include <functional>
 
-#include "cyber/common/environment.h"
-#include "cyber/common/file.h"
+#include "hiva/common/environment.h"
+#include "hiva/common/file.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace common {
 
 AtomicHashMap<uint64_t, std::string, 512> GlobalData::node_id_map_;
@@ -62,11 +62,11 @@ GlobalData::GlobalData() {
     process_group_ = GetFileName(prog_path) + "_" + std::to_string(process_id_);
     free(prog_path);
   } else {
-    process_group_ = "cyber_default_" + std::to_string(process_id_);
+    process_group_ = "hiva_default_" + std::to_string(process_id_);
   }
   is_reality_mode_ = (config_.has_run_mode_conf() &&
                       config_.run_mode_conf().run_mode() ==
-                          apollo::cyber::proto::RunMode::MODE_SIMULATION)
+                          apollo::hiva::proto::RunMode::MODE_SIMULATION)
                          ? false
                          : true;
 
@@ -154,9 +154,9 @@ void GlobalData::InitHostInfo() {
 }
 
 bool GlobalData::InitConfig() {
-  auto config_path = GetAbsolutePath(WorkRoot(), "conf/cyber.pb.conf");
+  auto config_path = GetAbsolutePath(WorkRoot(), "conf/hiva.pb.conf");
   if (!GetProtoFromFile(config_path, &config_)) {
-    AERROR << "read cyber default conf failed!";
+    AERROR << "read hiva default conf failed!";
     return false;
   }
 
@@ -246,5 +246,5 @@ std::string GlobalData::GetTaskNameById(uint64_t id) {
 }
 
 }  // namespace common
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

@@ -14,14 +14,14 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/transport/dispatcher/shm_dispatcher.h"
-#include "cyber/common/global_data.h"
-#include "cyber/common/util.h"
-#include "cyber/scheduler/scheduler_factory.h"
-#include "cyber/transport/shm/readable_info.h"
+#include "hiva/transport/dispatcher/shm_dispatcher.h"
+#include "hiva/common/global_data.h"
+#include "hiva/common/util.h"
+#include "hiva/scheduler/scheduler_factory.h"
+#include "hiva/transport/shm/readable_info.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
 using common::GlobalData;
@@ -154,5 +154,5 @@ bool ShmDispatcher::Init() {
 }
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

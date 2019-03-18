@@ -14,10 +14,10 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/transport/qos/qos_profile_conf.h"
+#include "hiva/transport/qos/qos_profile_conf.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
 QosProfileConf::QosProfileConf() {}
@@ -83,5 +83,5 @@ const QosProfile QosProfileConf::QOS_PROFILE_TOPO_CHANGE = CreateQosProfile(
     QosDurabilityPolicy::DURABILITY_TRANSIENT_LOCAL);
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

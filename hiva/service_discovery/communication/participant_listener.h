@@ -25,7 +25,7 @@
 #include "fastrtps/participant/ParticipantListener.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace service_discovery {
 
 class ParticipantListener : public eprosima::fastrtps::ParticipantListener {
@@ -46,7 +46,7 @@ class ParticipantListener : public eprosima::fastrtps::ParticipantListener {
 };
 
 }  // namespace service_discovery
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_SERVICE_DISCOVERY_COMMUNICATION_PARTICIPANT_LISTENER_H_

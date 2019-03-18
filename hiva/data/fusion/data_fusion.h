@@ -24,10 +24,10 @@
 #include <typeinfo>
 #include <vector>
 
-#include "cyber/common/types.h"
+#include "hiva/common/types.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace data {
 namespace fusion {
 
@@ -63,7 +63,7 @@ class DataFusion<M0, M1, NullType, NullType> {
 
 }  // namespace fusion
 }  // namespace data
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_DATA_FUSION_DATA_FUSION_H_

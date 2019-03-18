@@ -22,18 +22,18 @@
 #include <mutex>
 #include <string>
 
-#include "cyber/common/macros.h"
-#include "cyber/proto/proto_desc.pb.h"
+#include "hiva/common/macros.h"
+#include "hiva/proto/proto_desc.pb.h"
 #include "google/protobuf/compiler/parser.h"
 #include "google/protobuf/descriptor.h"
 #include "google/protobuf/dynamic_message.h"
 #include "google/protobuf/io/tokenizer.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace message {
 
-using apollo::cyber::proto::ProtoDesc;
+using apollo::hiva::proto::ProtoDesc;
 using google::protobuf::DescriptorPool;
 using google::protobuf::DynamicMessageFactory;
 using google::protobuf::FileDescriptor;
@@ -109,7 +109,7 @@ class ProtobufFactory {
 };
 
 }  // namespace message
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_MESSAGE_PROTOBUF_FACTORY_H_

@@ -20,7 +20,7 @@
 #include <string>
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 
 constexpr auto SERVICE_NAME_DELIMITER = "/";
 constexpr auto GET_PARAMETER_SERVICE_NAME = "get_parameter";
@@ -33,7 +33,7 @@ static inline std::string FixParameterServiceName(const std::string& node_name,
          std::string(service_name);
 }
 
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_PARAMETER_PARAMETER_SERVICE_NAMES_H_

@@ -5,14 +5,14 @@ package(default_visibility = ["//visibility:public"])
 cc_library(
     name = "common",
     deps = [
-        "//cyber/common:environment",
-        "//cyber/common:file",
-        "//cyber/common:global_data",
-        "//cyber/common:log",
-        "//cyber/common:macros",
-        "//cyber/common:time_conversion",
-        "//cyber/common:types",
-        "//cyber/common:util",
+        "//hiva/common:environment",
+        "//hiva/common:file",
+        "//hiva/common:global_data",
+        "//hiva/common:log",
+        "//hiva/common:macros",
+        "//hiva/common:time_conversion",
+        "//hiva/common:types",
+        "//hiva/common:util",
     ],
 )
 
@@ -25,7 +25,7 @@ cc_library(
         "file.h",
     ],
     deps = [
-        "//cyber/common:log",
+        "//hiva/common:log",
     ],
 )
 
@@ -36,8 +36,8 @@ cc_test(
         "file_test.cc",
     ],
     deps = [
-        "//cyber",
-        "//cyber/proto:unit_test_cc_proto",
+        "//hiva",
+        "//hiva/proto:unit_test_cc_proto",
         "@gtest//:main",
     ],
 )
@@ -51,7 +51,7 @@ cc_library(
         "-lglog",
     ],
     deps = [
-        "//cyber:binary",
+        "//hiva:binary",
     ],
 )
 
@@ -62,7 +62,7 @@ cc_test(
         "log_test.cc",
     ],
     deps = [
-        "//cyber",
+        "//hiva",
         "@gtest//:main",
     ],
 )
@@ -73,7 +73,7 @@ cc_library(
         "environment.h",
     ],
     deps = [
-        #"//cyber/common:log",
+        #"//hiva/common:log",
     ],
 )
 
@@ -86,13 +86,13 @@ cc_library(
         "global_data.h",
     ],
     deps = [
-        "//cyber/base:atomic_hash_map",
-        "//cyber/base:atomic_rw_lock",
-        "//cyber/common:environment",
-        "//cyber/common:file",
-        "//cyber/common:macros",
-        "//cyber/common:util",
-        "//cyber/proto:cyber_conf_cc_proto",
+        "//hiva/base:atomic_hash_map",
+        "//hiva/base:atomic_rw_lock",
+        "//hiva/common:environment",
+        "//hiva/common:file",
+        "//hiva/common:macros",
+        "//hiva/common:util",
+        "//hiva/proto:hiva_conf_cc_proto",
     ],
 )
 
@@ -103,7 +103,7 @@ cc_test(
         "macros_test.cc",
     ],
     deps = [
-        "//cyber",
+        "//hiva",
         "@gtest//:main",
     ],
 )
@@ -114,7 +114,7 @@ cc_library(
         "macros.h",
     ],
     deps = [
-        "//cyber/base:macros",
+        "//hiva/base:macros",
     ],
 )
 

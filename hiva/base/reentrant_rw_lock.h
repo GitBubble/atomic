@@ -26,10 +26,10 @@
 #include <mutex>
 #include <thread>
 
-#include "cyber/base/rw_lock_guard.h"
+#include "hiva/base/rw_lock_guard.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace base {
 
 static const std::thread::id NULL_THREAD_ID = std::thread::id();
@@ -136,7 +136,7 @@ inline void ReentrantRWLock::WriteUnlock() {
 }
 
 }  // namespace base
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_BASE_REENTRANT_RW_LOCK_H_

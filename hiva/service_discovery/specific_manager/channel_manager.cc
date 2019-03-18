@@ -14,22 +14,22 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/service_discovery/specific_manager/channel_manager.h"
+#include "hiva/service_discovery/specific_manager/channel_manager.h"
 
 #include <algorithm>
 #include <set>
 #include <utility>
 
-#include "cyber/common/global_data.h"
-#include "cyber/common/log.h"
-#include "cyber/message/message_traits.h"
-#include "cyber/message/py_message.h"
-#include "cyber/message/raw_message.h"
-#include "cyber/state.h"
-#include "cyber/time/time.h"
+#include "hiva/common/global_data.h"
+#include "hiva/common/log.h"
+#include "hiva/message/message_traits.h"
+#include "hiva/message/py_message.h"
+#include "hiva/message/raw_message.h"
+#include "hiva/state.h"
+#include "hiva/time/time.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace service_discovery {
 
 ChannelManager::ChannelManager() {
@@ -332,5 +332,5 @@ void ChannelManager::ScanMessageType(const ChangeMsg& msg) {
 }
 
 }  // namespace service_discovery
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

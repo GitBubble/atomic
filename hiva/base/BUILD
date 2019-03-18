@@ -5,21 +5,21 @@ package(default_visibility = ["//visibility:public"])
 cc_library(
     name = "base",
     deps = [
-        "//cyber/base:atomic_fifo",
-        "//cyber/base:atomic_hash_map",
-        "//cyber/base:atomic_rw_lock",
-        "//cyber/base:bounded_queue",
-        "//cyber/base:concurrent_object_pool",
-        "//cyber/base:for_each",
-        "//cyber/base:macros",
-        "//cyber/base:object_pool",
-        "//cyber/base:reentrant_rw_lock",
-        "//cyber/base:rw_lock_guard",
-        "//cyber/base:signal",
-        "//cyber/base:thread_pool",
-        "//cyber/base:thread_safe_queue",
-        "//cyber/base:unbounded_queue",
-        "//cyber/base:wait_strategy",
+        "//hiva/base:atomic_fifo",
+        "//hiva/base:atomic_hash_map",
+        "//hiva/base:atomic_rw_lock",
+        "//hiva/base:bounded_queue",
+        "//hiva/base:concurrent_object_pool",
+        "//hiva/base:for_each",
+        "//hiva/base:macros",
+        "//hiva/base:object_pool",
+        "//hiva/base:reentrant_rw_lock",
+        "//hiva/base:rw_lock_guard",
+        "//hiva/base:signal",
+        "//hiva/base:thread_pool",
+        "//hiva/base:thread_safe_queue",
+        "//hiva/base:unbounded_queue",
+        "//hiva/base:wait_strategy",
     ],
 )
 
@@ -44,7 +44,7 @@ cc_test(
         "atomic_hash_map_test.cc",
     ],
     deps = [
-        "//cyber/base:atomic_hash_map",
+        "//hiva/base:atomic_hash_map",
         "@gtest//:main",
     ],
 )
@@ -55,7 +55,7 @@ cc_library(
         "atomic_rw_lock.h",
     ],
     deps = [
-        "//cyber/base:rw_lock_guard",
+        "//hiva/base:rw_lock_guard",
     ],
 )
 
@@ -66,8 +66,8 @@ cc_test(
         "atomic_rw_lock_test.cc",
     ],
     deps = [
-        "//cyber/base:atomic_rw_lock",
-        "//cyber/base:reentrant_rw_lock",
+        "//hiva/base:atomic_rw_lock",
+        "//hiva/base:reentrant_rw_lock",
         "@gtest//:main",
     ],
 )
@@ -78,8 +78,8 @@ cc_library(
         "bounded_queue.h",
     ],
     deps = [
-        "//cyber/base:macros",
-        "//cyber/base:wait_strategy",
+        "//hiva/base:macros",
+        "//hiva/base:wait_strategy",
     ],
 )
 
@@ -90,7 +90,7 @@ cc_test(
         "bounded_queue_test.cc",
     ],
     deps = [
-        "//cyber/base:bounded_queue",
+        "//hiva/base:bounded_queue",
         "@gtest//:main",
     ],
 )
@@ -101,7 +101,7 @@ cc_library(
         "concurrent_object_pool.h",
     ],
     deps = [
-        "//cyber/base:for_each",
+        "//hiva/base:for_each",
     ],
 )
 
@@ -111,7 +111,7 @@ cc_library(
         "for_each.h",
     ],
     deps = [
-        "//cyber/base:macros",
+        "//hiva/base:macros",
     ],
 )
 
@@ -122,7 +122,7 @@ cc_test(
         "for_each_test.cc",
     ],
     deps = [
-        "//cyber/base:for_each",
+        "//hiva/base:for_each",
         "@gtest//:main",
     ],
 )
@@ -140,8 +140,8 @@ cc_library(
         "object_pool.h",
     ],
     deps = [
-        "//cyber/base:for_each",
-        "//cyber/base:macros",
+        "//hiva/base:for_each",
+        "//hiva/base:macros",
     ],
 )
 
@@ -155,8 +155,8 @@ cc_test(
         "-latomic",
     ],
     deps = [
-        "//cyber/base:concurrent_object_pool",
-        "//cyber/base:object_pool",
+        "//hiva/base:concurrent_object_pool",
+        "//hiva/base:object_pool",
         "@gtest//:main",
     ],
 )
@@ -189,7 +189,7 @@ cc_test(
         "signal_test.cc",
     ],
     deps = [
-        "//cyber/base:signal",
+        "//hiva/base:signal",
         "@gtest//:main",
     ],
 )

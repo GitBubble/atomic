@@ -14,12 +14,12 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/service_discovery/container/graph.h"
+#include "hiva/service_discovery/container/graph.h"
 
 #include <queue>
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace service_discovery {
 
 using base::AtomicRWLock;
@@ -282,5 +282,5 @@ bool Graph::LevelTraverse(const Vertice& start, const Vertice& end) {
 }
 
 }  // namespace service_discovery
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

@@ -14,19 +14,19 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/transport/dispatcher/rtps_dispatcher.h"
+#include "hiva/transport/dispatcher/rtps_dispatcher.h"
 
 #include <gtest/gtest.h>
 #include <memory>
 
-#include "cyber/common/util.h"
-#include "cyber/proto/unit_test.pb.h"
-#include "cyber/transport/common/identity.h"
-#include "cyber/transport/qos/qos_profile_conf.h"
-#include "cyber/transport/transport.h"
+#include "hiva/common/util.h"
+#include "hiva/proto/unit_test.pb.h"
+#include "hiva/transport/common/identity.h"
+#include "hiva/transport/qos/qos_profile_conf.h"
+#include "hiva/transport/transport.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
 TEST(RtpsDispatcherTest, add_listener) {
@@ -99,13 +99,13 @@ TEST(RtpsDispatcherTest, shutdown) {
 }
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 int main(int argc, char** argv) {
   testing::InitGoogleTest(&argc, argv);
-  apollo::cyber::transport::Transport::Instance();
+  apollo::hiva::transport::Transport::Instance();
   auto res = RUN_ALL_TESTS();
-  apollo::cyber::transport::Transport::Instance()->Shutdown();
+  apollo::hiva::transport::Transport::Instance()->Shutdown();
   return res;
 }

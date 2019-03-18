@@ -23,11 +23,11 @@
 #include <condition_variable>
 #include <mutex>
 
-#include "cyber/common/macros.h"
-#include "cyber/transport/shm/notifier_base.h"
+#include "hiva/common/macros.h"
+#include "hiva/transport/shm/notifier_base.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
 const uint32_t kBufLength = 4096;
@@ -67,7 +67,7 @@ class ConditionNotifier : public NotifierBase {
 };
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_TRANSPORT_SHM_CONDITION_NOTIFIER_H_

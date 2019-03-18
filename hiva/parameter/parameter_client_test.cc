@@ -14,22 +14,22 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/parameter/parameter_client.h"
+#include "hiva/parameter/parameter_client.h"
 
 #include <gtest/gtest.h>
 #include <memory>
 #include <vector>
 
-#include "cyber/cyber.h"
-#include "cyber/init.h"
-#include "cyber/message/protobuf_factory.h"
-#include "cyber/parameter/parameter_server.h"
+#include "hiva/hiva.h"
+#include "hiva/init.h"
+#include "hiva/message/protobuf_factory.h"
+#include "hiva/parameter/parameter_server.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 
-using apollo::cyber::proto::Param;
-using apollo::cyber::proto::ParamType;
+using apollo::hiva::proto::Param;
+using apollo::hiva::proto::ParamType;
 
 class ParameterClientTest : public ::testing::Test {
  protected:
@@ -42,7 +42,7 @@ class ParameterClientTest : public ::testing::Test {
 
   virtual void SetUp() {
     // Called before every TEST_F(ParameterClientTest, *)
-    apollo::cyber::Init("parameter_client_test");
+    apollo::hiva::Init("parameter_client_test");
     node_ = CreateNode("parameter_server");
     ps_.reset(new ParameterServer(node_));
     pc_.reset(new ParameterClient(node_, "parameter_server"));
@@ -88,11 +88,11 @@ TEST_F(ParameterClientTest, list_parameter) {
   EXPECT_FALSE(pc_->ListParameters(&parameters));
 }
 
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 int main(int argc, char** argv) {
-  apollo::cyber::Init(argv[0]);
+  apollo::hiva::Init(argv[0]);
   testing::InitGoogleTest(&argc, argv);
   auto res = RUN_ALL_TESTS();
   return res;

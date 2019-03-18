@@ -21,12 +21,12 @@
 #include <string>
 #include <vector>
 
-#include "cyber/service_discovery/container/single_value_warehouse.h"
-#include "cyber/service_discovery/role/role.h"
-#include "cyber/service_discovery/specific_manager/manager.h"
+#include "hiva/service_discovery/container/single_value_warehouse.h"
+#include "hiva/service_discovery/role/role.h"
+#include "hiva/service_discovery/specific_manager/manager.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace service_discovery {
 
 class TopologyManager;
@@ -56,7 +56,7 @@ class NodeManager : public Manager {
 };
 
 }  // namespace service_discovery
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  //  CYBER_SERVICE_DISCOVERY_SPECIFIC_MANAGER_NODE_MANAGER_H_

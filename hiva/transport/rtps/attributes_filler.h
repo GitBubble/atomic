@@ -19,12 +19,12 @@
 
 #include <string>
 
-#include "cyber/proto/qos_profile.pb.h"
+#include "hiva/proto/qos_profile.pb.h"
 #include "fastrtps/attributes/PublisherAttributes.h"
 #include "fastrtps/attributes/SubscriberAttributes.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
 using proto::QosDurabilityPolicy;
@@ -47,7 +47,7 @@ class AttributesFiller {
 };
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_TRANSPORT_RTPS_ATTRIBUTES_FILLER_H_

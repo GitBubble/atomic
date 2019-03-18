@@ -14,13 +14,13 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/parameter/parameter.h"
-#include "cyber/message/protobuf_factory.h"
+#include "hiva/parameter/parameter.h"
+#include "hiva/message/protobuf_factory.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 
-using apollo::cyber::message::ProtobufFactory;
+using apollo::hiva::message::ProtobufFactory;
 
 Parameter::Parameter() {
   param_.set_name("");
@@ -157,5 +157,5 @@ std::string Parameter::DebugString() const {
   return ss.str();
 }
 
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

@@ -14,20 +14,20 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/cyber.h"
+#include "hiva/hiva.h"
 
 #include <memory>
 #include <string>
 #include <utility>
 
-#include "cyber/common/global_data.h"
-//#include "cyber/proto/run_mode_conf.pb.h"
+#include "hiva/common/global_data.h"
+//#include "hiva/proto/run_mode_conf.pb.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 
-using apollo::cyber::common::GlobalData;
-//using apollo::cyber::proto::RunMode;
+using apollo::hiva::common::GlobalData;
+//using apollo::hiva::proto::RunMode;
 
 std::unique_ptr<Node> CreateNode(const std::string& node_name,
                                  const std::string& name_space) {
@@ -36,12 +36,12 @@ std::unique_ptr<Node> CreateNode(const std::string& node_name,
 
     if (is_reality_mode && !OK()) {
     // add some hint log
-    AERROR << "please initialize cyber firstly.";
+    AERROR << "please initialize hiva firstly.";
     return nullptr;
   }
   std::unique_ptr<Node> node(new Node(node_name, name_space));
   return std::move(node);
 }
 
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

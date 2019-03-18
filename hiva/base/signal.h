@@ -24,7 +24,7 @@
 #include <mutex>
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace base {
 
 template <typename... Args>
@@ -187,7 +187,7 @@ class Slot {
 };
 
 }  // namespace base
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_BASE_SIGNAL_H_

@@ -14,15 +14,15 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/base/object_pool.h"
+#include "hiva/base/object_pool.h"
 
 #include <thread>
 
-#include "cyber/base/concurrent_object_pool.h"
+#include "hiva/base/concurrent_object_pool.h"
 #include "gtest/gtest.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace base {
 
 struct TestNode {
@@ -140,5 +140,5 @@ TEST(ObjectPoolTest, get_object) {
 }
 
 }  // namespace base
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

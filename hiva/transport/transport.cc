@@ -14,12 +14,12 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/transport/transport.h"
+#include "hiva/transport/transport.h"
 
-#include "cyber/common/global_data.h"
+#include "hiva/common/global_data.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
 Transport::Transport()
@@ -63,5 +63,5 @@ void Transport::CreateParticipant() {
 }
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

@@ -23,17 +23,17 @@
 #include <unordered_map>
 #include <vector>
 
-#include "cyber/common/macros.h"
-#include "cyber/common/util.h"
-#include "cyber/event/perf_event_cache.h"
-#include "cyber/transport/transport.h"
+#include "hiva/common/macros.h"
+#include "hiva/common/util.h"
+#include "hiva/event/perf_event_cache.h"
+#include "hiva/transport/transport.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 
-using apollo::cyber::common::GlobalData;
-using apollo::cyber::event::PerfEventCache;
-using apollo::cyber::event::TransPerf;
+using apollo::hiva::common::GlobalData;
+using apollo::hiva::event::PerfEventCache;
+using apollo::hiva::event::TransPerf;
 
 class ReaderBase {
  public:
@@ -119,7 +119,7 @@ auto ReceiverManager<MessageT>::GetReceiver(
   return receiver_map_[channel_name];
 }
 
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_NODE_READER_BASE_H_

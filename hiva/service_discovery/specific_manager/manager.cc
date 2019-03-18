@@ -14,19 +14,19 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/service_discovery/specific_manager/manager.h"
+#include "hiva/service_discovery/specific_manager/manager.h"
 
-#include "cyber/common/global_data.h"
-#include "cyber/common/log.h"
-#include "cyber/message/message_traits.h"
-#include "cyber/time/time.h"
-#include "cyber/transport/qos/qos_profile_conf.h"
-#include "cyber/transport/rtps/attributes_filler.h"
-#include "cyber/transport/rtps/underlay_message.h"
-#include "cyber/transport/rtps/underlay_message_type.h"
+#include "hiva/common/global_data.h"
+#include "hiva/common/log.h"
+#include "hiva/message/message_traits.h"
+#include "hiva/time/time.h"
+#include "hiva/transport/qos/qos_profile_conf.h"
+#include "hiva/transport/rtps/attributes_filler.h"
+#include "hiva/transport/rtps/underlay_message.h"
+#include "hiva/transport/rtps/underlay_message_type.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace service_discovery {
 
 using transport::AttributesFiller;
@@ -166,7 +166,7 @@ bool Manager::NeedPublish(const ChangeMsg& msg) const {
 
 void Manager::Convert(const RoleAttributes& attr, RoleType role,
                       OperateType opt, ChangeMsg* msg) {
-  msg->set_timestamp(cyber::Time::Now().ToNanosecond());
+  msg->set_timestamp(hiva::Time::Now().ToNanosecond());
   msg->set_change_type(change_type_);
   msg->set_operate_type(opt);
   msg->set_role_type(role);
@@ -203,7 +203,7 @@ bool Manager::Publish(const ChangeMsg& msg) {
     return true;
   }
 
-  apollo::cyber::transport::UnderlayMessage m;
+  apollo::hiva::transport::UnderlayMessage m;
   RETURN_VAL_IF(!message::SerializeToString(msg, &m.data()), false);
   if (publisher_ != nullptr) {
     return publisher_->write(reinterpret_cast<void*>(&m));
@@ -222,5 +222,5 @@ bool Manager::IsFromSameProcess(const ChangeMsg& msg) {
 }
 
 }  // namespace service_discovery
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo

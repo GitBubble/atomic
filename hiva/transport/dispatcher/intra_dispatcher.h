@@ -21,15 +21,15 @@
 #include <memory>
 #include <string>
 
-#include "cyber/common/global_data.h"
-#include "cyber/common/log.h"
-#include "cyber/common/macros.h"
-#include "cyber/message/message_traits.h"
-#include "cyber/message/raw_message.h"
-#include "cyber/transport/dispatcher/dispatcher.h"
+#include "hiva/common/global_data.h"
+#include "hiva/common/log.h"
+#include "hiva/common/macros.h"
+#include "hiva/message/message_traits.h"
+#include "hiva/message/raw_message.h"
+#include "hiva/transport/dispatcher/dispatcher.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
 class IntraDispatcher;
@@ -79,7 +79,7 @@ void IntraDispatcher::OnMessage(uint64_t channel_id,
 }
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_TRANSPORT_DISPATCHER_INTRA_DISPATCHER_H_

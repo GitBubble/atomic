@@ -21,10 +21,10 @@
 #include <cstdint>
 #include <string>
 
-#include "cyber/transport/common/identity.h"
+#include "hiva/transport/common/identity.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace transport {
 
 class MessageInfo {
@@ -63,7 +63,7 @@ class MessageInfo {
 };
 
 }  // namespace transport
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_TRANSPORT_MESSAGE_MESSAGE_INFO_H_

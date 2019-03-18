@@ -42,7 +42,7 @@ cc_library(
     ],
     deps = [
         "data_notifier",
-        "//cyber/proto:component_conf_cc_proto",
+        "//hiva/proto:component_conf_cc_proto",
     ],
 )
 
@@ -70,7 +70,7 @@ cc_test(
         "data_visitor_test.cc",
     ],
     deps = [
-        "//cyber",
+        "//hiva",
         "@gtest//:main",
     ],
 )
@@ -99,7 +99,7 @@ cc_test(
         "data_dispatcher_test.cc",
     ],
     deps = [
-        "//cyber",
+        "//hiva",
         "@gtest//:main",
     ],
 )
@@ -111,7 +111,7 @@ cc_test(
         "channel_buffer_test.cc",
     ],
     deps = [
-        "//cyber",
+        "//hiva",
         "@gtest//:main",
     ],
 )

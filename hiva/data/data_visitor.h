@@ -22,15 +22,15 @@
 #include <memory>
 #include <vector>
 
-#include "cyber/common/log.h"
-#include "cyber/data/channel_buffer.h"
-#include "cyber/data/data_dispatcher.h"
-#include "cyber/data/data_visitor_base.h"
-#include "cyber/data/fusion/all_latest.h"
-#include "cyber/data/fusion/data_fusion.h"
+#include "hiva/common/log.h"
+#include "hiva/data/channel_buffer.h"
+#include "hiva/data/data_dispatcher.h"
+#include "hiva/data/data_visitor_base.h"
+#include "hiva/data/fusion/all_latest.h"
+#include "hiva/data/fusion/data_fusion.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace data {
 
 struct VisitorConfig {
@@ -193,7 +193,7 @@ class DataVisitor<M0, NullType, NullType, NullType> : public DataVisitorBase {
 };
 
 }  // namespace data
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
 
 #endif  // CYBER_DATA_DATA_VISITOR_H_

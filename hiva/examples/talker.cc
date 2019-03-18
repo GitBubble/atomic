@@ -14,24 +14,24 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/cyber.h"
-#include "cyber/examples/proto/examples.pb.h"
-#include "cyber/time/rate.h"
-#include "cyber/time/time.h"
+#include "hiva/hiva.h"
+#include "hiva/examples/proto/examples.pb.h"
+#include "hiva/time/rate.h"
+#include "hiva/time/time.h"
 
-using apollo::cyber::Rate;
-using apollo::cyber::Time;
-using apollo::cyber::examples::proto::Chatter;
+using apollo::hiva::Rate;
+using apollo::hiva::Time;
+using apollo::hiva::examples::proto::Chatter;
 
 int main(int argc, char *argv[]) {
-  // init cyber framework
-  apollo::cyber::Init(argv[0]);
+  // init hiva framework
+  apollo::hiva::Init(argv[0]);
   // create talker node
-  auto talker_node = apollo::cyber::CreateNode("talker");
+  auto talker_node = apollo::hiva::CreateNode("talker");
   // create talker
   auto talker = talker_node->CreateWriter<Chatter>("channel/chatter");
   Rate rate(1.0);
-  while (apollo::cyber::OK()) {
+  while (apollo::hiva::OK()) {
     static uint64_t seq = 0;
     auto msg = std::make_shared<Chatter>();
     msg->set_timestamp(Time::Now().ToNanosecond());

@@ -14,7 +14,7 @@
  * limitations under the License.
  *****************************************************************************/
 
-#include "cyber/base/atomic_hash_map.h"
+#include "hiva/base/atomic_hash_map.h"
 
 #include <string>
 #include <thread>
@@ -22,7 +22,7 @@
 #include "gtest/gtest.h"
 
 namespace apollo {
-namespace cyber {
+namespace hiva {
 namespace base {
 
 TEST(AtomicHashMapTest, int_int) {
@@ -95,5 +95,5 @@ TEST(AtomicHashMapTest, concurrency) {
 }
 
 }  // namespace base
-}  // namespace cyber
+}  // namespace hiva
 }  // namespace apollo
