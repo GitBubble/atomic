@@ -1,7 +1,0 @@
-<hiva>
-    <module>
-        <name>common</name>
-        <dag_conf>/apollo/hiva/examples/common_component_example/common.dag</dag_conf>
-        <process_name>common</process_name>
-    </module>
-</hiva>
